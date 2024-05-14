@@ -1,0 +1,97 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+
+}
+
+#sidebar {
+    background-color: #fafaff;
+    height: 110vh;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+.sidebar-header .logo {
+    width: 60x;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.sidebar-header h2 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 10px;
+    
+}
+
+.sidebar-menu li a {
+    text-decoration: none;
+    color: #6c757d;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-menu li a i {
+    margin-right: 10px;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+    background-color: #e9ecef;
+    color: #6938ef  ;
+}
+
+.sidebar-menu .submenu {
+    margin-top: 8px;
+    list-style-type: none;
+    padding-left: 20px;
+    display: none;
+}
+
+.sidebar-menu .submenu li a {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.sidebar-footer {
+    margin-top: 20px;
+}
+
+.btn-recommendation {
+    font-size: 14px;
+    bottom: 0px;
+    display: block;
+    text-align: center;
+    background-color: #6938ef;
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-recommendation:hover {
+    background-color: #6938ef;
+}
+

@@ -1,0 +1,19 @@
+body {
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar-container{
+    width: 20%;
+}
+
+.dashboard{
+    margin-left: 20px;
+    width: 80%;
+}
