@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     var menuItems = document.querySelectorAll('.sidebar-menu > li > a');
+    var submenuItems = document.querySelectorAll('.submenu > li > a');
     menuItems.forEach(function (menuItem) {
         menuItem.addEventListener('click', function (e) {
             var icons = menuItem.querySelector('.chevron-icon');
@@ -12,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (icons) {
                 icons.style.transform = icons.style.transform === 'rotate(90deg)' ? 'rotate(0deg)' : 'rotate(90deg)';
             }
-        });
+        });      
     });
+
 });

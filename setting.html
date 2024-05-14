@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPlecturer</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar-container"> 
+            <div id="sidebar">
+                <a class="sidebar-header" href="/index.html">
+                    <img src="image/logo.png" alt="Logo" class="logo">
+                    <h2>KPlecturer</h2>
+                </a>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home" ></i>
+                            <div style="display: flex; width: 100%; justify-content:space-between; align-items:center;">
+                                Home
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="/index.html" class="">Dashboard</a></li>
+                            <li><a href="#">KPI</a></li>
+                            <li><a href="#">Plan</a></li>
+                            <li><a href="#">Activity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-star"></i>
+                            Statistics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="menu-active">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <div style="width:100%; display:flex; justify-content:space-between; align-items:center;">
+                                Help
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">How to use</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <a href="#" class="btn-recommendation">Get Recommendation <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>        
+        </div>
+        <div class="dashboard"> 
+            <div id="header-container">
+                <div class="header">
+                    <div class="search-bar">
+                        <div class="logo-section">
+                            <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
+                            <div style="display:flex; flex-direction: column; margin-right:16px;">
+                                <span class="workspace">University</span>
+                                <span class="separator">Workspace</span>
+                            </div>
+                            <i class="fa-solid fa-sort sort-icon"></i>
+                        </div>
+                        <div class="search-section">
+                            <input type="text" class="search-input" placeholder="Search for tasks, events ..">
+                        </div>
+                        <div class="notification-section">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon">
+                        </div>
+                    </div>
+                    <div class="account-section">
+                        <div style="display:flex; flex-direction: column;">
+                            <span class="account-name">Cristiano</span>
+                            <span class="account-settings">Hust Student</span>
+                        </div>
+                        <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+</body>
+</html>

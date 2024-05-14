@@ -16,4 +16,88 @@ body {
 .dashboard{
     margin-left: 20px;
     width: 80%;
+    padding-right: 20px;
+}
+
+.banner {
+    background-image: url(/image/banner.png);
+    height: 120px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.banner button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: #fff;
+    color: #19181f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: poppins;
+}
+
+.stats {
+    display: flex;
+    margin-top: 20px;
+}
+
+.schedule, .kpi-stats {
+    flex: 1;
+    margin-right: 20px;
+    padding: 0 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.schedule {
+    position: relative;
+}
+
+.kpi-stats {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.kpi-circle {
+    width: 300px;
+    height: 300px;
+    background-image: url(image/chart.png);
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kpi-circle span {
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a1fb8;
+}
+
+.kpi-circle p {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    color: #7e89ac;
 }
