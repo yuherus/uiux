@@ -1,0 +1,119 @@
+.statistics-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.statistics, .chart-container, .top-activity, .expected-vs-reality {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.statistics:hover, .chart-container:hover, .top-activity:hover, .expected-vs-reality:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:start;
+    background: #f9f9ff;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+
+.stat-item i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: #6c63ff;
+}
+
+
+.stat-item div {
+    text-align: left;
+}
+
+.stat-item h3 {
+    margin: 5px 0;
+    color: #333;
+}
+
+.stat-item span {
+    font-size: 12px;
+    color: #999;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+table td progress {
+    width: 100%;
+}
+
+.chart-container {
+    height: 240px;
+    width: 400px;
+    padding-bottom: 80px;
+}
+
+.expected-vs-reality {
+    height: 260px;
+    width: 400px;
+    padding-bottom: 80px;
+}
+
+
+.sub-title {
+    font-size: 12px;
+    color: #4079ed;
+    margin-bottom: 10px;
+}
+
+.btn-export{
+    font-family: poppins;
+    background: #fff;
+    color: #333;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+.percent {
+    border: 1px solid #4a1fb8;
+    border-radius:4px; 
+    margin-left:8px; 
+    padding: 0 8px; 
+    background-color:#ebe9fe; 
+    color:#4a1fb8;
+}

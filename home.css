@@ -1,0 +1,92 @@
+.banner {
+    background-image: url(/image/banner.png);
+    height: 120px;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.banner button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 40px;
+    margin-top: 40px;
+    background-color: #fff;
+    color: #19181f;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 900;
+    font-family: poppins;
+}
+
+.banner button:hover {
+    background-color: #e9e9e9;
+    color: #4a1fb8;
+}
+
+.stats {
+    display: flex;
+    margin-top: 20px;
+}
+
+.schedule, .kpi-stats {
+    flex: 1;
+    margin-right: 20px;
+    padding: 0 10px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.schedule:hover, .kpi-stats:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.schedule {
+    position: relative;
+}
+
+.kpi-stats {
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    justify-content: start;
+    align-items: center;
+}
+
+.kpi-circle {
+    width: 240px;
+    height: 240px;
+    background-image: url(image/kpi-chart.png);
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.kpi-circle span {
+    padding-top: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a1fb8;
+}
+
+.kpi-circle p {
+    font-size: 20px;
+    font-weight: 600;
+    color: #7e89ac;
+}

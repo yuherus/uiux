@@ -1,0 +1,125 @@
+.setting-tabs{
+    width: 96%;
+    margin: 20px auto;
+    padding: 10px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    font-family: poppins;
+    font-weight: 700;
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.tab-button.active {
+    background-color: #fff;
+    border-bottom: 2px solid #5a67d8;
+    color: #5a67d8;
+    font-weight: 700;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+.profile-section {
+    margin-top: 10px;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 80px;
+    border: 2px dashed #ccc;
+    padding:20px 80px 40px;
+    margin: 20px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #f0f0f3;
+}
+
+.profile-info {
+    flex: 1;
+    width: 100%;
+}
+
+
+.form-group {
+    width: 50%;
+    margin-bottom: 15px;
+}
+
+.form-group-radio{
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+}
+
+.form-group.bio textarea {
+    height: 100px;
+    width: 180%;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #5a67d8;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #434190;
+}
+
+.profile-upload-picture {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}

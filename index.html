@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
 </head>
@@ -14,34 +16,34 @@
     <div class="container">
         <div id="sidebar-container"> 
             <div id="sidebar">
-                <div class="sidebar-header">
+                <a class="sidebar-header" href="/index.html">
                     <img src="image/logo.png" alt="Logo" class="logo">
                     <h2>KPlecturer</h2>
-                </div>
+                </a>
                 <ul class="sidebar-menu">
                     <li>
                         <a href="#">
-                            <i class="fas fa-home"></i>
-                            <div style="display: flex; width: 100%; justify-content:space-between;">
+                            <i class="fas fa-home" ></i>
+                            <div style="display: flex; width: 100%; justify-content:space-between; align-items:center;">
                                 Home
                                 <i class="fas fa-chevron-right chevron-icon"></i>
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="index.html" class="menu-active">Dashboard</a></li>
                             <li><a href="#">KPI</a></li>
                             <li><a href="#">Plan</a></li>
                             <li><a href="#">Activity</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="statistics.html">
                             <i class="fas fa-star"></i>
                             Statistics
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="setting.html">
                             <i class="fas fa-cog"></i>
                             Settings
                         </a>
@@ -49,14 +51,14 @@
                     <li>
                         <a href="#">
                             <i class="fas fa-user"></i>
-                            <div style="width:100%; display:flex; justify-content:space-between;">
+                            <div style="width:100%; display:flex; justify-content:space-between; align-items:center;">
                                 Help
                                 <i class="fas fa-chevron-right chevron-icon"></i>
                             </div>
                         </a>
                         <ul class="submenu">
                             <li><a href="#">How to use</a></li>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -80,8 +82,14 @@
                         <div class="search-section">
                             <input type="text" class="search-input" placeholder="Search for tasks, events ..">
                         </div>
-                        <div class="notification-section">
-                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon">
+                        <div class="notification-section noti-dropdown">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon noti-dropdown-btn">
+                            <div class="noti-dropdown-content">
+                                <a href="#">You have 2 tasks that are about to be late</a>
+                                <a href="#">Congratulations, you have completed all your work today</a>
+                                <a href="#">You haven't made plans for next week, make it now</a>
+                                <a href="#" style="text-align:center">View all notifications</a>
+                            </div>
                         </div>
                     </div>
                     <div class="account-section">
@@ -89,9 +97,162 @@
                             <span class="account-name">Cristiano</span>
                             <span class="account-settings">Hust Student</span>
                         </div>
-                        <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
+                        <div class="user-dropdown">
+                            <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture user-dropbtn">
+                            <div class="user-dropdown-content">
+                                <a href="#">
+                                    <i class="fa-solid fa-user"></i>
+                                    Profile Settings
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>                                    Log Out
+                                </a>
+                              </div>
+                        </div>
                     </div>
                 </div>            
+            </div>
+            <div class="banner">
+                <h2>Ready to create your own KPI right now?</h2>
+                <button>Click Here</button>
+            </div>
+            <div class="stats">
+                <div class="schedule">
+                    <div style="font-size:18px; font-weight:700; margin:5px 0; width:100%; text-align:center;">Schedule</div>
+                    <div class="calendar-container">
+                        <div style="display:flex; justify-content:space-between;">
+                            <div class="date-range" style="display:flex; align-items:center ">
+                                <span style="margin-right: 10px">02 - 08 May</span>
+                                <i class="fas fa-chevron-left"></i>
+                                <i class="fas fa-chevron-right"></i>
+                            </div>
+                            <div>
+                                <span class="timezone">(GMT +07:00) Public Time</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                        </div>
+                        <div class="calendar-header">
+                            <div class="day-header">
+                                <span class="day-name">Mon</span>
+                              </div>                      
+                              <div class="day-header">
+                                <span class="day-name">Tues</span>
+                              </div>
+                              <div class="day-header">
+                                <span class="day-name">Wed</span>
+                              </div>
+                              <div class="day-header">
+                                <span class="day-name">Thu</span>
+                              </div>
+                              <div class="day-header">
+                                <span class="day-name">Fri</span>
+                              </div>
+                              <div class="day-header">
+                                <span class="day-name">Sat</span>
+                              </div> 
+                        </div>
+                        <div style="display:flex">
+                            <div class="time-slot">
+                                <span>08:00</span>
+                                <span>10:00</span>
+                                <span>12:00</span>
+                                <span>14:00</span>
+                                <span>16:00</span>
+                                <span>18:00</span>
+                            </div>              
+                            <div class="grid">
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                                <div class="grid-line"></div>
+                            </div>          
+                        </div>
+                      </div>     
+                      <div class=task1>
+                        <div class="task1-background"></div>
+                        <div class=task1-background2>
+                          <div class="e638_2909"></div>
+                          <span  class="task1-title">Web design </span>
+                          <div class="e638_2911"></div>
+                        </div>
+                        <div class=e638_2912>
+                          <div class="e638_2913"></div><span  class="task1-title2">39%</span>
+                        </div>
+                      </div>
+                      <div class=task2>
+                        <div class="e638_2917"></div>
+                        <div class=e638_2918>
+                          <div class="e638_2919"></div><span  class="e638_2920">Learn</span>
+                          <div class="e638_2921"></div>
+                        </div>
+                        <div class=e638_2922>
+                          <div class="e638_2923"></div><span  class="e638_2924">54%</span>
+                        </div>
+                      </div>
+                      <div class=task3>
+                        <div class="e638_2891"></div>
+                        <div class=e638_2892>
+                          <div class="e638_2893"></div><span  class="e638_2894">UIUX Dea...</span>
+                          <div class="e638_2895"></div>
+                        </div>
+                        <div class=e638_2896>
+                          <div class="e638_2897"></div><span  class="e638_2898">80%</span>
+                        </div>    
+                      </div>             
+                </div>
+                <div class="kpi-stats">
+                    <div style="font-size:18px; font-weight:700; margin:5px 0;">KPI Statics</div>
+                    <div class="kpi-circle">
+                        <span>80% KPI</span>
+                        <p>Completed</p>
+                    </div>
+                    <div style="display: flex; justify-content:space-around; margin-top:20px;">
+                        <div style="display: flex; align-items: center; margin-right:16px;">
+                            <div style="width:8px; height:8px; background-color:#cb3cff; border-radius:8px; margin-right:4px;"></div>
+                            Completed
+                        </div>
+                        <div style="display: flex; align-items: center; margin-right:16px;">
+                            <div style="width:8px; height:8px; background-color:#0038ff; border-radius:8px; margin-right:4px;"></div>
+                            Undue
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <div style="width:8px; height:8px; background-color:#00c2ff; border-radius:8px; margin-right:4px;"></div>
+                            Late
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

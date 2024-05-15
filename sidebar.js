@@ -12,6 +12,19 @@ document.addEventListener('DOMContentLoaded', function () {
             if (icons) {
                 icons.style.transform = icons.style.transform === 'rotate(90deg)' ? 'rotate(0deg)' : 'rotate(90deg)';
             }
-        });
+        });      
     });
+    var selectedSubmenu = document.querySelector('.submenu > li > a.menu-active');
+    if (selectedSubmenu) {
+        var submenu = selectedSubmenu.closest('.submenu');
+        var menuItem = submenu.previousElementSibling;
+        menuItem.style.color = '#6c63ff';
+        var icons = menuItem.querySelector('.chevron-icon');
+        if (submenu && submenu.classList.contains('submenu')) {
+            submenu.style.display = 'block';
+        }
+        if (icons) {
+            icons.style.transform = 'rotate(90deg)';
+        }
+    }
 });

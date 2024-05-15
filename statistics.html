@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPlecturer</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar-container"> 
+            <div id="sidebar">
+                <a class="sidebar-header" href="/index.html">
+                    <img src="image/logo.png" alt="Logo" class="logo">
+                    <h2>KPlecturer</h2>
+                </a>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home" ></i>
+                            <div style="display: flex; width: 100%; justify-content:space-between; align-items:center;">
+                                Home
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a href="#">KPI</a></li>
+                            <li><a href="#">Plan</a></li>
+                            <li><a href="#">Activity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="statistics.html" class="menu-active">
+                            <i class="fas fa-star"></i>
+                            Statistics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="setting.html">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <div style="width:100%; display:flex; justify-content:space-between; align-items:center;">
+                                Help
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">How to use</a></li>
+                            <li><a href="#">About us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <a href="#" class="btn-recommendation">Get Recommendation <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>        
+        </div>
+        <div class="dashboard"> 
+            <div id="header-container">
+                <div class="header">
+                    <div class="search-bar">
+                        <div class="logo-section">
+                            <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
+                            <div style="display:flex; flex-direction: column; margin-right:16px;">
+                                <span class="workspace">University</span>
+                                <span class="separator">Workspace</span>
+                            </div>
+                            <i class="fa-solid fa-sort sort-icon"></i>
+                        </div>
+                        <div class="search-section">
+                            <input type="text" class="search-input" placeholder="Search for tasks, events ..">
+                        </div>
+                        <div class="notification-section noti-dropdown">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon noti-dropdown-btn">
+                            <div class="noti-dropdown-content">
+                                <a href="#">You have 2 tasks that are about to be late</a>
+                                <a href="#">Congratulations, you have completed all your work today</a>
+                                <a href="#">You haven't made plans for next week, make it now</a>
+                                <a href="#" style="text-align:center">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-section">
+                        <div style="display:flex; flex-direction: column;">
+                            <span class="account-name">Cristiano</span>
+                            <span class="account-settings">Hust Student</span>
+                        </div>
+                        <div class="user-dropdown">
+                            <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture user-dropbtn">
+                            <div class="user-dropdown-content">
+                                <a href="#">
+                                    <i class="fa-solid fa-user"></i>
+                                    Profile Settings
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>                                    Log Out
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <div class="statistics-container">
+                <div class="statistics">
+                    <div style="display: flex; justify-content:space-between;; align-items:start;">
+                        <h2>Today's Statistics</h2>    
+                        <button id="exportBtn" class="btn-export"><i class="fas fa-file-export"></i> Export</button>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div style="width:100%; display: flex; align-items:center; justify-content:space-between;">
+                                <i class="fas fa-chart-bar"></i>
+                                <h3>3</h3>
+                            </div>
+                            <div style="display: flex; flex-direction:column; justify-content:space-between">
+                                <p>Total Completed Tasks</p>
+                                <p class="sub-title">+5% from yesterday</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div style="width:100%; display: flex; align-items:center; justify-content:space-between;">
+                                <i class="fas fa-clock"></i>
+                                <h3>12.5</h3>
+                            </div>
+                            <div style="display: flex; flex-direction:column; justify-content:space-between">
+                                <p>Total Hours</p>
+                                <p class="sub-title">+5% from yesterday</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div style="width:100%;display: flex; align-items:center; justify-content:space-between;">
+                                <i class="fas fa-exclamation-circle"></i>
+                                <h3>15</h3>
+                            </div>
+                            <div style="display: flex; flex-direction:column; justify-content:space-between">
+                                <p>Incomplete Tasks</p>
+                                <p class="sub-title">+1.2% from yesterday</p>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div style="width:100%; display: flex; align-items:center; justify-content:space-between;">
+                                <i class="fas fa-tasks"></i>
+                                <h3>8</h3>
+                            </div>
+                            <div style="display: flex; flex-direction:column; justify-content:space-between">
+                                <p>New Task</p>
+                                <p class="sub-title">+0.5% from yesterday</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h2>Statistics by month</h2>
+                    <canvas id="monthlyStats"></canvas>
+                </div>
+                <div class="top-activity">
+                    <h2>Top Activity</h2>
+                    <table>
+                        <tr>
+                            <th style="width: 10%">#</th>
+                            <th style="width: 50%">Name</th>
+                            <th style="width: 40%">Progress</th>
+                        </tr>
+                        <tr>
+                            <td>01</td>
+                            <td>Home Decor Range</td>
+                            <td style="display: flex; align-items:center"><progress value="45" max="100"></progress>  <div class="percent">45%</div> </td>
+                        </tr>
+                        <tr>
+                            <td>02</td>
+                            <td>Disney Princess </td>
+                            <td style="display: flex; align-items:center"><progress value="29" max="100"></progress>  <div class="percent">29%</div> </td>
+                        </tr>
+                        <tr>
+                            <td>03</td>
+                            <td>Bathroom Essentials</td>
+                            <td style="display: flex; align-items:center"><progress value="81" max="100"></progress>  <div class="percent">85%</div> </td>
+                        </tr>
+                        <tr>
+                            <td>04</td>
+                            <td>Apple Smartwatches</td>
+                            <td style="display: flex; align-items:center"><progress value="63" max="100"></progress>  <div class="percent">63%</div> </td>
+                        </tr>
+                    </table>
+                    <a href="/activity.html" style="width:100%; display: block; margin: 12px auto 0px; text-align:center; text-decoration:none; color:#333">Show More <i class="fas fa-arrow-down"></i></a>
+                </div>
+                <div class="expected-vs-reality">
+                    <h2>Expected vs Reality</h2>
+                    <canvas id="expectedRealityChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script src="sidebar.js"></script>
+    <script src="statistics.js"></script>
+</body>
+</html>
