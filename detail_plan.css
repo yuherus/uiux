@@ -1,0 +1,177 @@
+
+
+.plan-section {
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.container{
+    display: flex;
+}
+
+.sidebar-container{
+    width: 20%;
+}
+
+.dashboard{
+    margin-left: 20px;
+    width: 80%;
+}
+
+
+
+
+
+.plan-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-left: 50px;
+    margin-top: 20px;
+}   
+
+.plan-section h1 {
+    margin-bottom: 20   px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input[type="text"] {
+    width: 50%; 
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; 
+    margin-left: 20px;
+    height: 50px;
+}
+.form-group input[type="date"] {
+    width: 100%; 
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; 
+    margin-left: 20px;
+    height: 50px;
+}
+.form-time{
+    display: flex;
+    align-items: center;
+}
+#end-date{
+        margin-left: 50px;
+}
+
+.form-group input[type="date"] {
+    width: 40%; 
+    padding: 8px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px; 
+    margin-left: 20px;
+    height: 50px;
+    float: block;
+}
+
+.skills {
+    margin-bottom: 20px;
+}
+
+.skills label {
+    font-weight: bold;
+}
+
+.skills-list {
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.skills-list span {
+    background-color: #f1f3f5;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px; 
+}
+
+.logo-activity-list{
+    float: left;
+    margin-right: 10px;
+}
+.activity {
+    
+    margin-bottom: 20px;
+}
+
+.activity label {
+    font-weight: bold;
+    
+}
+
+.activity-list {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.activity-item {
+    background-color: #f1f3f5;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px; 
+    width: 30%;
+}
+
+.add-activity-btn {
+    background-color: #6C63FF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; 
+    margin-left: 20px;
+}
+
+.form-actions {
+    display: flex;
+    gap: 10px;
+    margin-left: 160px;
+}
+
+.save-btn,
+.remove-btn {
+    margin-left: 50px;
+    width: 97%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; 
+}
+
+.save-btn {
+    background-color: #6C63FF;
+    color: white;
+}
+
+.remove-btn {
+    background-color: #ff4757;
+    color: white;
+    width: 80%;
+}
