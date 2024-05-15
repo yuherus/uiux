@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Plan Popup</title>
+    <link rel="stylesheet" href="create-plan.css">
+</head>
+
+<body>
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="image-container">
+                <img src="./image/create-plan.svg" alt="Decorative Image">
+            </div>
+            <div class="form-container">
+                <div class="header">
+                    <h1>Create your new plan</h1>
+                    <button class="close-btn" id="close-btn">&times;</button>
+                </div class="body-container">
+                <div>
+                    <form action="plan.html" method="get">
+                        <label for="plan-name">Plan's name</label>
+                        <input type="text" id="plan-name" placeholder="Enter your Plan's name">
+
+                        <label for="time">Time</label>
+                        <input type="text" id="time" placeholder="Enter time about this plan">
+
+                        <label for="target">Target</label>
+                        <input type="text" id="target" placeholder="Enter your target for this plan">
+
+                        <label for="activity">Select your Activity</label>
+                        <select id="activity">
+                            <option value="" disabled selected>Select your activity</option>
+                            <option value="activity1">UX/UI</option>
+                            <option value="activity2">English</option>
+                        </select>
+                        <div class="selectes" style="margin-top: 10px;
+                        font-size: 14px;
+                        color: #555">Selected</div>
+
+                        <div id="selectedActivities">
+                        </div>
+                        <div class="footer"><button type="submit" class="submit-btn">Create Plan</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="toast" class="hidden">
+        <img src="./image/Successmark.svg" alt="">
+        <h3 style="color: blueviolet;">
+            Successful!
+        </h3>
+    </div>
+    <script src="create-plan.js"></script>
+</body>
+
+</html>
