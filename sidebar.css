@@ -42,6 +42,7 @@
     align-items: center;
     border-radius: 4px;
     transition: background-color 0.3s;
+    color: #49475a;
 }
 
 
@@ -88,6 +89,6 @@
 }
 
 .btn-recommendation:hover {
-    background-color: #6938ef;
+    background-color: #7a5af8;
 }
 

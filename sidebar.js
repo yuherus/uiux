@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     var menuItems = document.querySelectorAll('.sidebar-menu > li > a');
-    var submenuItems = document.querySelectorAll('.submenu > li > a');
     menuItems.forEach(function (menuItem) {
         menuItem.addEventListener('click', function (e) {
             var icons = menuItem.querySelector('.chevron-icon');
@@ -15,5 +14,17 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });      
     });
-
+    var selectedSubmenu = document.querySelector('.submenu > li > a.menu-active');
+    if (selectedSubmenu) {
+        var submenu = selectedSubmenu.closest('.submenu');
+        var menuItem = submenu.previousElementSibling;
+        menuItem.style.color = '#6c63ff';
+        var icons = menuItem.querySelector('.chevron-icon');
+        if (submenu && submenu.classList.contains('submenu')) {
+            submenu.style.display = 'block';
+        }
+        if (icons) {
+            icons.style.transform = 'rotate(90deg)';
+        }
+    }
 });

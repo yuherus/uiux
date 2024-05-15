@@ -1,0 +1,26 @@
+{
+  "statistics": {
+    "completedTasks": 3,
+    "totalHours": 12.5,
+    "incompleteTasks": 15,
+    "newTasks": 8
+  },
+  "topActivity": [
+    {
+      "name": "Home Decor Range",
+      "progress": 45
+    },
+    {
+      "name": "Disney Princess Pink Bag 18'",
+      "progress": 29
+    },
+    {
+      "name": "Bathroom Essentials",
+      "progress": 18
+    },
+    {
+      "name": "Apple Smartwatches",
+      "progress": 25
+    }
+  ]
+}

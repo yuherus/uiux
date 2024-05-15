@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="statistics.css">
+    <link rel="stylesheet" href="schedule.css">
+    <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
 </head>
@@ -36,7 +37,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="statistics.html" class="menu-active">
+                        <a href="statistics.html">
                             <i class="fas fa-star"></i>
                             Statistics
                         </a>
@@ -57,7 +58,7 @@
                         </a>
                         <ul class="submenu">
                             <li><a href="#">How to use</a></li>
-                            <li><a href="#">About us</a></li>
+                            <li><a href="aboutus.html" class="menu-active">About us</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -111,100 +112,9 @@
                     </div>
                 </div>            
             </div>
-            <div class="statistics-container">
-                <div class="statistics">
-                    <div style="display: flex; justify-content:space-between;; align-items:start;">
-                        <h2>Today's Statistics</h2>    
-                        <button id="exportBtn" class="btn-export"><i class="fas fa-file-export"></i> Export</button>
-                    </div>
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <div style="width:100%; display: flex; align-items:center; justify-content:space-between;">
-                                <i class="fas fa-chart-bar"></i>
-                                <h3>3</h3>
-                            </div>
-                            <div style="display: flex; flex-direction:column; justify-content:space-between">
-                                <p>Total Completed Tasks</p>
-                                <p class="sub-title">+5% from yesterday</p>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div style="width:100%; display: flex; align-items:center; justify-content:space-between;">
-                                <i class="fas fa-clock"></i>
-                                <h3>12.5</h3>
-                            </div>
-                            <div style="display: flex; flex-direction:column; justify-content:space-between">
-                                <p>Total Hours</p>
-                                <p class="sub-title">+5% from yesterday</p>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div style="width:100%;display: flex; align-items:center; justify-content:space-between;">
-                                <i class="fas fa-exclamation-circle"></i>
-                                <h3>15</h3>
-                            </div>
-                            <div style="display: flex; flex-direction:column; justify-content:space-between">
-                                <p>Incomplete Tasks</p>
-                                <p class="sub-title">+1.2% from yesterday</p>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div style="width:100%; display: flex; align-items:center; justify-content:space-between;">
-                                <i class="fas fa-tasks"></i>
-                                <h3>8</h3>
-                            </div>
-                            <div style="display: flex; flex-direction:column; justify-content:space-between">
-                                <p>New Task</p>
-                                <p class="sub-title">+0.5% from yesterday</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="chart-container">
-                    <h2>Statistics by month</h2>
-                    <canvas id="monthlyStats"></canvas>
-                </div>
-                <div class="top-activity">
-                    <h2>Top Activity</h2>
-                    <table>
-                        <tr>
-                            <th style="width: 10%">#</th>
-                            <th style="width: 50%">Name</th>
-                            <th style="width: 40%">Progress</th>
-                        </tr>
-                        <tr>
-                            <td>01</td>
-                            <td>Home Decor Range</td>
-                            <td style="display: flex; align-items:center"><progress value="45" max="100"></progress>  <div class="percent">45%</div> </td>
-                        </tr>
-                        <tr>
-                            <td>02</td>
-                            <td>Disney Princess </td>
-                            <td style="display: flex; align-items:center"><progress value="29" max="100"></progress>  <div class="percent">29%</div> </td>
-                        </tr>
-                        <tr>
-                            <td>03</td>
-                            <td>Bathroom Essentials</td>
-                            <td style="display: flex; align-items:center"><progress value="81" max="100"></progress>  <div class="percent">85%</div> </td>
-                        </tr>
-                        <tr>
-                            <td>04</td>
-                            <td>Apple Smartwatches</td>
-                            <td style="display: flex; align-items:center"><progress value="63" max="100"></progress>  <div class="percent">63%</div> </td>
-                        </tr>
-                    </table>
-                    <a href="/activity.html" style="width:100%; display: block; margin: 12px auto 0px; text-align:center; text-decoration:none; color:#333">Show More <i class="fas fa-arrow-down"></i></a>
-                </div>
-                <div class="expected-vs-reality">
-                    <h2>Expected vs Reality</h2>
-                    <canvas id="expectedRealityChart"></canvas>
-                </div>
-            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+
     <script src="sidebar.js"></script>
-    <script src="statistics.js"></script>
 </body>
 </html>
