@@ -191,7 +191,7 @@
 }
 
 
-.modal-createkpi .btn {
+.modal-createkpi .btn-create {
     background-color: #8000ff;
     color: #fff;
     border: none;
@@ -203,7 +203,7 @@
     margin-top: 10px;
 }
 
-.modal-createkpi .btn:hover {
+.modal-createkpi .btn-create:hover {
     background-color: #7c28aa;
     color: #dbe4e8;
     transform: scale(1.02);
@@ -212,5 +212,5 @@
 .gray-background {
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Màu xám với độ trong suốt 50% */
+    background-color: rgba(0, 0, 0, 0.5);
 }

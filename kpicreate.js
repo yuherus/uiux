@@ -43,3 +43,8 @@ window.onclick = function(event) {
         dropdownMenu.style.display = 'none';
     }
 }
+
+let createKPIButton = document.getElementById("createKPIButton");
+createKPIButton.addEventListener("click", function(){
+    window.location.href = "kpilist.html";
+})
