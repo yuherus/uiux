@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="activitydetail.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="activitylist.html" class="close-button">
+            <img src="image/Cancel.png" alt="Cancel" class="close-image">
+        </a>
+        <div class="content">
+            <div class="content-top">
+                <div class="stretch"></div>
+                <div class="flex-start">
+                    <div class="height-441"></div>
+                    <div class="content-bottom">
+                        <div class="flex-start"></div>
+                    </div>
+                    <div class="button-container">
+                        <div class="delete-button" id="delete-btn">
+                            <div class="delete-text">Delete</div>
+                        </div>
+                        <div class="delete-button" id="save-btn">
+                            <div class="delete-text">Save</div>
+                        </div>
+                    </div>
+                    <div class="column-content">
+                        <div class="flex-start"></div>
+                        <div class="input-group">
+                            <div class="time-inputs">
+                                <div class="time-box">
+                                    <div class="time-content" id="beginDate">
+                                        Begin: 2/4/2024
+                                    </div>
+                                </div>
+                                <div class="time-box">
+                                    <div class="time-content" id="endDate">
+                                        End: 9/6/2024
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="label-de">Description</div>
+                        <div class="description">
+                            <div class="description-content">
+                                <div class="description-text">
+                                    <textarea class="description-input" placeholder="Get started in design by learning the basics. Learn everything from pixels."></textarea>
+                                </div>
+                                <div>
+                                    <img class="small-color-box" src="image/edit.png" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skills">
+                            <div class="skills-header">
+                                <div class="skills-label">Skills</div>
+                                <div class="hidden"></div>
+                            </div>
+                            <div class="skills-options">
+                                <div class="skill-box">
+                                    <div class="skill-content">
+                                        <div class="skill-text">Wireframing</div>
+                                        <div>
+                                            <img class="skill-checkbox" src="image/acx.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-box">
+                                    <div class="skill-content">
+                                        <div class="skill-text">Prototyping</div>
+                                        <div>
+                                            <img class="skill-checkbox" src="image/acx.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-box">
+                                    <div class="skill-content">
+                                        <div class="skill-text">UI/UX</div>
+                                        <div>
+                                            <img class="skill-checkbox" src="image/acx.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="skill-box">
+                                    <div class="skill-content">
+                                        <div class="skill-text">Research</div>
+                                        <div>
+                                            <img class="skill-checkbox" src="image/acx.png" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header">
+                    <div class="header-text">Greatest way to a good Economy</div>
+                    <div class="header-padding"></div>
+                </div>
+                <div>
+                    <img class="contribution-box" src="image/acb2.png" />
+                </div>
+
+                <div>
+                    <img class="progress-box" src="image/acb1.png" />
+                </div>
+                <div id="confirm-dialog" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <p>Are you sure you want to delete?</p>
+                        <button id="confirm-delete">Yes</button>
+                        <button id="cancel-delete">No</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thêm liên kết đến thư viện Flatpickr và jQuery (nếu cần) -->
+            <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+            <!-- Đoạn mã JavaScript để kích hoạt DatePicker -->
+            <script src="script.js"></script>
+
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const createActivityBtn = document.getElementById('save-btn');
+
+                    createActivityBtn.addEventListener('click', function () {
+                        alert("successful! You've created an activity");
+                        setTimeout(function () {
+                            window.location.href = 'activitylist.html';
+                        }, 3); // 5 seconds
+                    });
+                });
+                // Khi tài liệu đã tải hoàn thành
+                $(document).ready(function () {
+                    // Kích hoạt DatePicker cho phần thời gian "Begin"
+                    flatpickr("#beginDate", {
+                        enableTime: false,
+                        dateFormat: "d/m/Y",
+                        onClose: function (selectedDates, dateStr, instance) {
+                            document.getElementById("beginDate").innerText = "Begin: " + dateStr;
+                        }
+                    });
+
+                    // Kích hoạt DatePicker cho phần thời gian "End"
+                    flatpickr("#endDate", {
+                        enableTime: false,
+                        dateFormat: "d/m/Y",
+                        onClose: function (selectedDates, dateStr, instance) {
+                            document.getElementById("endDate").innerText = "End: " + dateStr;
+                        }
+                    });
+                });
+            </script>
+            <style>
+                .button-container {
+                    display: flex;
+                    gap: 10px;
+                }
+
+                .delete-button {
+                    padding: 10px 20px;
+                    color: white;
+                    cursor: pointer;
+                }
+
+                #save-btn {
+                    background-color: green;
+                }
+
+                .modal {
+                    display: none;
+                    /* Hidden by default */
+                    position: fixed;
+                    z-index: 1;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.4);
+                }
+
+                .modal-content {
+                    background-color: white;
+                    margin: 15% auto;
+                    padding: 20px;
+                    border: 1px solid #888;
+                    width: 300px;
+                    text-align: center;
+                }
+
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            </style>
+</body>
+
+</html>

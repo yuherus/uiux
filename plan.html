@@ -32,20 +32,20 @@
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">KPI</a></li>
-                            <li><a href="plan.html">Plan</a></li>
-                            <li><a href="#">Activity</a></li>
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a href="kpilist.html">KPI</a></li>
+                            <li><a href="plan.html" class="menu-active">Plan</a></li>
+                            <li><a href="activitylist.html">Activity</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/statistics.html">
                             <i class="fas fa-star"></i>
                             Statistics
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="/setting.html">
                             <i class="fas fa-cog"></i>
                             Settings
                         </a>
@@ -65,10 +65,49 @@
                     </li>
                 </ul>
                 <div class="sidebar-footer">
-                    <a href="create-plan.html" class="btn-recommendation">New Plan <i class="fa-solid fa-plus"></i></a>
+                    <div id="btn-create-plan" class="btn-recommendation">New Plan <i class="fa-solid fa-plus"></i></div>
+                    <div id="planModal" class="modal">
+                        <div class="popup-content">
+                            <div class="image-container">
+                                <img src="./image/create-plan.svg" alt="Decorative Image">
+                            </div>
+                            <div class="form-container">
+                                <div class="modal-header">
+                                    <h3>Create your new plan</h3>
+                                    <button class="close" id="close-btn">&times;</button>
+                                </div class="body-container">
+                                <div>
+                                    <form action="plan.html" method="get">
+                                        <label for="plan-name">Plan's name</label>
+                                        <input type="text" id="plan-name" placeholder="Enter your Plan's name">
+
+                                        <label for="time">Time</label>
+                                        <input type="text" id="time" placeholder="Enter time about this plan">
+
+                                        <label for="target">Target</label>
+                                        <input type="text" id="target" placeholder="Enter your target for this plan">
+
+                                        <label for="activity">Select your Activity</label>
+                                        <select id="activity">
+                                            <option value="" disabled selected>Select your activity</option>
+                                            <option value="activity1">UX/UI</option>
+                                            <option value="activity2">English</option>
+                                        </select>
+                                        <div id="selectedActivities">
+                                        </div>
+                                        <div class="footer"><button type="submit" class="submit-btn">Create Plan</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div id="toast">
+                    </div>
                 </div>
             </div>
-        </div>
         <div class="dashboard">
             <div id="header-container">
                 <div class="header">
@@ -100,8 +139,8 @@
 
             </div>
             <div class="list-plan">
-                <a href="detail_plan.html">
-                    <div class="box-item-web-design">
+                <a href="detail_plan.html" style="text-decoration: none;">
+                    <div class="box-item-web-design box-item">
                         <div class="item">
                             <div class="item_img">
                                 <img src="/image/web_design_img.png" alt="">
@@ -125,8 +164,8 @@
                 </a>
 
 
-                <a href="detail_plan.html">
-                    <div class="box-item-figma">
+                <a href="detail_plan.html" style="text-decoration: none;">
+                    <div class="box-item-figma box-item">
                         <div class="item">
                             <div class="item_img">
                                 <img src="/image/figma.svg" alt="">
@@ -149,8 +188,8 @@
                     </div>
                 </a>
 
-                <a href="detail_plan.html">
-                    <div class="box-item-logo-design">
+                <a href="detail_plan.html" style="text-decoration: none;">
+                    <div class="box-item-logo-design box-item">
                         <div class="item">
                             <div class="item_img">
                                 <img src="/image/logo-design.svg" alt="">
@@ -173,8 +212,8 @@
                     </div>
                 </a>
 
-                <a href="detail_plan.html">
-                    <div class="box-item-ml">
+                <a href="detail_plan.html" style="text-decoration: none;">
+                    <div class="box-item-ml box-item">
                         <div class="item">
                             <div class="item_img">
                                 <img src="/image/ml-svg.svg" alt="">
@@ -197,8 +236,8 @@
                     </div>
                 </a>
 
-                <a href="detail_plan.html">
-                    <div class="box-item-figma">
+                <a href="detail_plan.html" style="text-decoration: none;">
+                    <div class="box-item-figma box-item">
                         <div class="item">
                             <div class="item_img">
                                 <img src="/image/pts-svg.svg" alt="">
@@ -221,8 +260,8 @@
                     </div>
                 </a>
 
-                <a href="detail_plan.html">
-                    <div class="box-item-web-design">
+                <a href="detail_plan.html" style="text-decoration: none;">
+                    <div class="box-item-web-design box-item">
                         <div class="item">
                             <div class="item_img">
                                 <img src="/image/web_design_img.png" alt="">
@@ -250,6 +289,7 @@
     </div>
 
     <script src="sidebar.js"></script>
+    <script src="plan.js"></script>
 </body>
 
 </html>
