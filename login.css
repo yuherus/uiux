@@ -3,29 +3,38 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif; /* Font Popins */
+    font-weight: 400; /* Trọng lượng font regular */
 
 }
 
 .container button {
   /* Existing styles */
   background-color: #6938EF;
-  color: #fff; /* White text color */
-  font-family: "Poppins", sans-serif; /* Font Popins */
-  font-size: 20px; /* Font size 20px */
+
   padding: 10px 45px;
   border: 1px solid transparent;
-  border-radius: 8px;
+  border-radius: 30px;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   margin-top: 10px;
   cursor: pointer;
-
+margin-bottom:10px;
   /* New properties */
   width: 528px; /* Button width */
-  height: 56px; /* Button height */
+  height: 50px; /* Button height */
 }
+button a{
+    color: #fff; /* White text color */
+    font-family: "Poppins", sans-serif; /* Font Popins */
+    font-size: 18px; /* Font size 20px */
+    font-weight: 400; /* Trọng lượng font regular */
+    text-decoration: none;
+    font-weight: bold;
 
+
+
+}
 
 .container form {
     background-color: #fff;
@@ -43,7 +52,7 @@
     margin: 8px 0;
     padding: 10px 15px;
     font-size: 13px;
-    border-radius: 6px; /* Bo tròn 6px */
+    border-radius: 10px; /* Bo tròn 6px */
     width: 528px; /* Chiều rộng là 528px */
     height: 50px; /* Chiều cao là 64px */
     outline: none;
@@ -114,6 +123,7 @@
     font-family: 'Poppins', sans-serif; /* Sử dụng font chữ Poppins */
     font-size: 40px; /* Đặt kích thước chữ là 48px */
     margin-bottom: 20px; 
+    font-weight: bold;
 
 
 }
@@ -133,14 +143,22 @@
     font-size: 36px;
     text-align: center;
     /* margin-bottom: 40px;  */
+    font-weight: 400; /* Trọng lượng font regular */
+    font-weight: bold;
+
+
 }
 
 .sign-in h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 32px;
+    font-size: 31px;
     text-align: left;
-    margin-bottom: 10px; 
+    margin-bottom: 20px; 
     margin-top:40px;
+    font-weight: 400; /* Trọng lượng font regular */
+    font-weight: bold;
+
+
 
 }
 .sign-in span {
@@ -148,21 +166,26 @@
     font-family: "Poppins", sans-serif; /* Font Popins */
     color: rgb(123, 120, 120); /* Màu #600 */
     text-align: left; /* Căn lề trái */
-    margin-bottom: 30px; 
+    margin-bottom: 20px; 
+    font-weight: 500; /* Trọng lượng font regular */
 
   }
   
 .sign-in h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     color:#9794AA;
+    font-weight: 500; /* Trọng lượng font regular */
+
 }
 .sign-in h4 {
     font-family: 'Poppins', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     text-align: left;
     color:#9794AA;
+    font-weight: 500; /* Trọng lượng font regular */
+
 }
 .Question {
     display: flex;
@@ -170,6 +193,10 @@
     width : 100%;
     padding: 0 15px;
     margin-right: 50px; /* Khoảng cách 10px giữa a1 và a2 */
+    font-family: "Poppins", sans-serif; /* Font Popins */
+    font-weight: 500; /* Trọng lượng font regular */
+
+
 }
 
 .Question div {
@@ -208,3 +235,14 @@
     padding: 0;
     margin: 0;
 }
+.logohi {
+    height: 2em; /* Set the height of the image to match the "Welcome back" text */
+    width: auto; /* Let the width adjust automatically to maintain aspect ratio */
+    margin-bottom: -20px;
+    margin-left: 5px;
+  }
+  .frame-background {
+    background-color: rgba(166, 22, 147, 0.2); /* Trắng với độ trong suốt là 20% */
+    padding: 60px 60px; /* Padding bên trong hộp */
+    box-sizing: border-box;
+  }
