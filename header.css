@@ -88,3 +88,73 @@
 .sort-icon {
    color: #6938ef;
 }
+
+.noti-dropbtn {
+    cursor: pointer;
+  }
+  
+.noti-dropdown {
+position: relative;
+display: inline-block;
+}
+
+.noti-dropdown-content {
+display: none;
+position: absolute;
+top: 25px;
+background-color: #f9f9f9;
+min-width: 300px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+border-radius: 8px;
+}
+
+.noti-dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+border-bottom: 1px solid #dcdcdc;
+}
+
+.noti-dropdown-content a:hover {background-color: #f1f1f1}
+
+.noti-dropdown:hover .noti-dropdown-content {
+display: block;
+}
+
+
+.user-dropbtn {
+    cursor: pointer;
+}
+  
+.user-dropdown {
+position: relative;
+display: inline-block;
+}
+
+.user-dropdown-content {
+display: none;
+position: absolute;
+top: 44px;
+right: 0px;
+background-color: #f9f9f9;
+min-width: 200px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+border-radius: 8px;
+}
+
+.user-dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+border-bottom: 1px solid #dcdcdc;
+}
+
+.user-dropdown-content a:hover {background-color: #f1f1f1}
+
+.user-dropdown:hover .user-dropdown-content {
+display: block;
+}

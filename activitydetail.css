@@ -1,0 +1,404 @@
+body {
+    background-image: url('image/al.png');
+    /* Đường dẫn đến hình ảnh background */
+    background-size: cover;
+    /* Phủ kín toàn bộ nền */
+    background-repeat: no-repeat;
+    /* Không lặp lại hình ảnh */
+    background-attachment: fixed;
+    /* Giữ hình ảnh background cố định khi cuộn trang */
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 1236px;
+    height: 844px;
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0 auto;
+    /* Center the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    left: 20px;
+    top: -59.98px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
+.content-top {
+    align-self: stretch;
+    height: 71px;
+}
+
+.flex-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.height-441 {
+    height: 441px;
+}
+
+.image-small {
+    width: 250px;
+    height: 60px;
+}
+
+.content-bottom {
+    align-self: stretch;
+    height: 89px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    /* Khoảng cách từ đỉnh cùng xuống */
+}
+
+.delete-button {
+    width: 249px;
+    height: 59px;
+    position: relative;
+    background: #5925DC;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.delete-button:first-child {
+    margin-left: 60px;
+    /* Khoảng cách từ lề trái */
+}
+
+.delete-button:last-child {
+    margin-left: 50px;
+    /* Khoảng cách giữa hai nút */
+}
+
+.delete-text {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    word-wrap: break-word;
+}
+
+
+.column-content {
+    width: 686px;
+    height: 497px;
+    left: 49px;
+    top: 20px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 34px;
+}
+
+.label {
+    align-self: stretch;
+    color: #9794AA;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    word-wrap: break-word;
+    top: 230px
+}
+
+.label-de {
+    color: #9794AA;
+    font-size: 16px;
+    font-weight: 500;
+    top: 200px
+}
+
+.time-inputs {
+    top: 250px;
+    height: 56px;
+    display: flex;
+    gap: 30px;
+    /* Adjust gap to balance the width */
+    width: 100%;
+    /* Ensure it takes full width of container */
+    font-family: 'Poppins'
+}
+
+.time-box {
+    top: 250px;
+    width: 50%;
+    /* Each time-box will take up half of the time-inputs container */
+    height: 56px;
+    position: relative;
+    font-family: 'Poppins'
+}
+
+.time-content {
+    width: 300px;
+    top: 250px;
+    height: 100%;
+    padding: 0px 15px;
+    background: rgba(243, 243, 255, 0.9);
+    border-radius: 8px;
+    border: 1px solid #5925DC;
+    display: flex;
+    align-items: center;
+    color: #5925DC;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Poppins'
+}
+
+
+.color-box {
+    width: 21.50px;
+    height: 21.50px;
+    background: #5925DC;
+}
+
+.time-text {
+    flex: 1 1 0;
+    color: #5925DC;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 26px;
+    word-wrap: break-word;
+}
+
+.small-color-box {
+    width: 13.50px;
+    height: 13.50px;
+}
+
+.description {
+    align-self: stretch;
+    height: 164px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.description-content {
+    width: 658px;
+    padding: 15.5px 20px;
+    position: relative;
+    border-radius: 6px;
+    border: 1px #CBCAD7 solid;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.description-text {
+    color: #686677;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+.skills {
+    align-self: stretch;
+    height: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.skills-header {
+    align-self: stretch;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.skills-label {
+    flex: 1 1 0;
+    color: #9794AA;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    word-wrap: break-word;
+    top: 500px
+}
+
+.hidden {
+    height: 27px;
+    opacity: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-options {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: inline-flex;
+}
+
+.skill-box {
+    padding: 8px 16px;
+    background: rgba(243.80, 243, 255, 0.90);
+    border-radius: 8px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.skill-content {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.skill-text {
+    color: #49475A;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 25px;
+    word-wrap: break-word;
+}
+
+.skill-checkbox {
+    width: 10px;
+    height: 10px;
+    position: relative;
+}
+
+.checkbox-background {
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+.checkbox-fill {
+    width: 11.67px;
+    height: 11.67px;
+    left: 4.17px;
+    top: 4.17px;
+    position: absolute;
+    background: #49475A;
+}
+
+.header {
+    height: 71px;
+    left: 282px;
+    top: 82px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.header-text {
+    align-self: stretch;
+    text-align: center;
+    color: #49475A;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 41px;
+    word-wrap: break-word;
+}
+
+.header-padding {
+    align-self: stretch;
+    padding: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.contribution-box {
+    width: 347px;
+    height: 234px;
+    left: 800px;
+    top: 264px;
+    position: absolute;
+}
+
+
+.progress-box {
+    width: 297px;
+    height: 49px;
+    left: 820px;
+    top: 193px;
+    position: absolute;
+}
+
+/* CSS styles here */
+.description-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    margin-bottom: 16px;
+}
+
+.close-button {
+    position: absolute;
+    /* Sử dụng fixed để nút được cố định trên màn hình */
+    top: 20px;
+    right: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+    /* transition: background-color 0.3s ease-in-out; */
+    /* Hiệu ứng chuyển đổi màu nền */
+    z-index: 9999;
+    /* Đặt vị trí của nút lên trên các phần tử khác */
+}
+
+.close-button:hover {
+    background-color: #f0f0f0;
+    /* Màu nền khi di chuột qua */
+}
+
+.close-image {
+    width: 100%;
+    height: auto;
+}

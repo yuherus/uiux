@@ -1,0 +1,306 @@
+body {
+    background: white;
+}
+
+.container {
+    display: flex;
+    justify-content: flex-start;
+    width: 1440px;
+    height: 1024px;
+    position: relative;
+    background: white;
+}
+
+.content {
+    width: 857px;
+    height: 833px;
+    left: 20px;
+    top: 128px;
+    position: absolute;
+}
+
+.card {
+    width: 855.07px;
+    height: 108px;
+    left: 0px;
+    top: 143px;
+    position: absolute;
+    background: white;
+    box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.activity-details {
+    width: 268px;
+    height: 39px;
+    left: 112px;
+    top: 35px;
+    position: absolute;
+}
+
+.detail-link {
+    left: 82px;
+    top: 19px;
+    position: absolute;
+    color: #4318FF;
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 500;
+    text-decoration: underline;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.separator {
+    left: 71px;
+    top: 19px;
+    position: absolute;
+    color: #A3AED0;
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.activity-number {
+    left: 0px;
+    top: 19px;
+    position: absolute;
+    color: #A3AED0;
+    font-size: 14px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 20px;
+    word-wrap: break-word;
+}
+
+.activity-title {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: #2B3674;
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: 16px;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.activity-image {
+    width: 79px;
+    height: 80px;
+    left: 14px;
+    top: 14px;
+    position: absolute;
+}
+
+.image-placeholder {
+    width: 79px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    background: #C4C4C4;
+    border-radius: 8px;
+}
+
+.image-src {
+    width: 79px;
+    height: 80px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    border-radius: 8px;
+}
+
+.progress-icon {
+    width: 18px;
+    height: 18px;
+    left: 807px;
+    top: 45px;
+    position: absolute;
+}
+
+.icon-placeholder {
+    width: 18px;
+    height: 18px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.icon-src {
+    width: 18px;
+    height: 18px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.progress-bar {
+    width: 154.63px;
+    height: 32px;
+    left: 492px;
+    top: 29px;
+    position: absolute;
+}
+
+.percentage {
+    width: 33px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    color: #0A0A1F;
+    font-size: 13px;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 0.26px;
+    word-wrap: break-word;
+}
+
+.status {
+    width: 62px;
+    left: 33px;
+    top: 3px;
+    position: absolute;
+    color: #F56B3F;
+    font-size: 11px;
+    font-family: Poppins;
+    font-weight: 400;
+    letter-spacing: 0.22px;
+    word-wrap: break-word;
+    white-space: nowrap;
+}
+
+.bar-bg {
+    width: 154.63px;
+    height: 6px;
+    left: 0px;
+    top: 26px;
+    position: absolute;
+    opacity: 0.08;
+    background: #0A0A1F;
+    border-radius: 2px;
+}
+
+.bar-fill {
+    width: 95.45px;
+    height: 6px;
+    left: 0px;
+    top: 26px;
+    position: absolute;
+    background: #DC3545;
+    border-radius: 2px;
+}
+.bar-fill-1 {
+    width: 95.45px;
+    height: 6px;
+    left: 0px;
+    top: 26px;
+    position: absolute;
+    background: #5BBFFF;
+    border-radius: 2px;
+}
+.bar-fill-2 {
+    width: 95.45px;
+    height: 6px;
+    left: 0px;
+    top: 26px;
+    position: absolute;
+    background: #FC6B21;
+    border-radius: 2px;
+}
+.image-container {
+    width: 212px;
+    height: 208px;
+    position: absolute;
+    left: 920px;
+    top: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: 0 0;
+}
+
+.display-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.upload-box {
+    width: 210px;
+    height: 110px;
+    position: absolute;
+    left: 920px;
+    top: 447px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #623CE7;
+    border-radius: 30px; /* Đảm bảo các góc bo tròn đều nhau */
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease;
+}
+
+.upload-box:hover {
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.35);
+}
+
+.upload-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+.upload-text {
+    color: white;
+    font-size: 18px;
+    font-family: Poppins, sans-serif;
+    font-weight: 600; /* Không dùng chữ nghiêng */
+    margin-bottom: 10px; /* Khoảng cách giữa chữ và biểu tượng */
+}
+
+.upload-icon {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%; /* Hình tròn hoàn hảo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.icon-structure {
+    width: 20px;
+    height: 20px;
+    position: relative;
+}
+
+.icon-structure::before, .icon-structure::after {
+    content: "";
+    position: absolute;
+    background: #623CE7;
+}
+
+.icon-structure::before {
+    width: 2px;
+    height: 20px;
+    left: 9px;
+    top: 0;
+}
+
+.icon-structure::after {
+    width: 20px;
+    height: 2px;
+    top: 9px;
+    left: 0;
+}
+
