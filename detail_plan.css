@@ -1,12 +1,3 @@
-
-
-.plan-section {
-    font-family: poppins;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-}
-
 .container{
     display: flex;
 }
@@ -20,17 +11,12 @@
     width: 80%;
 }
 
-
-
-
-
 .plan-section {
+    margin-top: 10px;
     background-color: white;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-left: 50px;
-    margin-top: 20px;
 }   
 
 .plan-section h1 {
@@ -55,17 +41,9 @@
     border-radius: 5px;
     font-size: 14px; 
     margin-left: 20px;
-    height: 50px;
+    height: 30px;
 }
-.form-group input[type="date"] {
-    width: 100%; 
-    padding: 8px; 
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px; 
-    margin-left: 20px;
-    height: 50px;
-}
+
 .form-time{
     display: flex;
     align-items: center;
@@ -75,13 +53,14 @@
 }
 
 .form-group input[type="date"] {
+    font-family: poppins;
     width: 40%; 
     padding: 8px; 
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px; 
     margin-left: 20px;
-    height: 50px;
+    height: 30px;
     float: block;
 }
 
@@ -151,13 +130,12 @@
 .form-actions {
     display: flex;
     gap: 10px;
-    margin-left: 160px;
+    justify-content: center;
 }
 
 .save-btn,
 .remove-btn {
-    margin-left: 50px;
-    width: 97%;
+    width:100px;
     padding: 10px;
     border: none;
     border-radius: 5px;
@@ -173,5 +151,4 @@
 .remove-btn {
     background-color: #ff4757;
     color: white;
-    width: 80%;
 }
