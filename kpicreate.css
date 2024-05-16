@@ -1,0 +1,216 @@
+
+.modal-createkpi {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-createkpi .modal-content{
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 800px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+.image-modal {
+    flex: 0.8;
+    background: linear-gradient(180deg, #8a2be2, #ff7f50);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-modal img {
+    max-width: 100%;
+    height: auto;
+    border-right: 1px solid #ddd;
+}
+
+.form-modal {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-modal h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.form-modal .close{
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0px 1.8px 1px 2px rgba(119, 119, 119, 0.2);
+    
+}
+
+.form-modal .icon{
+    font-size: 12px;
+    color: #444;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    color: #8c8c8c;
+}
+
+.form-group input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: poppins;
+}
+
+.form-group input[type="text"]{
+    font-size: poppins;
+    font-size: 14px;
+}
+
+.form-group .dropdown-modal {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.form-group .dropdown {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.form-group span{
+    font-size: 14px;
+}
+
+.form-group .arrow {
+    font-size: 16px;
+}
+
+.form-group .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.form-group .dropdown-item {
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.form-group .dropdown-item:hover {
+    background-color: #ded3e9;
+}
+
+.form-group .selected-plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group .selected-plan {
+    display: flex;
+    align-items: center;
+    background-color: #f5f3ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group .selected-plan .remove-plan {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+.radio-container {
+    display: flex;
+    gap: 20px;
+}
+
+.modal-createkpi .radio-item {
+    background-color: #f5edff;
+    border: 2px solid #a855f7;
+    border-radius: 12px;
+    padding: 10px 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 220px;
+}
+
+.modal-createkpi .radio-item input[type="radio"] {
+    width: 15px;
+    accent-color: #a855f7;
+}
+
+.modal-createkpi .radio-item label {
+    color: #a855f7;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+
+.modal-createkpi .btn {
+    background-color: #8000ff;
+    color: #fff;
+    border: none;
+    padding: 10px 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.modal-createkpi .btn:hover {
+    background-color: #7c28aa;
+    color: #dbe4e8;
+    transform: scale(1.02);
+}
+
+.gray-background {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu xám với độ trong suốt 50% */
+}
