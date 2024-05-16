@@ -191,3 +191,9 @@
     background-color: #d2cde1;
     color: #6d21b9;
 }
+
+.prev.disabled,
+.next.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
