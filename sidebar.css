@@ -86,6 +86,7 @@
     border-radius: 4px;
     text-decoration: none;
     transition: background-color 0.3s;
+    cursor: pointer;
 }
 
 .btn-recommendation:hover {
