@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPlecturer</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="kpilist.css">
+    <link rel="stylesheet" href="kpicreate.css">
+    <link rel="stylesheet" href="helpkpilist.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+</head>
+<body>
+    <div class="overlay-container">
+        <div class="overlay" id="overlay">
+        </div>
+        <div class="help-content">
+            <div class="help-kpilist">
+                <div class="help-choose-kpi">
+                    Choose KPI
+                </div>
+                <div class="help-add-kpi">
+                    Add new KPI
+                </div>
+                <div class="arrow-add-kpi">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>              
+                <button class="help-add-kpi-btn">Add New KPI</button>
+                <div class="help-submenu">KPI</div>
+                <div class="arrow-submenu">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>
+            </div>
+            <div class="help-kpicreate">
+                <div class="help-input">
+                    Fill in blank
+                </div>
+                <input type="text" id="help-kpi-name" placeholder="Enter your KPI name" disabled>
+                <div class="arrow-input">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div> 
+                <div class="help-select-plan">
+                    How to create plan
+                </div>
+                <div class="help-dropdown">
+                    <span>Select your plan</span>
+                    <span class="arrow">&#9662;</span>
+                </div>             
+                <div class="arrow-select-plan">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div id="sidebar-container"> 
+            <div id="sidebar">
+                <a class="sidebar-header" href="/index.html">
+                    <img src="image/logo.png" alt="Logo" class="logo">
+                    <h2>KPlecturer</h2>
+                </a>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home" ></i>
+                            <div style="display: flex; width: 100%; justify-content:space-between; align-items:center;">
+                                Home
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a href="#" class="menu-active">KPI</a></li>
+                            <li><a href="#">Plan</a></li>
+                            <li><a href="#">Activity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="statistics.html">
+                            <i class="fas fa-star"></i>
+                            Statistics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="setting.html">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <div style="width:100%; display:flex; justify-content:space-between; align-items:center;">
+                                Help
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">How to use</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <button onclick="openCreateKpi()" class="new-kpi-btn">Add New KPI</button>
+                </div>
+            </div>        
+        </div>
+        <div class="dashboard"> 
+            <div id="header-container">
+                <div class="header">
+                    <div class="search-bar">
+                        <div class="logo-section">
+                            <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
+                            <div style="display:flex; flex-direction: column; margin-right:16px;">
+                                <span class="workspace">University</span>
+                                <span class="separator">Workspace</span>
+                            </div>
+                            <i class="fa-solid fa-sort sort-icon"></i>
+                        </div>
+                        <div class="search-section">
+                            <input type="text" class="search-input" placeholder="Search for tasks, events ..">
+                        </div>
+                        <div class="notification-section">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon">
+                        </div>
+                    </div>
+                    <div class="account-section">
+                        <div style="display:flex; flex-direction: column;">
+                            <span class="account-name">Cristiano</span>
+                            <span class="account-settings">Hust Student</span>
+                        </div>
+                        <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
+                    </div>
+                </div>            
+            </div>
+            <div class="main-content">
+                <div class="kpi-list">
+                    <div class="kpi-card in-progress">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Weekly Team Meeting</h2>
+                            </a>
+                            <p>Organize and lead the weekly team meeting to discuss project progress.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="in-progress">Progress</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Team Meeting">
+                            </div>
+                            </a>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card late">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Product Quality Check</h2>
+                            </a>
+                            <p>Conduct product quality checks to ensure standards before market release.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="late">Late</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Product Quality Check">
+                            </a>
+                        </div>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card completed">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Website Performance Optimization</h2>
+                            </a>
+                            <p>Optimize the website's performance to improve loading times and user experience.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="completed">Completed</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Research Topic">
+                            </div>
+                            </a>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card in-progress">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Annual Budget Planning</h2>
+                            </a>
+                            <p>Prepare the annual budget, including forecasts for revenue and expenses.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="in-progress">Progress</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Midterm Exam Preparation">
+                            </a>
+                        </div>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card late">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Employee Training Session</h2>
+                            </a>
+                            <p> Plan and execute a training session for new employees on company policies and procedures.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="late">Late</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Lab Practice">
+                            </div>
+                            </a>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card completed">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Monthly Sales Report</h2>
+                            </a>
+                            <p>Compile and submit the monthly sales report, including analysis of sales trends and performance.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="completed">Completed</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Monthly Sales Report">
+                            </a>
+                        </div>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card in-progress">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>Customer Satisfaction Survey</h2>
+                            </a>
+                            <p>Design and distribute the customer satisfaction survey to gather feedback on recent product releases.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="in-progress">Progress</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Customer Satisfaction Survey">
+                            </a>
+                        </div>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                    <div class="kpi-card in-progress">
+                        <div class="card-content">
+                            <a href="kpidetail.html">
+                                <h2>New Hire Training Program</h2>
+                            </a>
+                            <p>Develop and implement a training program for new hires, including orientation and initial skill training.</p>
+                            <div class="meta">
+                                <span class="status">Status: <span class="in-progress">Progress</span></span>
+                                <span>Created on: 18/06/2023</span>
+                                <span>Deadline: 20/06/2023</span>
+                            </div>
+                        </div>
+                        <div class="card-image">
+                            <a href="kpidetail.html">
+                                <img src="https://via.placeholder.com/60" alt="Employee Training Session">
+                            </a>
+                        </div>
+                        <a class="edit" href="kpidetail.html">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a href="#" class="prev">&laquo;</a>
+                    <a href="#" class="page">1</a>
+                    <a href="#" class="page active">2</a>
+                    <a href="#" class="page">3</a>
+                    <a href="#" class="page">4</a>
+                    <a href="#" class="page">5</a>
+                    <a href="#" class="page">6</a>
+                    <a href="#" class="next">&raquo;</a>
+                  </div>
+            </div>
+            
+        </div>
+        <div id="id01" class="modal-createkpi">
+            <div class="modal-content" >
+                <div class="image-modal">
+                    <img src="your-image-source.jpg" alt="Decorative Spiral Image">
+                </div>
+                <div class="form-modal">
+                    <h2>Create your new KPI</h2>
+                    <button onclick="closeModal()" class="close">
+                        <i class="icon fa-regular fa-x"></i>
+                    </button>
+                    <form>
+                        <div class="form-group">
+                            <label for="kpi-name">Activity's name</label>
+                            <input type="text" id="kpi-name" placeholder="Enter your KPI name">
+                        </div>
+                        <div class="form-group">
+                            <label for="target">Target</label>
+                            <input type="text" id="target" placeholder="Enter your target for this KPI">
+                        </div>
+                        <div class="form-group">
+                            <label for="plan">Select your Plan</label>
+                            <div class="dropdown-modal">
+                                <div class="dropdown" onclick="toggleDropdown()">
+                                    <span>Select your plan</span>
+                                    <span class="arrow">&#9662;</span>
+                                </div>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item" onclick="selectPlan('Web design')">Web design</div>
+                                    <div class="dropdown-item" onclick="selectPlan('Graphic design')">Graphic design</div>
+                                    <div class="dropdown-item" onclick="selectPlan('SEO')">SEO</div>
+                                    <!-- Add more options as needed -->
+                                </div>
+                            </div>
+                            <div class="selected-plans" id="selected-plans">
+                                <!-- Selected plans will appear here -->
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Evaluation methods</label>
+                            <div class="radio-container">
+                                <div class="radio-item">
+                                    <input type="radio" id="option1" name="option">
+                                    <label for="option1">Percentage (Actual time to complete/Set time)</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="option2" name="option">
+                                    <label for="option2">Percentage (Task completed/Total Task)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-create" id="createKPIButton">Create KPI</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="kpilist.js"></script>
+    <script src="kpicreate.js"></script>
+    <script src="helpkpilist.js"></script>
+
+</body>
+</html>
