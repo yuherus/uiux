@@ -1,0 +1,69 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #BDB4FE; /* Màu nền của trang */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container_success {
+    background-color: #fff; /* Màu nền của form */
+    border-radius: 20px; /* Bo tròn viền của form */
+    padding: 130px 120px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Hiệu ứng bóng đổ */
+}
+
+.form-container.success {
+    text-align: center;
+}
+
+.button-success button {
+    background-color: #6938EF; /* Màu nền của nút */
+    color: #fff;
+    border: none;
+    border-radius: 20px; /* Bo tròn viền của nút */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi màu nền */
+    margin-top: 40px;
+}
+
+.button-success button:hover {
+    background-color: #5228b3; /* Màu nền của nút khi hover */
+}
+
+.success-logo-frame {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.success-logo {
+    max-width: 100px; /* Độ rộng tối đa của logo */
+    height: auto;
+}
+.header_verifi {
+    font-family: "Poppins", sans-serif; /* Đổi font chữ sang Poppins */
+    font-size: 40px; /* Đổi kích thước thành 40px */
+    color: #000; /* Màu chữ đen */
+    font-weight: 400; /* Trọng lượng font regular */
+
+}
+.container_success span {
+    font-size: 17px; /* Đổi kích thước thành 17px */
+    color: #989898; /* Màu chữ xám */
+    font-family: "Poppins", sans-serif; /* Đổi font chữ sang Poppins */
+    margin-bottom: 20px;
+    font-weight: 400; /* Trọng lượng font regular */
+}
+button a{
+    color: #fff; /* White text color */
+    font-family: "Poppins", sans-serif; /* Font Popins */
+    font-size: 15px; /* Font size 20px */
+    font-weight: 400; /* Trọng lượng font regular */
+    text-decoration: none;
+    font-weight: bold;
+}
