@@ -582,4 +582,319 @@ cursor: pointer;
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
+  .update-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.update-popup-content {
+    background-color: white;
+    border-radius: 20px;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-main-content {
+    width: 100%;
+}
+
+.update-modal-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.update-header-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.update-close {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.update-progress-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.update-progress-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 18px;
+}
+
+.update-progress-status {
+    color: #FF6A3D;
+}
+
+.update-progress-bar {
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 10px;
+    height: 10px;
+    margin-top: 5px;
+    position: relative;
+}
+
+.update-progress-fill {
+    background-color: #5BBFFF;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.update-content {
+    width: 100%;
+}
+
+.update-time-inputs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.update-time-box {
+    background: #F3F3F3;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: space-between;
+}
+
+.update-time-icon {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.update-time-content {
+    flex-grow: 1;
+    font-size: 14px;
+}
+
+.update-edit-icon {
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.update-description-section {
+    margin-bottom: 20px;
+}
+
+.update-label-de {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.update-description {
+    background: #F3F3F3;
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.update-description-input {
+    flex-grow: 1;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    resize: none;
+}
+
+.update-skills {
+    margin-bottom: 20px;
+}
+
+.update-skills-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.update-skills-label {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.update-skills-options {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.update-skill-box {
+    background: #E0E0E0;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.update-skill-remove {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.update-button-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.update-button {
+    background-color: #4318FF;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#save-btn {
+    background-color: #4318FF;
+}
+
+#delete-btn {
+    background-color: #FF3D71;
+}
+
+.update-button:hover {
+    opacity: 0.8;
+}
+
+.update-stats-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.update-daily-contribution {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-daily-contribution-number {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.update-daily-contribution-change {
+    color: #27C383;
+    font-size: 14px;
+}
+
+.update-contribution-graph {
+    width: 50%;
+    height: 150px;
+    position: relative;
+}
+
+#contributionChart {
+    width: 100%;
+    height: 100%;
+}
+.update-progress-bar {
+    width: 100%;
+    background-color: #E0E0E0;
+    border-radius: 10px;
+    height: 8px; /* Thu nhỏ lại thanh tiến độ */
+    margin-top: 5px;
+    position: relative;
+}
+
+.update-contribution-graph {
+    width: 80%; /* Giảm kích thước của biểu đồ */
+    height: 100px; /* Giảm kích thước của biểu đồ */
+    position: relative;
+}
+.popup-successful {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.popup-successful-content {
+    text-align: center;
+}
+
+.popup-successful-image {
+    width: 92px;
+    height: 77px;
+}
+
+.popup-successful-title {
+    font-size: 36px;
+    color: #1E1E1E;
+    font-family: Poppins;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.popup-successful-description {
+    font-size: 18px;
+    color: #5925DC;
+    font-family: Poppins;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.popup-successful-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-successful-button {
+    background: linear-gradient(0deg, #6938EF 0%, #6938EF 100%), linear-gradient(128deg, #CB3CFF 20%, #7F25FB 68%);
+    color: white;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 800;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.popup-successful-button:hover {
+    background: linear-gradient(0deg, #7F25FB 0%, #7F25FB 100%), linear-gradient(128deg, #CB3CFF 20%, #7F25FB 68%);
+}
   

@@ -80,4 +80,20 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
       main.appendChild(toast);
     }
   }
-  
+  // Hiển thị popup khi nhấp vào nút "Create Activity"
+document.getElementById("create-activity-btn").addEventListener("click", function() {
+  document.getElementById("successPopup").style.display = "block";
+});
+
+// Đóng popup khi nhấp vào nút "Back to Activity"
+document.getElementById("backToActivity").addEventListener("click", function() {
+  document.getElementById("successPopup").style.display = "none";
+});
+
+// Đóng popup khi nhấp vào nút "Continue with Plan"
+document.getElementById("continueWithKPI").addEventListener("click", function() {
+  document.getElementById("successPopup").style.display = "none";
+});
+document.getElementById("continueWithKPI").addEventListener("click", function() {
+  window.location.href = "kpilist.html";
+});
