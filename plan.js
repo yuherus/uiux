@@ -90,7 +90,7 @@ document.getElementById("backToActivity").addEventListener("click", function() {
   document.getElementById("successPopup").style.display = "none";
 });
 
-// Đóng popup khi nhấp vào nút "Continue with Plan"
+// Đóng popup khi nhấp vào nút "Continue with KPI"
 document.getElementById("continueWithKPI").addEventListener("click", function() {
   document.getElementById("successPopup").style.display = "none";
 });
