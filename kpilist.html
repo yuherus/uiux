@@ -30,10 +30,10 @@
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="index.html" class="menu-active">Dashboard</a></li>
-                            <li><a href="#">KPI</a></li>
-                            <li><a href="#">Plan</a></li>
-                            <li><a href="#">Activity</a></li>
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li><a href="kpilist.html" class="menu-active">KPI</a></li>
+                            <li><a href="plan.html">Plan</a></li>
+                            <li><a href="activitylist.html">Activity</a></li>
                         </ul>
                     </li>
                     <li>
@@ -63,7 +63,7 @@
                     </li>
                 </ul>
                 <div class="sidebar-footer">
-                    <button onclick="openCreateKpi()" class="new-kpi-btn">Add New KPI</button>
+                    <button onclick="openCreateKpi()" class="new-kpi-btn btn-recommendation">New KPI <i class="fa-solid fa-plus"></i></button>
                 </div>
             </div>        
         </div>
@@ -282,7 +282,7 @@
         <div id="id01" class="modal-createkpi">
             <div class="modal-content" >
                 <div class="image-modal">
-                    <img src="your-image-source.jpg" alt="Decorative Spiral Image">
+                    <img src="image/newkpi.png" alt="Decorative Spiral Image">
                 </div>
                 <div class="form-modal">
                     <h2>Create your new KPI</h2>
@@ -329,11 +329,14 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn-create" id="createKPIButton">Create KPI</button>
+                        <div style="display: flex; justify-content:end;">
+                            <button type="submit" class="btn-create" id="createKPIButton">Create KPI</button>       
+                        </div>
                     </form>
                 </div>
-            </div>
-            
+            </div>       
+        </div>
+        <div id="toast">
         </div>
     </div>
 

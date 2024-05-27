@@ -53,10 +53,26 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "none";
     });
 
+    var updatePlanButton = document.getElementById("save-btn");
+    updatePlanButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        showUpdateToast();
+        modal1.style.display = "none";
+    });
+
     function showSuccessToast() {
         toast({
           title: "Thành công!",
           message: "Bạn đã tạo Acitivity thành công.",
+          type: "success",
+          duration: 5000
+        });
+      }
+    
+      function showUpdateToast() {
+        toast({
+          title: "Thành công!",
+          message: "Bạn đã cập nhật Acitivity thành công.",
           type: "success",
           duration: 5000
         });
@@ -108,7 +124,72 @@ function toast({ title = "", message = "", type = "info", duration = 3000 }) {
       main.appendChild(toast);
     }
   }
-  
+  // Placeholder for any future JavaScript
+document.querySelectorAll('.edit-button').forEach(button => {
+    button.addEventListener('click', () => {
+
+    });
+});
+
+document.querySelectorAll('.remove-tag').forEach(button => {
+    button.addEventListener('click', () => {
+        button.parentElement.remove();
+    });
+});
+
+function selectPlan(plan) {
+    console.log("Selected plan: ", plan);
+    const selectedPlansContainer = document.getElementById('selected-skill');
+    
+    // Check if the plan is already selected
+    if (Array.from(selectedPlansContainer.children).some(child => child.textContent.includes(plan))) {
+        return; 
+    }
+
+    const planElement = document.createElement('div');
+    planElement.className = 'selected-plan';
+    planElement.innerHTML = `
+        <span>${plan}</span>
+        <span class="remove-plan" onclick="removePlan(this)">&#10005;</span>
+    `;
+
+    selectedPlansContainer.appendChild(planElement);
+}
+
+
+function removePlan(element) {
+    const selectedPlansContainer = document.getElementById('selected-skill');
+    selectedPlansContainer.removeChild(element.parentElement);
+}
+
+
+function toggleDropdown() {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('.dropdown') && !event.target.matches('.dropdown *')) {
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        dropdownMenu.style.display = 'none';
+    }
+}
+
+
+// Placeholder for any future JavaScript
+document.querySelectorAll('.edit-button').forEach(button => {
+    button.addEventListener('click', () => {
+        alert('Edit functionality to be implemented');
+    });
+});
+
+document.querySelectorAll('.remove-tag').forEach(button => {
+    button.addEventListener('click', () => {
+        button.parentElement.remove();
+    });
+});
+
+
 // Hiển thị popup khi nhấp vào nút "Create Activity"
 document.getElementById("create-activity-btn").addEventListener("click", function() {
     document.getElementById("successPopup").style.display = "block";

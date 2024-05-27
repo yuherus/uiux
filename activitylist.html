@@ -30,10 +30,10 @@
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="index.html" class="menu-active">Dashboard</a></li>
+                            <li><a href="index.html">Dashboard</a></li>
                             <li><a href="kpilist.html">KPI</a></li>
                             <li><a href="plan.html">Plan</a></li>
-                            <li><a href="activitylist.html">Activity</a></li>
+                            <li><a href="activitylist.html"  class="menu-active">Activity</a></li>
                         </ul>
                     </li>
                     <li>
@@ -126,7 +126,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">64%</div>
                                 <div class="status">Pending</div>
@@ -150,7 +150,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">70%</div>
                                 <div class="status">Pending</div>
@@ -174,7 +174,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">80%</div>
                                 <div class="status">Almost Done</div>
@@ -198,7 +198,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">80%</div>
                                 <div class="status">Almost Done</div>
@@ -222,7 +222,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">20%</div>
                                 <div class="status">Pending</div>
@@ -236,9 +236,9 @@
                     </div>
                     <div id="activityModalUpdate" class="modal">
                         <div class="popup-content">
-                            <div class="main-content">
-                                <div class="modal-header">
-                                    <h3>Activity details</h3>
+                            <div class="activity-content">
+                                <div class="modal-header1">
+                                    <h3 style="width:100%; text-align:center; margin-top:20px">Technology behind the Blockchain</h3>
                                     <button class="close" id="close-btn1">&times;</button>
                                 </div>
                                 <div class="body-container">
@@ -488,6 +488,7 @@
     <script src="activitylist.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         $(document).ready(function () {
             flatpickr("#beginDate", {
@@ -506,6 +507,54 @@
                 }
             });
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            flatpickr("#beginDate1", {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                onClose: function (selectedDates, dateStr, instance) {
+                    document.getElementById("beginDate1").innerText = "Begin: " + dateStr;
+                }
+            });
+
+            flatpickr("#endDate1", {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                onClose: function (selectedDates, dateStr, instance) {
+                    document.getElementById("endDate1").innerText = "End: " + dateStr;
+                }
+            });
+        });
+    </script>
+    <script>
+        const ctx = document.getElementById('dailyContributionChart').getContext('2d');
+        const dailyContributionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['00', '04', '08', '12', '14', '16', '18'],
+                datasets: [{
+                    label: 'Hours',
+                    data: [3, 4, 2, 6, 5, 7, 1],
+                    backgroundColor: 'rgba(98, 0, 234, 0.5)',
+                    borderColor: 'rgba(98, 0, 234, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
     </script>
 </body>
 </html>

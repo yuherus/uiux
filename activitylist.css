@@ -114,8 +114,8 @@
 
 }
 
-.progress-bar {
-    width: 154.63px;
+.activity-progress-bar {
+    width: 154px;
     height: 32px;
 }
 
@@ -126,7 +126,6 @@
     font-family: Poppins;
     font-weight: 400;
     letter-spacing: 0.26px;
-    word-wrap: break-word;
 }
 
 .status {
@@ -283,6 +282,13 @@
     align-items: center;
 }
 
+.modal-header1 {
+    margin: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .modal-header h3 {
     margin: 0;
     font-size: 24px;
@@ -400,7 +406,8 @@ cursor: pointer;
 }
 
 .skills-section {
-    gap: 20px;
+    margin-top: 12px;
+    gap: 8px;
 }
 
 .select-box {
