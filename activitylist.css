@@ -114,8 +114,8 @@
 
 }
 
-.progress-bar {
-    width: 154.63px;
+.activity-progress-bar {
+    width: 154px;
     height: 32px;
 }
 
@@ -126,7 +126,6 @@
     font-family: Poppins;
     font-weight: 400;
     letter-spacing: 0.26px;
-    word-wrap: break-word;
 }
 
 .status {
@@ -283,6 +282,13 @@
     align-items: center;
 }
 
+.modal-header1 {
+    margin: 10px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .modal-header h3 {
     margin: 0;
     font-size: 24px;
@@ -316,7 +322,7 @@ cursor: pointer;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     margin: 40px auto;
-    width: 70%;
+    width: 60%;
     height: 480px;
 }
 
@@ -399,7 +405,8 @@ cursor: pointer;
 }
 
 .skills-section {
-    gap: 20px;
+    margin-top: 12px;
+    gap: 8px;
 }
 
 .select-box {
@@ -583,3 +590,234 @@ cursor: pointer;
     cursor: pointer;
   }
   
+
+.activity-content {
+    width: 100%;
+}
+
+
+.time-section, .description-section, .skills-section, .progress-section, .daily-contribution-section {
+    margin-bottom: 20px;
+}
+
+.time-box, .description-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+label {
+    margin-right: 10px;
+    color: #888;
+}
+
+input[type="text"] {
+    border: none;
+    background: #f0f0f0;
+    padding: 5px;
+    border-radius: 5px;
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.edit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+}
+
+select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: #e0e0e0;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.remove-tag {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 16px;
+    color: #888;
+}
+
+.save-button {
+    position: absolute;
+    left: 580px;
+    bottom: 60px;
+    font-family: poppins;
+    width: 100px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.progress-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.progress-bar {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.progress {
+    background: #6200ea;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.progress-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.progress-info span {
+    font-size: 14px;
+}
+
+.daily-contribution-section {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 40px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.contribution-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.hours {
+    font-size: px;
+    font-weight: bold;
+}
+
+.percentage {
+    color: green;
+}
+
+.chart {
+    height: 100px;
+    background: #e0e0e0;
+    border-radius: 10px;
+}
+
+.dropdown-modal {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.arrow {
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #ded3e9;
+}
+
+.selected-plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selected-plan {
+    display: flex;
+    align-items: center;
+    background-color: #f5f3ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.selected-plan .remove-plan {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+.bar-bg1{
+    width: 200px;
+    height: 6px;
+    position: absolute;
+    opacity: 0.08;
+    background: #0A0A1F;
+    border-radius: 2px;
+}
+
+.bar-fill3{
+    width: 160px;
+    height: 6px;
+    position: absolute;
+    background: #5BBFFF;
+    border-radius: 2px;
+}
+
+canvas {
+    width: 100% !important;
+    height: auto !important;
+}

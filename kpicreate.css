@@ -14,7 +14,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
     overflow: hidden;
-    max-width: 800px;
+    max-width: 840px;
     width: 100%;
     background-color: white;
     position: relative;
@@ -22,21 +22,18 @@
 
 .image-modal {
     flex: 0.8;
-    background: linear-gradient(180deg, #8a2be2, #ff7f50);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .image-modal img {
-    max-width: 100%;
-    height: auto;
-    border-right: 1px solid #ddd;
+    height: 540px;
 }
 
 .form-modal {
     flex: 1;
-    padding: 20px;
+    padding: 10px 16px 16px 16px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +41,7 @@
 
 .form-modal h2 {
     margin-top: 0;
+    margin-bottom: 10px;
     color: #333;
 }
 
@@ -52,13 +50,17 @@
     width: 25px;
     background-color: white;
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
     border: none;
     border-radius: 15px;
-    box-shadow: 0px 1.8px 1px 2px rgba(119, 119, 119, 0.2);
     
 }
+
+.form-modal .close:hover{
+    background-color: #f5f3ff;
+}
+    
 
 .form-modal .icon{
     font-size: 12px;
@@ -91,7 +93,7 @@
 
 .form-group .dropdown-modal {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .form-group .dropdown {
@@ -204,8 +206,8 @@
 }
 
 .modal-createkpi .btn-create:hover {
-    background-color: #7c28aa;
-    color: #dbe4e8;
+    background-color: #7a5af8;
+    color: #ffffff;
     transform: scale(1.02);
 }
 
