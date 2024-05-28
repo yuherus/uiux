@@ -6,137 +6,63 @@ body {
 }
 
 .container {
-    width: 1440px;
-    height: 1024px;
-    position: relative;
     background: white;
 }
 
-.sidebar {
-    width: 286px;
-    height: 1024px;
-    position: absolute;
-    left: -5px;
-    top: 0;
-}
-
-.sidebar-blur {
-    width: 286px;
-    height: 1024px;
-    position: absolute;
-    transform: rotate(180deg);
-    transform-origin: 0 0;
-    background: #F6F7FC;
-    backdrop-filter: blur(24px);
-}
-
-.header {
-    width: 1032px;
-    height: 193px;
-    position: absolute;
-    left: 338px;
-    top: 100px;
-    background: linear-gradient(101deg, #5C24FC 0%, #9D7AFF 100%);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.header-text {
-    color: white;
-    font-size: 30px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 1.5;
-}
-
-.logo {
-    width: 246px;
-    height: 88.89px;
-    position: absolute;
-    left: 13px;
-    top: 8px;
-}
-
-.logo-part1, .logo-part2 {
-    width: 175.16px;
-    height: 59.07px;
-    position: absolute;
-}
-
-.logo-part1::before, .logo-part1::after, .logo-part2::before, .logo-part2::after {
-    content: '';
-    width: 79px;
-    height: 11px;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.10);
-    border-radius: 100px;
-    transform: rotate(-15deg);
-}
-
-.logo-part1::before {
-    left: 96px;
-    top: 23.45px;
-}
-
-.logo-part1::after {
-    left: 0px;
-    top: 20.45px;
-}
-
-.logo-part2::before {
-    left: 8px;
-    top: 48.45px;
-}
-
-.logo-part2::after {
-    left: 0px;
-    top: 20.45px;
-}
-
 .main-image {
-    width: 530px;
-    height: 719px;
+    width: 24%;
     position: absolute;
-    left: 840px;
-    top: 198px;
+    right: 0;
+    top: 100;
 }
+
+.banner {
+    width: 100%;
+    height: 160px;
+    background: linear-gradient(101deg, #5C24FC 0%, #9D7AFF 100%);
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.banner-text {
+    font-size: 32px;
+    font-weight: 500;
+    color: white;
+    margin-left: 20px;
+}
+
 
 .cards-container {
-    position: absolute;
-    left: 338px;
-    top: 306px; /* Adjust the top position to place the first card correctly */
     display: flex;
     flex-direction: column;
     gap: 20px; /* Space between cards */
 }
 
 .card {
-    width: 516px;
-    height: 142px;
+    width: 60%;
+    height: 120px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background: white;
-    box-shadow: 1px 1px 1px rgba(15.62, 24.73, 52.06, 0.40);
+    box-shadow: 1px 4px 4px rgba(15.62, 24.73, 52.06, 0.05);
     border-radius: 12px;
+    padding: 0 20px;
+    transition: all 0.3s;
 }
 
-.card-background {
-    width: 15px;
-    height: 142px;
-    position: absolute;
-    left: 1px;
-    background: #D7F0FF;
-    border-top-left-radius: 7.5px;
-    border-top-right-radius: 7.5px;
+.card:hover {
+    box-shadow: 1px 4px 4px rgba(15.62, 24.73, 52.06, 0.1);
+    transform: translateY(-5px);
 }
 
 .card-status-icon {
     width: 100px;
     height: 50px;
-    position: absolute;
-    top: 46px;
-    right: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,6 +79,10 @@ body {
     text-align: center;
 }
 
+.status-dropdown:focus {
+    outline: none;
+}
+
 .status-dropdown.ongoing {
     background-color: rgba(236, 72, 153, 0.1);
 }
@@ -164,39 +94,37 @@ body {
 
 .card-text {
     position: absolute;
-    top: 26px;
-    left: 200px;
+    left: 140px;
+    width: 56%;
 }
 
 .card-title {
-    font-size: 32px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
     color: #100F14;
     letter-spacing: 0.96px;
 }
 
 .card-detail {
-    font-size: 12px;
+    font-size: 14px;
     color: #313039;
-    text-decoration: underline;
     letter-spacing: 0.36px;
-    margin-top: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
 }
 
 .card-time {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     color: #131215;
     letter-spacing: 0.60px;
-    margin-top: 10px;
 }
 
 .card-image-container {
     width: 90px;
     height: 90px;
-    position: absolute;
-    left: 40px;
-    top: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
