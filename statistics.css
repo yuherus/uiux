@@ -117,3 +117,29 @@ table td progress {
     background-color:#ebe9fe; 
     color:#4a1fb8;
 }
+@media(max-width:1134px) {
+
+    .account-name,
+    .account-settings {
+        display: none;
+    }
+    .statistics-container{
+        
+        grid-template-columns: auto;
+    }
+}
+@media(max-width:768px) {
+
+    .account-name,
+    .account-settings {
+        display: none;
+    }
+    .statistics-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 80px    }
+}
+
+    

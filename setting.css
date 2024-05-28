@@ -123,3 +123,10 @@
     border-bottom: 1px solid #ccc;
     margin-bottom: 20px;
 }
+@media(max-width:1024px) {
+
+    .account-name,
+    .account-settings {
+        display: none;
+    }
+}
