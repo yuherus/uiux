@@ -1,9 +1,10 @@
-#sidebar {
+#sidebar{
     background-color: #fafaff;
     height: 100%;
     padding: 20px 20px 0 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .sidebar-header {
     display: flex;

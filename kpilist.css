@@ -1,4 +1,3 @@
-
 .main-content {
     flex: 1;
     padding: 20px 0;
@@ -299,4 +298,43 @@ line-height: 1.5;
 font-size: 20px;
 color: rgba(0, 0, 0, 0.3);
 cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .account-name,
+    .account-settings {
+        display: none;
+    }
+    .kpi-list {
+        grid-template-columns: 1fr; /* Hiển thị thành một cột */
+    }
+
+    .kpi-card {
+        width: auto; /* Sử dụng kích thước tự động */
+        max-width: calc(100% - 60px); /* Chiều rộng tối đa của mỗi kpi-card */
+        margin-bottom: 20px; /* Khoảng cách giữa các kpi-card */
+    }
+    #sidebar-container {
+        display: none;
+    }
+   
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .sidebar-toggle {
+        margin-right: 20px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .sidebar-toggle {
+        display: none;
+    }
 }
