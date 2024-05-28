@@ -184,7 +184,9 @@
 @media (max-width: 768px) {
     .search-input {
         width: 150px; /* Thu gọn search bar khi màn hình nhỏ hơn 768px */
-    }}
+    }
+
+}
     @media (max-width: 600px) {
         .search-input {
             width: 100px; /* Thu gọn search bar khi màn hình nhỏ hơn 768px */

@@ -300,9 +300,11 @@ color: rgba(0, 0, 0, 0.3);
 cursor: pointer;
 }
 @media screen and (max-width: 768px) {
-    .account-name,
-    .account-settings {
-        display: none;
+   
+    .dashboard {
+        margin-left: 30px;
+        width: 100%;
+        padding-right: 30px;
     }
     .kpi-list {
         grid-template-columns: 1fr; /* Hiển thị thành một cột */
@@ -322,16 +324,17 @@ cursor: pointer;
         justify-content: space-between;
         align-items: center;
     }
-
     .menu-icon {
         width: 30px;
         height: 30px;
         cursor: pointer;
     }
 
+
     .sidebar-toggle {
         margin-right: 20px;
     }
+
 }
 @media screen and (min-width: 768px) {
     .sidebar-toggle {
