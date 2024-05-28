@@ -210,3 +210,20 @@ button a{
 
 
 }
+@media(max-width:768px) {
+    .signup-pic{
+        width: 100%;
+    }
+    .signup-img {
+        width: 63%;
+    }
+    .signup h1{
+        font-size: 30px;
+
+    }
+    .toggle-panel button{
+        font-size: 13px;
+        padding: 5px 5px;
+
+    }
+}
