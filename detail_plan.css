@@ -64,6 +64,46 @@
     float: block;
 }
 
+.plan-section .status-content{
+    margin-bottom: 20px;
+}
+.status-content label{
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.status-content #status{
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.status-content .status1 {
+    color: rgb(0, 0, 0) !important;
+    background-color: rgb(255, 255, 255) !important;
+}
+
+.status-content .status2 {
+    color: #7A5AF8 !important;
+    border: 1px solid #7A5AF8 !important;
+}
+
+.status-content .status3 {
+    color: #48C682 !important;
+    border: 1px solid #48C682 !important;
+}
+
+.status-content .status4 {
+    color: #ec6666 !important;
+    border: 1px solid #ec6666 !important;
+}
+
+#status option {
+    color: rgb(0, 0, 0);
+}
+
+
 .skills {
     margin-bottom: 20px;
 }

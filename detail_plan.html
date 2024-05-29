@@ -119,11 +119,15 @@
                         </div>
                     </div>
                 </form>
-                <select id="activity">
-                    <option value="" disabled selected>Select your activity</option>
-                    <option value="activity1">UX/UI</option>
-                    <option value="activity2">English</option>
-                </select>
+                <div class="status-content">
+                    <label>Status</label>
+                    <select id="status">
+                        <option value="status1" selected>Yet start</option>
+                        <option value="status2">Progress</option>
+                        <option value="status3">Completed</option>
+                        <option value="status4">Late</option>
+                    </select>
+                </div>
                 <div class="skills">
                     <label>Skills</label>
                     <div class="skills-list">
@@ -181,6 +185,23 @@
 
         </div>
         <script src="sidebar.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    const statusSelect = document.getElementById('status');
+
+    function updateStatusClass() {
+        const selectedValue = statusSelect.value;
+        statusSelect.className = ''; // Reset class
+        statusSelect.classList.add(selectedValue);
+    }
+
+    statusSelect.addEventListener('change', updateStatusClass);
+
+    // Initial update based on the default selected option
+    updateStatusClass();
+});
+
+        </script>
 </body>
 
 </html>
