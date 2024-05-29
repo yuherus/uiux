@@ -130,3 +130,38 @@
         display: none;
     }
 }
+@media screen and (max-width: 768px) {
+   
+    .dashboard {
+        margin-left: 30px;
+        width: 100%;
+        padding-right: 30px;
+    }
+  
+    #sidebar-container {
+        display: none;
+    }
+   
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    .sidebar-toggle {
+        margin-right: 20px;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .sidebar-toggle {
+        display: none;
+    }
+}
+

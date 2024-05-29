@@ -5,6 +5,10 @@
     background: white;
 }
 
+.activity-content{
+    width: 100%;
+}
+
 .activity-des{
     display: flex;
     justify-content: start;
@@ -20,7 +24,7 @@
 }
 
 .card {
-    width: 800px;
+    width: calc(100% - 220px);
     height: 100px;
     background: white;
     box-shadow: 0px 18px 40px rgba(112, 144, 176, 0.12);
@@ -173,8 +177,8 @@
     width: 212px;
     height: 208px;
     position: absolute;
-    left: 800px;
-    top: 45px;
+    right:10px;
+    top: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -190,7 +194,7 @@
 .upload-box {
     width: 180px;
     position: absolute;
-    left: 820px;
+    right: 40px;
     top: 400px;
     display: flex;
     justify-content: center;
@@ -408,6 +412,7 @@ cursor: pointer;
 .skills-section {
     margin-top: 12px;
     gap: 8px;
+    margin-bottom: 20px;
 }
 
 .select-box {
@@ -603,6 +608,73 @@ cursor: pointer;
     backdrop-filter: blur(5px);
 }
 
+.dropdown-modal {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.dropdown {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+}
+
+.arrow {
+    font-size: 16px;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #ded3e9;
+}
+
+
+.selected-plans {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selected-plan {
+    display: flex;
+    align-items: center;
+    background-color: #f5f3ff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.selected-plan .remove-plan {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #666;
+}
+
+
 .update-popup-content {
     background-color: white;
     border-radius: 20px;
@@ -786,8 +858,26 @@ cursor: pointer;
     transition: background-color 0.3s;
 }
 
-#save-btn {
-    background-color: #4318FF;
+#save-btn1 {
+    position: relative;
+    left: 30%;
+    bottom: 0;
+    font-family: poppins;
+    width: 100px;
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#save-btn:hover {
+    background-color: #4d1ea9;
 }
 
 #delete-btn {
