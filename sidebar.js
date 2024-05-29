@@ -28,3 +28,19 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+let sidebarVisible = true;
+
+function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar-container");
+    var body = document.body; // Hoặc sử dụng phần tử cha phù hợp
+    
+    if (sidebarVisible) {
+        sidebar.style.display = 'none'; // Ẩn sidebar nếu đã hiển thị
+        body.classList.remove('sidebar-visible');
+    } else {
+        sidebar.style.display = 'block'; // Hiển thị sidebar nếu chưa hiển thị
+        body.classList.add('sidebar-visible');
+    }
+    sidebarVisible = !sidebarVisible; // Đảo ngược trạng thái hiển thị
+}

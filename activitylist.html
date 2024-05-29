@@ -235,116 +235,72 @@
                         </div>
                     </div>
                     <div id="activityModalUpdate" class="modal">
-                        <div class="popup-content">
-                            <div class="activity-content">
-                                <div class="modal-header1">
-                                    <h3 style="width:100%; text-align:center; margin-top:20px">Technology behind the Blockchain</h3>
-                                    <button class="close" id="close-btn1">&times;</button>
-                                </div>
-                                <div class="body-container">
-                                    <div class="detail-container">
-                                        <div class="detail-content">
-                                            <div class="detail-content-top">
-                                                <div class="detail-stretch"></div>
-                                                <div class="detail-flex-start">
-                                                    <div class="detail-height-441"></div>
-                                                    <div class="detail-content-bottom">
-                                                        <div class="detail-flex-start"></div>
-                                                    </div>
-                                                    <div class="detail-button-container">
-                                                        <div class="detail-delete-button" id="delete-btn">
-                                                            <div class="detail-delete-text">Delete</div>
-                                                        </div>
-                                                        <div class="detail-delete-button" id="save-btn">
-                                                            <div class="detail-delete-text">Save</div>
+                            <div class="update-popup-content">
+                                <div class="activity-content">
+                                    <div class="modal-header1">
+                                        <h3 style="width:100%; text-align:center; margin-top:20px">Technology behind the Blockchain</h3>
+                                        <button class="close" id="close-btn1">&times;</button>
+                                    </div class="body-container">
+                                    <div style="display:flex; width:100%; justify-content:space-around">
+                                        <div style="width:60%;">
+                                            <div class="input-group">
+                                                <div class="label">Time</div>
+                                                <div class="time-inputs">
+                                                    <div class="time-box">
+                                                        <div class="time-content" id="beginDate1">
+                                                            Begin: Click here to choose
                                                         </div>
                                                     </div>
-                                                    <div class="detail-column-content">
-                                                        <div class="detail-flex-start"></div>
-                                                        <div class="detail-input-group">
-                                                            <div class="detail-time-inputs">
-                                                                <div class="detail-time-box">
-                                                                    <div class="detail-time-content" id="beginDate">
-                                                                        Begin: 2/4/2024
-                                                                    </div>
-                                                                </div>
-                                                                <div class="detail-time-box">
-                                                                    <div class="detail-time-content" id="endDate">
-                                                                        End: 9/6/2024
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                    <div class="time-box">
+                                                        <div class="time-content" id="endDate1">
+                                                            End: Click here to choose
                                                         </div>
-                                                        <div class="detail-label-de">Description</div>
-                                                        <div class="detail-description">
-                                                            <div class="detail-description-content">
-                                                                <div class="detail-description-text">
-                                                                    <textarea class="detail-description-input" placeholder="Get started in design by learning the basics. Learn everything from pixels."></textarea>
-                                                                </div>
-                                                                <div>
-                                                                    <img class="detail-small-color-box" src="image/edit.png" />
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <div class="detail-skills">
-                                                            <div class="detail-skills-header">
-                                                                <div class="detail-skills-label">Skills</div>
-                                                                <div class="detail-hidden"></div>
-                                                            </div>
-                                                            <div class="detail-skills-options">
-                                                                <div class="detail-skill-box">
-                                                                    <div class="detail-skill-content">
-                                                                        <div class="detail-skill-text">Wireframing</div>
-                                                                        <div>
-                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="detail-skill-box">
-                                                                    <div class="detail-skill-content">
-                                                                        <div class="detail-skill-text">Prototyping</div>
-                                                                        <div>
-                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="detail-skill-box">
-                                                                    <div class="detail-skill-content">
-                                                                        <div class="detail-skill-text">UI/UX</div>
-                                                                        <div>
-                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="detail-skill-box">
-                                                                    <div class="detail-skill-content">
-                                                                        <div class="detail-skill-text">Research</div>
-                                                                        <div>
-                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div>
-                                                    <img class="detail-contribution-box" src="image/acb2.png" />
-                                                </div>
-                                                <div>
-                                                    <img class="detail-progress-box" src="image/acb1.png" />
-                                                </div>
-                                                <div id="confirm-dialog" class="modal">
-                                                    <div class="modal-content">
-                                                        <span class="close">&times;</span>
-                                                        <p>Are you sure you want to delete?</p>
-                                                        <button id="confirm-delete">Yes</button>
-                                                        <button id="cancel-delete">No</button>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="input-group">
+                                                <div class="label">Description</div>
+                                                <div class="input-box">
+                                                    <textarea class="input-field"
+                                                        placeholder="Enter your description about this activity"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="input-group skills-section">
+                                                <div class="label">Select the Skills</div>
+                                                <div class="dropdown-modal">
+                                                    <div class="dropdown" onclick="toggleDropdown()">
+                                                        <span>Select your plan</span>
+                                                        <span class="arrow">&#9662;</span>
+                                                    </div>
+                                                    <div class="dropdown-menu">
+                                                        <div class="dropdown-item" onclick="selectPlan('Web design')">Web design</div>
+                                                        <div class="dropdown-item" onclick="selectPlan('Graphic design')">Graphic design</div>
+                                                        <div class="dropdown-item" onclick="selectPlan('SEO')">SEO</div>
+                                                    </div>
+                                                </div>
+                                                <div class="selected-plans" id="selected-skill">
+                                                    <!-- Selected plans will appear here -->
+                                                </div>
+                                            </div>
+                                            <button id="save-btn1" class="save-button">Save</button>
+                                        </div>
+                                        <div style="width:34%;">
+                                            <div class="progress-bar">
+                                                <div style="display:flex;">
+                                                    <div class="percentage">20%</div>
+                                                    <div class="status">Pending</div>
+                                                </div>
+                                                <div class="bar-bg1"></div>
+                                                <div class="bar-fill3"></div>
+                                            </div>
+                                            <section class="daily-contribution-section">
+                                                <div class="contribution-info">
+                                                    <span style="font-size:18px;">Daily Contribution</span>
+                                                    <span class="hours">45 Hour</span>
+                                                </div>
+                                                <span class="percentage">+2.45%</span>
+                                            </section>
+                                            <canvas id="dailyContributionChart"></canvas>
                                         </div>
                                     </div>
                                 </div>

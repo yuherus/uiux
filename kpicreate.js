@@ -46,8 +46,8 @@ window.onclick = function(event) {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-var createKPIButton = document.getElementById("createKPIButton");
-    createKPIButton.addEventListener('click', function(event) {
+    const confirmButton = document.querySelector('.btn-confirm');
+    confirmButton.addEventListener('click', function(event) {
         event.preventDefault();
         showSuccessToast();
         closeModal();

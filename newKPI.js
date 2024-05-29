@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const prevButtons = document.querySelectorAll('.btn-prev');
     const submitButton = document.querySelector('.btn-submit');
     const modal = document.getElementById('confirmModal');
+    const kpiModal = document.getElementById('id01');
     const confirmButton = document.querySelector('.btn-confirm');
     const cancelButton = document.querySelector('.btn-cancel');
     const kpiField = document.getElementById('kpiField');
@@ -41,9 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     confirmButton.addEventListener('click', () => {
-        // Handle form submission here
         modal.style.display = 'none';
-        alert('KPI created successfully!');
+        kpiModal.style.display = 'none';
     });
 
     cancelButton.addEventListener('click', () => {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     kpiField.addEventListener('change', function () {
         if (this.value === 'custom') {
-            customFieldContainer.style.display = 'block';
+            customFieldContainer.style.display = 'flex';
         } else {
             customFieldContainer.style.display = 'none';
         }

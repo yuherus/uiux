@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var createPlanButton = document.getElementById("create-activity-btn");
     createPlanButton.addEventListener('click', function(event) {
         event.preventDefault();
-        showSuccessToast();
         modal.style.display = "none";
     });
 
@@ -53,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = "none";
     });
 
-    var updatePlanButton = document.getElementById("save-btn");
+    var updatePlanButton = document.getElementById("save-btn1");
     updatePlanButton.addEventListener('click', function(event) {
         event.preventDefault();
         showUpdateToast();

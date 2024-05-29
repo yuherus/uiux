@@ -173,7 +173,6 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 220px;
 }
 
 .modal-createkpi .radio-item input[type="radio"] {
@@ -216,3 +215,36 @@
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+@media screen and (max-width: 768px) {
+    .radio-container {
+       gap: 20px;
+    }
+    .radio-item {
+       width: 160px;
+       height: auto; /* hoặc bạn có thể chỉ định một giá trị cụ thể, ví dụ: height: 40px; */
+
+    }
+    .modal-createkpi .btn-create {
+
+    padding: 10px 40px;
+    font-size: 16px;
+    margin-top: 10px;
+    align-self: center; /* Căn giữa nút */
+
+}
+.image-modal {
+    flex:0.5;
+}
+
+   
+ }
+ @media screen and (min-width: 768px) {
+    .radio-container {
+       gap: 20px;
+    }
+    .radio-item {
+        width:220px;
+       height: auto; /* hoặc bạn có thể chỉ định một giá trị cụ thể, ví dụ: height: 40px; */
+    }
+ }
+ 

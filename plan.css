@@ -340,6 +340,45 @@ input:focus, select:focus {
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
+  @media screen and (max-width: 768px) {
+   
+    .dashboard {
+      margin-left: 30px;
+      width: 100%;
+      padding-right: 30px;
+  }
+    .list-plan {
+      width: 100%;
+      display: flex;  
+      flex-wrap: wrap;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;/* Hiển thị thành một cột */
+    }
+
+    .detail_plan {
+        width: auto; /* Sử dụng kích thước tự động */
+        max-width: calc(100% - 60px); /* Chiều rộng tối đa của mỗi kpi-card */
+        margin-bottom: 20px; /* Khoảng cách giữa các kpi-card */
+    }
+    #sidebar-container {
+        display: none;
+    }
+    .sidebar-toggle {
+      margin-right: 30px;
+      margin-left:20px;
+  }
+  .submit-btn{
+    margin-top: 5px;
+    font-size:14px;
+    padding: 5px 5px;
+  }
+  }
+    @media screen and (min-width: 768px) {
+      .sidebar-toggle {
+          display: none;
+      }
+  }
+  
   .popup-successful {
     display: none;
     position: fixed;
