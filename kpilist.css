@@ -1,23 +1,16 @@
-
 .main-content {
     flex: 1;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .new-kpi-btn {
-    background-color: #6938EF;
     border: none;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 10px;
-    cursor: pointer;
-    margin-bottom: 20px;
+    width: 100%;
+    margin: auto;
 }
 
 .new-kpi-btn:hover{
     transform:  scale(1.02);
-    background-color: #7c28aa;
-    color: #dbe4e8;
 }
 
 .kpi-list {
@@ -35,6 +28,7 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 420px;
 }
 
 .kpi-card:hover{
@@ -89,28 +83,31 @@
     color: #48C682;
 }
 
-.card-content {
-    flex: 1;
-}
 
 .card-content h2:hover{
     color: #6938EF;
 }
 
 .card-content a{
+    display: block;
     text-decoration: none;
+    max-width: 300px;
 }
 
 .card-content h2 {
     margin: 0px 5px;
     font-size: 20px;
     color: #333;
+    white-space: nowrap;      
+    overflow: hidden;           
+    text-overflow: ellipsis;
+    width: 80%;
 }
 
 .card-content > p {
     margin-right: 30px;
     color: #777;
-    max-width: 380px;
+    max-width: 300px;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
@@ -128,7 +125,7 @@
 
 .card-content .meta span{
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 8px;
 }
 
 .card-content .meta > span {
@@ -196,4 +193,151 @@
 .next.disabled {
     pointer-events: none;
     opacity: 0.5;
+}
+
+#toast {
+    position: fixed;
+    top: 32px;
+    right: 32px;
+    z-index: 999999;
+  }
+  
+.toast {
+display: flex;
+align-items: center;
+background-color: #fff;
+border-radius: 2px;
+padding:  0;
+min-width: 400px;
+max-width: 500px;
+border-left: 4px solid;
+box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+transition: all linear 0.3s;
+}
+
+@keyframes slideInLeft {
+from {
+    opacity: 0;
+    transform: translateX(calc(100% + 32px));
+}
+to {
+    opacity: 1;
+    transform: translateX(0);
+}
+}
+
+@keyframes fadeOut {
+to {
+    opacity: 0;
+}
+}
+
+.toast--success {
+border-color: #47d864;
+}
+
+.toast--success .toast__icon {
+color: #47d864;
+}
+
+.toast--info {
+border-color: #2f86eb;
+}
+
+.toast--info .toast__icon {
+color: #2f86eb;
+}
+
+.toast--warning {
+border-color: #ffc021;
+}
+
+.toast--warning .toast__icon {
+color: #ffc021;
+}
+
+.toast--error {
+border-color: #ff623d;
+}
+
+.toast--error .toast__icon {
+color: #ff623d;
+}
+
+.toast + .toast {
+margin-top: 24px;
+}
+
+.toast__icon {
+font-size: 24px;
+}
+
+.toast__icon,
+.toast__close {
+padding: 0 16px;
+}
+
+.toast__body {
+flex-grow: 1;
+}
+
+.toast__title {
+font-size: 16px;
+font-weight: 600;
+color: #333;
+}
+
+.toast__msg {
+font-size: 14px;
+color: #888;
+margin-top: 6px;
+line-height: 1.5;
+}
+
+.toast__close {
+font-size: 20px;
+color: rgba(0, 0, 0, 0.3);
+cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+   
+    .dashboard {
+        margin-left: 30px;
+        width: 100%;
+        padding-right: 30px;
+    }
+    .kpi-list {
+        grid-template-columns: 1fr; /* Hiển thị thành một cột */
+    }
+
+    .kpi-card {
+        width: auto; /* Sử dụng kích thước tự động */
+        max-width: calc(100% - 60px); /* Chiều rộng tối đa của mỗi kpi-card */
+        margin-bottom: 20px; /* Khoảng cách giữa các kpi-card */
+    }
+    #sidebar-container {
+        display: none;
+    }
+   
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    .sidebar-toggle {
+        margin-right: 20px;
+    }
+
+}
+@media screen and (min-width: 768px) {
+    .sidebar-toggle {
+        display: none;
+    }
 }

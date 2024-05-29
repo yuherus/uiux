@@ -28,3 +28,15 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+let sidebarVisible = true;
+function toggleSidebar() {
+    var sidebar = document.getElementById("sidebar-container");
+
+      if (sidebarVisible) {
+        sidebar.style.display = 'none'; // Ẩn sidebar nếu đã hiển thị
+      } else {
+        sidebar.style.display = 'block'; // Hiển thị sidebar nếu chưa hiển thị
+      }
+      sidebarVisible = !sidebarVisible; // Đảo ngược trạng thái hiển thị
+}

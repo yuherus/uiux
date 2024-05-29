@@ -1,6 +1,5 @@
 
 
-
 .btn-new{
     width: 150px;
     height: 50px;
@@ -341,4 +340,103 @@ input:focus, select:focus {
     color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
-  
+  @media screen and (max-width: 768px) {
+   
+    .dashboard {
+      margin-left: 30px;
+      width: 100%;
+      padding-right: 30px;
+  }
+    .list-plan {
+      width: 100%;
+      display: flex;  
+      flex-wrap: wrap;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;/* Hiển thị thành một cột */
+    }
+
+    .detail_plan {
+        width: auto; /* Sử dụng kích thước tự động */
+        max-width: calc(100% - 60px); /* Chiều rộng tối đa của mỗi kpi-card */
+        margin-bottom: 20px; /* Khoảng cách giữa các kpi-card */
+    }
+    #sidebar-container {
+        display: none;
+    }
+    .sidebar-toggle {
+      margin-right: 30px;
+      margin-left:20px;
+  }
+  .submit-btn{
+    margin-top: 5px;
+    font-size:14px;
+    padding: 5px 5px;
+  }
+  }
+    @media screen and (min-width: 768px) {
+      .sidebar-toggle {
+          display: none;
+      }
+  }
+ 
+=======
+  .popup-successful {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.popup-successful-content {
+    text-align: center;
+}
+
+.popup-successful-image {
+    width: 92px;
+    height: 77px;
+}
+
+.popup-successful-title {
+    font-size: 36px;
+    color: #1E1E1E;
+    font-family: Poppins;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.popup-successful-description {
+    font-size: 18px;
+    color: #5925DC;
+    font-family: Poppins;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.popup-successful-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.popup-successful-button {
+    background: linear-gradient(0deg, #6938EF 0%, #6938EF 100%), linear-gradient(128deg, #CB3CFF 20%, #7F25FB 68%);
+    color: white;
+    font-size: 20px;
+    font-family: Poppins;
+    font-weight: 800;
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.popup-successful-button:hover {
+    background: linear-gradient(0deg, #7F25FB 0%, #7F25FB 100%), linear-gradient(128deg, #CB3CFF 20%, #7F25FB 68%);
+}
+   

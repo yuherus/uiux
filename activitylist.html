@@ -30,10 +30,10 @@
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="index.html" class="menu-active">Dashboard</a></li>
+                            <li><a href="index.html">Dashboard</a></li>
                             <li><a href="kpilist.html">KPI</a></li>
                             <li><a href="plan.html">Plan</a></li>
-                            <li><a href="activitylist.html">Activity</a></li>
+                            <li><a href="activitylist.html"  class="menu-active">Activity</a></li>
                         </ul>
                     </li>
                     <li>
@@ -126,7 +126,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">64%</div>
                                 <div class="status">Pending</div>
@@ -150,7 +150,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">70%</div>
                                 <div class="status">Pending</div>
@@ -174,7 +174,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">80%</div>
                                 <div class="status">Almost Done</div>
@@ -198,7 +198,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">80%</div>
                                 <div class="status">Almost Done</div>
@@ -222,7 +222,7 @@
                                 <div class="detail-link">See activity details</div>
                             </div>
                         </div>
-                        <div class="progress-bar">
+                        <div class="activity-progress-bar">
                             <div style="display:flex;">
                                 <div class="percentage">20%</div>
                                 <div class="status">Pending</div>
@@ -236,15 +236,161 @@
                     </div>
                     <div id="activityModalUpdate" class="modal">
                         <div class="popup-content">
-                            <div class="main-content">
-                                <div class="modal-header">
-                                    <h3>Activity details</h3>
+                            <div class="activity-content">
+                                <div class="modal-header1">
+                                    <h3 style="width:100%; text-align:center; margin-top:20px">Technology behind the Blockchain</h3>
                                     <button class="close" id="close-btn1">&times;</button>
-                                </div class="body-container">
-                                
+                                </div>
+                                <div class="body-container">
+                                    <div class="detail-container">
+                                        <div class="detail-content">
+                                            <div class="detail-content-top">
+                                                <div class="detail-stretch"></div>
+                                                <div class="detail-flex-start">
+                                                    <div class="detail-height-441"></div>
+                                                    <div class="detail-content-bottom">
+                                                        <div class="detail-flex-start"></div>
+                                                    </div>
+                                                    <div class="detail-button-container">
+                                                        <div class="detail-delete-button" id="delete-btn">
+                                                            <div class="detail-delete-text">Delete</div>
+                                                        </div>
+                                                        <div class="detail-delete-button" id="save-btn">
+                                                            <div class="detail-delete-text">Save</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="detail-column-content">
+                                                        <div class="detail-flex-start"></div>
+                                                        <div class="detail-input-group">
+                                                            <div class="detail-time-inputs">
+                                                                <div class="detail-time-box">
+                                                                    <div class="detail-time-content" id="beginDate">
+                                                                        Begin: 2/4/2024
+                                                                    </div>
+                                                                </div>
+                                                                <div class="detail-time-box">
+                                                                    <div class="detail-time-content" id="endDate">
+                                                                        End: 9/6/2024
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="detail-label-de">Description</div>
+                                                        <div class="detail-description">
+                                                            <div class="detail-description-content">
+                                                                <div class="detail-description-text">
+                                                                    <textarea class="detail-description-input" placeholder="Get started in design by learning the basics. Learn everything from pixels."></textarea>
+                                                                </div>
+                                                                <div>
+                                                                    <img class="detail-small-color-box" src="image/edit.png" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="detail-skills">
+                                                            <div class="detail-skills-header">
+                                                                <div class="detail-skills-label">Skills</div>
+                                                                <div class="detail-hidden"></div>
+                                                            </div>
+                                                            <div class="detail-skills-options">
+                                                                <div class="detail-skill-box">
+                                                                    <div class="detail-skill-content">
+                                                                        <div class="detail-skill-text">Wireframing</div>
+                                                                        <div>
+                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="detail-skill-box">
+                                                                    <div class="detail-skill-content">
+                                                                        <div class="detail-skill-text">Prototyping</div>
+                                                                        <div>
+                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="detail-skill-box">
+                                                                    <div class="detail-skill-content">
+                                                                        <div class="detail-skill-text">UI/UX</div>
+                                                                        <div>
+                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="detail-skill-box">
+                                                                    <div class="detail-skill-content">
+                                                                        <div class="detail-skill-text">Research</div>
+                                                                        <div>
+                                                                            <img class="detail-skill-checkbox" src="image/acx.png" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <img class="detail-contribution-box" src="image/acb2.png" />
+                                                </div>
+                                                <div>
+                                                    <img class="detail-progress-box" src="image/acb1.png" />
+                                                </div>
+                                                <div id="confirm-dialog" class="modal">
+                                                    <div class="modal-content">
+                                                        <span class="close">&times;</span>
+                                                        <p>Are you sure you want to delete?</p>
+                                                        <button id="confirm-delete">Yes</button>
+                                                        <button id="cancel-delete">No</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                
+                    <!-- Thêm liên kết đến thư viện Flatpickr và jQuery (nếu cần) -->
+                    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                
+                    <!-- Đoạn mã JavaScript để kích hoạt DatePicker -->
+                    <script src="script.js"></script>
+                
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            const createActivityBtn = document.getElementById('save-btn');
+                
+                            createActivityBtn.addEventListener('click', function () {
+                                alert("successful! You've created an activity");
+                                setTimeout(function () {
+                                    window.location.href = 'activitylist.html';
+                                }, 3); // 5 seconds
+                            });
+                        });
+                        // Khi tài liệu đã tải hoàn thành
+                        $(document).ready(function () {
+                            // Kích hoạt DatePicker cho phần thời gian "Begin"
+                            flatpickr("#beginDate", {
+                                enableTime: false,
+                                dateFormat: "d/m/Y",
+                                onClose: function (selectedDates, dateStr, instance) {
+                                    document.getElementById("beginDate").innerText = "Begin: " + dateStr;
+                                }
+                            });
+                
+                            // Kích hoạt DatePicker cho phần thời gian "End"
+                            flatpickr("#endDate", {
+                                enableTime: false,
+                                dateFormat: "d/m/Y",
+                                onClose: function (selectedDates, dateStr, instance) {
+                                    document.getElementById("endDate").innerText = "End: " + dateStr;
+                                }
+                            });
+                        });
+                    </script>
                 </div>
                 <div class="image-container">
                     <img src="image/girl.png" alt="Girl Image" class="display-image">
@@ -254,6 +400,20 @@
                         <div class="upload-text">New Upload <i class="fa-solid fa-plus"></i> </div>
                     </div>
                 </div>
+                <div id="successPopup" class="popup-successful">
+                    <div class="popup-successful-content">
+                        <img src="image/acsucess.png" alt="Success Icon" class="popup-successful-image">
+                        <div class="popup-successful-text">
+                            <h2 class="popup-successful-title">Successful!</h2>
+                            <p class="popup-successful-description">Congratulations! Your activity has been created.</p>
+                        </div>
+                        <div class="popup-successful-buttons">
+                            <button id="backToActivity" class="popup-successful-button">BACK TO ACTIVITY</button>
+                            <button id="continueWithPlan" class="popup-successful-button">CONTINUE WITH PLAN</button>
+                        </div>
+                    </div>
+                </div>
+                
                 <div id="activityModal" class="modal">
                     <div class="popup-content">
                         <img class="side-image" src="image/ac.png" />
@@ -325,6 +485,7 @@
     <script src="activitylist.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         $(document).ready(function () {
             flatpickr("#beginDate", {
@@ -343,6 +504,54 @@
                 }
             });
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            flatpickr("#beginDate1", {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                onClose: function (selectedDates, dateStr, instance) {
+                    document.getElementById("beginDate1").innerText = "Begin: " + dateStr;
+                }
+            });
+
+            flatpickr("#endDate1", {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                onClose: function (selectedDates, dateStr, instance) {
+                    document.getElementById("endDate1").innerText = "End: " + dateStr;
+                }
+            });
+        });
+    </script>
+    <script>
+        const ctx = document.getElementById('dailyContributionChart').getContext('2d');
+        const dailyContributionChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['00', '04', '08', '12', '14', '16', '18'],
+                datasets: [{
+                    label: 'Hours',
+                    data: [3, 4, 2, 6, 5, 7, 1],
+                    backgroundColor: 'rgba(98, 0, 234, 0.5)',
+                    borderColor: 'rgba(98, 0, 234, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
     </script>
 </body>
 </html>
