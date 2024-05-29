@@ -70,6 +70,9 @@
         <div class="dashboard"> 
             <div id="header-container">
                 <div class="header">
+                    <div class="sidebar-toggle">
+                        <i class="fa-solid fa-bars menu-icon" onclick="toggleSidebar()"></i>
+                    </div>
                     <div class="search-bar">
                         <div class="logo-section">
                             <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
@@ -112,6 +115,14 @@
                     </div>
                 </div>            
             </div>
+            <div class ="add-activity">
+                <div class="activity-list">Activity List</div>
+                <div id="activityPopup" class="upload-box">
+                    <div class="upload-content">
+                        <div class="upload-text"><span>New Upload</span> <i class="fa-solid fa-plus"></i> </div>
+                </div>
+                </div>
+                </div>
             <div class="activity-container">
                 <div class="content">
                     <div class="card">
@@ -348,14 +359,9 @@
                         });
                     </script>
                 </div>
-                <div class="image-container">
-                    <img src="image/girl.png" alt="Girl Image" class="display-image">
-                </div>
-                <div id="activityPopup" class="upload-box">
-                    <div class="upload-content">
-                        <div class="upload-text">New Upload <i class="fa-solid fa-plus"></i> </div>
-                    </div>
-                </div>
+               <div class ="image-container">
+                <img src ="image/girl.png" alt ="Girl Image" class=""display-image>
+               </div>
                 <div id="successPopup" class="popup-successful">
                     <div class="popup-successful-content">
                         <img src="image/acsucess.png" alt="Success Icon" class="popup-successful-image">
