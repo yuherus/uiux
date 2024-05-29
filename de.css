@@ -1,0 +1,238 @@
+.de-kpi-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #EEE;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.de-kpi-details-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #5925DC;
+}
+
+.de-kpi-details-header .de-btn-edit {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    background: linear-gradient(90deg, #5925DC, #9C3CE7);
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.de-progress-status-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.de-progress-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.de-progress-container label {
+    margin-bottom: 5px;
+    color: #000;
+    font-weight: bold;
+}
+
+.de-progress-bar {
+    position: relative;
+    width: 100%;
+    height: 20px;
+    background: #EEE;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.de-progress-fill {
+    height: 100%;
+    background: #9C3CE7;
+    border-radius: 10px;
+    transition: width 0.3s, background 0.3s;
+}
+
+.de-progress-text {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9C3CE7;
+    font-weight: bold;
+}
+
+.de-status-hour-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.de-hour-completed {
+    display: flex;
+    align-items: center;
+}
+
+.de-hour-completed .de-hours {
+    margin-left: 10px;
+    color: #5925DC;
+    font-weight: bold;
+}
+
+.de-status-container {
+    display: flex;
+    align-items: center;
+}
+
+.de-status-container label {
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.de-kpi-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.de-kpi-info, .de-kpi-goals, .de-kpi-plans {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #FAFAFA;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.de-kpi-info h2, .de-kpi-goals h2, .de-kpi-plans h2 {
+    margin-top: 0;
+    color: #000;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+label strong {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], select, textarea, input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+    color: #000;
+}
+
+textarea {
+    height: 100px;
+}
+
+.de-date-label {
+    display: inline-block;
+    width: 46%;
+    margin-right: 30px;
+}
+
+.de-plan-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.de-plan-card .de-plan-info {
+    flex: 1;
+}
+
+.de-plan-card h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.de-plan-details {
+    text-decoration: none;
+    color: #5925DC;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.de-plan-percentage {
+    margin-right: 20px;
+}
+
+.de-plan-percentage label {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-size: 14px;
+}
+
+.de-plan-percentage input[type="text"] {
+    width: 50px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.de-plan-checkbox {
+    transform: scale(1.2);
+}
+
+.de-add-more-plans {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.de-add-more-plans .de-btn-add-more {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    background: linear-gradient(90deg, #5925DC, #9C3CE7);
+    cursor: pointer;
+}
+
+.de-kpi-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.de-kpi-actions .de-btn-save, .de-kpi-actions .de-btn-delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.de-kpi-actions .de-btn-save {
+    background: linear-gradient(90deg, #5925DC, #9C3CE7);
+}
+
+.de-kpi-actions .de-btn-delete {
+    background: linear-gradient(90deg, #5925DC, #9C3CE7);
+}
+
+.de-additional-plans .de-plan-card {
+    display: none;
+}

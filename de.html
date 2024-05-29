@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPI Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="de.css">
+</head>
+<body>
+    <div class="de-container">
+        <div class="de-kpi-details-header">
+            <h1>KPI Details</h1>
+            <button class="de-btn-edit" onclick="enableEditing()">Edit</button>
+        </div>
+        <!-- KPI Details Form -->
+        <form id="kpiForm">
+            <!-- Progress and Status Section -->
+            <div class="de-progress-status-container">
+                <div class="de-progress-container">
+                    <label><strong>Progress</strong></label>
+                    <div class="de-progress-bar" id="progressBar">
+                        <div class="de-progress-fill" id="progressFill" style="width: 80%;"></div>
+                        <span class="de-progress-text" id="progressText">80%</span>
+                    </div>
+                </div>
+                <div class="de-status-hour-container">
+                    <div class="de-hour-completed">
+                        <span><strong>Hour completed</strong></span>
+                        <span class="de-hours"><span class="de-current-hours">80</span>/<span class="de-total-hours">100</span></span>
+                    </div>
+                    <div class="de-status-container">
+                        <label for="statusSelect"><strong>Status:</strong></label>
+                        <select id="statusSelect" onchange="updateStatus()">
+                            <option value="inProgress">In Progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- Basic Information Section -->
+            <div class="de-kpi-details">
+                <div class="de-kpi-info">
+                    <h2>Basic Information</h2>
+                    <label><strong>KPI Name:</strong>
+                        <input type="text" id="kpiNameDetail" disabled>
+                    </label>
+                    <label><strong>Field:</strong>
+                        <select id="kpiFieldDetail" disabled>
+                            <option value="Work">Work</option>
+                            <option value="Life">Life</option>
+                            <option value="Study">Study</option>
+                            <option value="Custom">Custom</option>
+                        </select>
+                        <input type="text" id="kpiFieldCustom" style="display: none;" placeholder="Enter custom field">
+                    </label>
+                    <label class="de-date-label"><strong>Start Date:</strong>
+                        <input type="date" id="kpiStartDateDetail" disabled>
+                    </label>
+                    <label class="de-date-label"><strong>End Date:</strong>
+                        <input type="date" id="kpiEndDateDetail" disabled>
+                    </label>
+                    <label><strong>Description:</strong>
+                        <textarea id="kpiDescriptionDetail" disabled></textarea>
+                    </label>
+                </div>
+                <!-- Goals Section -->
+                <div class="de-kpi-goals">
+                    <h2>KPI Goals</h2>
+                    <label><strong>Specific Goal:</strong>
+                        <input type="text" id="kpiGoalDetail" disabled>
+                    </label>
+                    <label><strong>Measurement Unit:</strong>
+                        <span id="kpiUnitDetailText">Actual Time vs. Set Time</span>
+                        <select id="kpiUnitDetail" disabled>
+                            <option value="Time">Actual Time vs. Set Time</option>
+                            <option value="Completion">Completion Level</option>
+                        </select>
+                        
+                    </label>
+                </div>
+            </div>
+            <!-- Linked Plans Section -->
+            <div class="de-kpi-plans">
+                <h2>Linked Plans</h2>
+                <!-- Initial plan cards (Plan 1 to Plan 3) -->
+                <div class="de-plan-card">
+                    <div class="de-plan-info">
+                        <h3>Plan 1</h3>
+                        <a href="#" class="de-plan-details">See plan details</a>
+                    </div>
+                    <div class="de-plan-percentage">
+                        <label><strong>% Importance:</strong>
+                            <input type="text" value="30%" class="de-plan-percentage-input" disabled>
+                        </label>
+                    </div>
+                    <input type="checkbox" class="de-plan-checkbox" checked>
+                </div>
+                <div class="de-plan-card">
+                    <div class="de-plan-info">
+                        <h3>Plan 2</h3>
+                        <a href="#" class="de-plan-details">See plan details</a>
+                    </div>
+                    <div class="de-plan-percentage">
+                        <label><strong>% Importance:</strong>
+                            <input type="text" value="50%" class="de-plan-percentage-input" disabled>
+                        </label>
+                    </div>
+                    <input type="checkbox" class="de-plan-checkbox" checked>
+                </div>
+                <div class="de-plan-card">
+                    <div class="de-plan-info">
+                        <h3>Plan 3</h3>
+                        <a href="#" class="de-plan-details">See plan details</a>
+                    </div>
+                    <div class="de-plan-percentage">
+                        <label><strong>% Importance:</strong>
+                            <input type="text" value="20%" class="de-plan-percentage-input" disabled>
+                        </label>
+                    </div>
+                    <input type="checkbox" class="de-plan-checkbox" checked>
+                </div>
+                <!-- Add More Plans Button -->
+                <div class="de-add-more-plans">
+                    <button type="button" class="de-btn-add-more" onclick="addMorePlans()">Add More Plans</button>
+                </div>
+                <!-- Container for additional plans -->
+                <div class="de-additional-plans" id="additionalPlans">
+                    <!-- Additional plans will be appended here -->
+                </div>
+            </div>
+            <!-- Save and Delete Buttons -->
+            <div class="de-kpi-actions">
+                <button type="button" class="de-btn-save" onclick="saveKPIDetails()">Save</button>
+                <button type="button" class="de-btn-delete" onclick="deleteKPIDetails()">Delete</button>
+            </div>
+        </form>
+    </div>
+    <!-- JavaScript -->
+    <script src="de.js"></script>
+</body>
+</html>
