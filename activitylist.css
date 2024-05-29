@@ -962,7 +962,6 @@ cursor: pointer;
 .detail-button-container {
     display: flex;
     justify-content: flex-start;
-    margin-top: 50px;
 }
 
 .detail-delete-button {
@@ -1204,37 +1203,6 @@ cursor: pointer;
     background: #49475A;
 }
 
-.detail-header {
-    height: 71px;
-    left: 282px;
-    top: 82px;
-    position: absolute;
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2px;
-}
-
-.detail-header-text {
-    align-self: stretch;
-    text-align: center;
-    color: #49475A;
-    font-size: 32px;
-    font-weight: 600;
-    line-height: 41px;
-    word-wrap: break-word;
-}
-
-.detail-header-padding {
-    align-self: stretch;
-    padding: 2px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    word-wrap: nowrap;
-}
 
 .detail-contribution-box {
     width: 347px;
@@ -1254,7 +1222,7 @@ cursor: pointer;
 
 .detail-close-button {
     position: absolute;
-    top: 20px;
+    top: -20px;
     right: 20px;
     width: 40px;
     height: 40px;

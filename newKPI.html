@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New KPI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newKPI.css">
+</head>
+<body>
+    <div class="container">
+        <div class="progress-bar">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-label">Basic Info</div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-label">Set Goals</div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-label">Select Plans</div>
+            </div>
+        </div>
+
+        <form id="kpiForm">
+            <div class="form-step form-step-active">
+                <h2>Enter Basic Information</h2>
+                <label for="kpiName">KPI Name</label>
+                <input type="text" id="kpiName" name="kpiName" placeholder="KPI Name" required>
+                
+                <label for="kpiField">Field</label>
+                <select id="kpiField" name="kpiField" required>
+                    <option value="work">Work</option>
+                    <option value="life">Life</option>
+                    <option value="study">Study</option>
+                    <option value="custom">Custom</option>
+                </select>
+
+                <div id="customFieldContainer" style="display: none;">
+                    <label for="customField">Custom Field Name</label>
+                    <input type="text" id="customField" name="customField" placeholder="Custom Field Name">
+                </div>
+
+                <label for="kpiDescription">Description</label>
+                <textarea id="kpiDescription" name="kpiDescription" placeholder="Brief description of the KPI"></textarea>
+
+                <button type="button" class="btn-next">Next</button>
+            </div>
+
+            <div class="form-step">
+                <h2>Set KPI Goals</h2>
+                <label for="kpiGoal">Specific Goal</label>
+                <input type="text" id="kpiGoal" name="kpiGoal" placeholder="Specific Goal" required>
+                
+                <label for="kpiUnit">Measurement Unit</label>
+                <select id="kpiUnit" name="kpiUnit" required>
+                    <option value="time">Actual Time vs. Set Time</option>
+                    <option value="completion">Completion Rate vs. Set Rate</option>
+                </select>
+
+                <label for="kpiStartDate">Start Date</label>
+                <input type="date" id="kpiStartDate" name="kpiStartDate" required>
+                
+                <label for="kpiEndDate">End Date</label>
+                <input type="date" id="kpiEndDate" name="kpiEndDate" required>
+
+                <button type="button" class="btn-prev">Back</button>
+                <button type="button" class="btn-next">Next</button>
+            </div>
+
+            <div class="form-step">
+                <h2>Select Plans</h2>
+                <label for="kpiPlans">Choose one or more Plans</label>
+                <div id="plansContainer">
+                    <div class="plan-card">
+                        <img src="plan1.jpg" alt="Plan 1" class="plan-image">
+                        <div class="plan-info">
+                            <h3>Plan 1</h3>
+                            <a href="#" class="plan-details">See plan details</a>
+                        </div>
+                        <input type="checkbox" id="plan1" name="kpiPlans" value="plan1">
+                        <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
+                    </div>
+                    <div class="plan-card">
+                        <img src="plan2.jpg" alt="Plan 2" class="plan-image">
+                        <div class="plan-info">
+                            <h3>Plan 2</h3>
+                            <a href="#" class="plan-details">See plan details</a>
+                        </div>
+                        <input type="checkbox" id="plan2" name="kpiPlans" value="plan2">
+                        <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
+                    </div>
+                    <div class="plan-card">
+                        <img src="plan3.jpg" alt="Plan 3" class="plan-image">
+                        <div class="plan-info">
+                            <h3>Plan 3</h3>
+                            <a href="#" class="plan-details">See plan details</a>
+                        </div>
+                        <input type="checkbox" id="plan3" name="kpiPlans" value="plan3">
+                        <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
+                    </div>
+                    <div class="plan-card">
+                        <img src="plan4.jpg" alt="Plan 4" class="plan-image">
+                        <div class="plan-info">
+                            <h3>Plan 4</h3>
+                            <a href="#" class="plan-details">See plan details</a>
+                        </div>
+                        <input type="checkbox" id="plan4" name="kpiPlans" value="plan4">
+                        <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
+                    </div>
+                    <div class="plan-card">
+                        <img src="plan5.jpg" alt="Plan 5" class="plan-image">
+                        <div class="plan-info">
+                            <h3>Plan 5</h3>
+                            <a href="#" class="plan-details">See plan details</a>
+                        </div>
+                        <input type="checkbox" id="plan5" name="kpiPlans" value="plan5">
+                        <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
+                    </div>
+                </div>
+
+                <button type="button" class="btn-prev">Back</button>
+                <button type="button" class="btn-submit">Create New KPI</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3>Confirm</h3>
+            <p>Are you sure you want to create a new KPI?</p>
+            <button type="button" class="btn-confirm">Confirm</button>
+            <button type="button" class="btn-cancel">Cancel</button>
+        </div>
+    </div>
+
+    <script src="newKPI.js"></script>
+</body>
+</html>
