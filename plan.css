@@ -378,8 +378,7 @@ input:focus, select:focus {
           display: none;
       }
   }
- 
-=======
+  
   .popup-successful {
     display: none;
     position: fixed;
