@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KPlecturer</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="helpactivity.css">
+    <link rel="stylesheet" href="activitylist.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="overlay-container">
+        <div class="overlay" id="overlay">
+        </div>
+        <div class="help-content">
+            <div class="help-activity">
+                <div class="choose-activity">
+                    <div class="help-choose-activity help-text">
+                        Choose Activity
+                    </div>
+                    <div class="help-submenu">Activity</div>
+                    <div class="arrow-submenu">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div>
+                </div>
+                <div class="add-activity">
+                    <div class="help-add-activity help-text">
+                        Add new Activity
+                    </div>
+                    <div class="upload-box">
+                        <div class="upload-content">
+                            <div class="upload-text">New Upload <i class="fa-solid fa-plus"></i> </div>
+                        </div>
+                    </div>
+                    <div class="arrow-add-activity">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div>              
+                </div>
+            </div>
+            <div class="help-actcreate" style="display: none;">
+                <div class="fill-input">
+                    <div class="help-input help-text">
+                        Fill in blank
+                    </div>
+                    <div class="input-name">
+                        <input class="input-field" placeholder="Enter your Activity’s name"></input>
+                    </div>
+                    <div class="input-des">
+                        <input class="input-field"
+                            placeholder="Enter your description about this activity"></input>
+                    </div>
+                    <div class="arrow-input-name">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div>
+                    <div class="arrow-input-des">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div> 
+                </div>
+                <div class="help-time-group">
+                    <div class="help-time help-text">
+                        Select time here
+                    </div>
+                    <div class="input-group">
+                        <div class="time-inputs">
+                            <div class="time-box">
+                                <div class="time-content" id="beginDate">
+                                    Begin: Click here to choose
+                                </div>
+                            </div>
+                            <div class="time-box">
+                                <div class="time-content" id="endDate">
+                                    End: Click here to choose
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="arrow-time">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div>
+                </div>
+                <div class="help-skill-group">
+                    <div class="help-skill help-text">
+                        Select skill here
+                    </div>
+                    <div class="input-group skills-section">
+                        <div class="select-box">
+                            <select id="skillsSelect">
+                                <option value="" disabled selected>Click here to select your skills</option>
+                                <option value="Wireframe">Wireframe</option>
+                                <option value="Prototyping">Prototyping</option>
+                                <option value="UI/UX">UI/UX</option>
+                                <option value="Research">Research</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="arrow-skill">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div>
+                </div>
+                <div class="help-creact-group">
+                    <div class="help-creact help-text">
+                        Create activity successful
+                    </div>
+                    <button class="create-activity-button">
+                        <div class="create-button-content">
+                            Create Activity
+                        </div>
+                    </button>
+                    <div class="arrow-creact">
+                        <div class="arrow-head"></div>
+                        <div class="arrow-body"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <button onclick="closeHelp()" class="back">
+                <i class="icon-back fa-solid fa-arrow-left-long"></i>
+            </button>
+        </div>
+        
+    </div>
+
+    <div class="container">
+        <div id="sidebar-container"> 
+            <div id="sidebar">
+                <a class="sidebar-header" href="/index.html">
+                    <img src="image/logo.png" alt="Logo" class="logo">
+                    <h2>KPlecturer</h2>
+                </a>
+                <ul class="sidebar-menu">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home" ></i>
+                            <div style="display: flex; width: 100%; justify-content:space-between; align-items:center;">
+                                Home
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="index.html" >Dashboard</a></li>
+                            <li><a href="kpilist.html">KPI</a></li>
+                            <li><a href="plan.html">Plan</a></li>
+                            <li><a href="activitylist.html" class="menu-active">Activity</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="statistics.html">
+                            <i class="fas fa-star"></i>
+                            Statistics
+                        </a>
+                    </li>
+                    <li>
+                        <a href="setting.html">
+                            <i class="fas fa-cog"></i>
+                            Settings
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                            <div style="width:100%; display:flex; justify-content:space-between; align-items:center;">
+                                Help
+                                <i class="fas fa-chevron-right chevron-icon"></i>
+                            </div>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#">How to use</a></li>
+                            <li><a href="aboutus.html">About us</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="sidebar-footer">
+                    <a href="#" class="btn-recommendation">Get Recommendation <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>        
+        </div>
+        <div class="dashboard"> 
+            <div id="header-container">
+                <div class="header">
+                    <div class="search-bar">
+                        <div class="logo-section">
+                            <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
+                            <div style="display:flex; flex-direction: column; margin-right:16px;">
+                                <span class="workspace">University</span>
+                                <span class="separator">Workspace</span>
+                            </div>
+                            <i class="fa-solid fa-sort sort-icon"></i>
+                        </div>
+                        <div class="search-section">
+                            <input type="text" class="search-input" placeholder="Search for tasks, events ..">
+                        </div>
+                        <div class="notification-section noti-dropdown">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon noti-dropdown-btn">
+                            <div class="noti-dropdown-content">
+                                <a href="#">You have 2 tasks that are about to be late</a>
+                                <a href="#">Congratulations, you have completed all your work today</a>
+                                <a href="#">You haven't made plans for next week, make it now</a>
+                                <a href="#" style="text-align:center">View all notifications</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-section">
+                        <div style="display:flex; flex-direction: column;">
+                            <span class="account-name">Cristiano</span>
+                            <span class="account-settings">Hust Student</span>
+                        </div>
+                        <div class="user-dropdown">
+                            <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture user-dropbtn">
+                            <div class="user-dropdown-content">
+                                <a href="#">
+                                    <i class="fa-solid fa-user"></i>
+                                    Profile Settings
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>                                    Log Out
+                                </a>
+                              </div>
+                        </div>
+                    </div>
+                </div>            
+            </div>
+            <div class="activity-container">
+                <div class="content">
+                    <div class="card">
+                        <div class="activity-image">
+                            <img class="image-src" src="image/ac2.png" />
+                        </div>
+                        <div class="activity-details">
+                            <div class="activity-title">Technology behind the Blockchain</div>
+                            <div class="activity-des">
+                                <div class="activity-number">Activity #2</div>
+                                <div class="activity-separator">•</div>
+                                <div class="detail-link">See activity details</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div style="display:flex;">
+                                <div class="percentage">64%</div>
+                                <div class="status">Pending</div>
+                            </div>
+                            <div class="bar-bg"></div>
+                            <div class="bar-fill-2"></div>
+                        </div>
+                        <div class="progress-icon">
+                            <img class="icon-src" src="image/edit.png" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="activity-image">
+                            <img class="image-src" src="image/ac3.png" />
+                        </div>
+                        <div class="activity-details">
+                            <div class="activity-title">Greatest way to a good Economy</div>
+                            <div class="activity-des">
+                                <div class="activity-number">Activity #3</div>
+                                <div class="activity-separator">•</div>
+                                <div class="detail-link">See activity details</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div style="display:flex;">
+                                <div class="percentage">70%</div>
+                                <div class="status">Pending</div>
+                            </div>
+                            <div class="bar-bg"></div>
+                            <div class="bar-fill-2"></div>
+                        </div>
+                        <div class="progress-icon">
+                            <img class="icon-src" src="image/edit.png" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="activity-image">
+                            <img class="image-src" src="image/ac1.png" />
+                        </div>
+                        <div class="activity-details">
+                            <div class="activity-title">UI/UX</div>
+                            <div class="activity-des">
+                                <div class="activity-number">Activity #4</div>
+                                <div class="activity-separator">•</div>
+                                <div class="detail-link">See activity details</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div style="display:flex;">
+                                <div class="percentage">80%</div>
+                                <div class="status">Almost Done</div>
+                            </div>
+                            <div class="bar-bg"></div>
+                            <div class="bar-fill-1"></div>
+                        </div>
+                        <div class="progress-icon">
+                            <img class="icon-src" src="image/edit.png" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="activity-image">
+                            <img class="image-src" src="image/ac5.png" />
+                        </div>
+                        <div class="activity-details">
+                            <div class="activity-title">Most Essentials tips for burnout</div>
+                            <div class="activity-des">
+                                <div class="activity-number">Activity #5</div>
+                                <div class="activity-separator">•</div>
+                                <div class="detail-link">See activity details</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div style="display:flex;">
+                                <div class="percentage">80%</div>
+                                <div class="status">Almost Done</div>
+                            </div>
+                            <div class="bar-bg"></div>
+                            <div class="bar-fill-1"></div>
+                        </div>
+                        <div class="progress-icon">
+                            <img class="icon-src" src="image/edit.png" />
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="activity-image">
+                            <img class="image-src" src="image/ac6.png" />
+                        </div>
+                        <div class="activity-details">
+                            <div class="activity-title">Figma course</div>
+                            <div class="activity-des">
+                                <div class="activity-number">Activity #6</div>
+                                <div class="activity-separator">•</div>
+                                <div class="detail-link">See activity details</div>
+                            </div>
+                        </div>
+                        <div class="progress-bar">
+                            <div style="display:flex;">
+                                <div class="percentage">20%</div>
+                                <div class="status">Pending</div>
+                            </div>
+                            <div class="bar-bg"></div>
+                            <div class="bar-fill"></div>
+                        </div>
+                        <div class="progress-icon">
+                            <img class="icon-src" src="image/edit.png" />
+                        </div>
+                    </div>
+                    <div id="activityModalUpdate" class="modal">
+                        <div class="popup-content">
+                            <div class="main-content">
+                                <div class="modal-header">
+                                    <h3>Activity details</h3>
+                                    <button class="close" id="close-btn1">&times;</button>
+                                </div class="body-container">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="image/girl.png" alt="Girl Image" class="display-image">
+                </div>
+                <div id="activityPopup" class="upload-box">
+                    <div class="upload-content">
+                        <div class="upload-text">New Upload <i class="fa-solid fa-plus"></i> </div>
+                    </div>
+                </div>
+                <div id="activityModal" class="modal">
+                    <div class="popup-content">
+                        <img class="side-image" src="image/ac.png" />
+                        <div class="main-content">
+                            <div class="modal-header">
+                                <h3>Create your new activity</h3>
+                                <button class="close" id="close-btn">&times;</button>
+                            </div class="body-container">
+                            <div class="input-section">
+                                <div class="input-group">
+                                    <div class="label">Activity’s name</div>
+                                    <div class="input-box">
+                                        <textarea class="input-field" placeholder="Enter your Activity’s name"></textarea>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="label">Time</div>
+                                    <div class="time-inputs">
+                                        <div class="time-box">
+                                            <div class="time-content" id="beginDate">
+                                                Begin: Click here to choose
+                                            </div>
+                                        </div>
+                                        <div class="time-box">
+                                            <div class="time-content" id="endDate">
+                                                End: Click here to choose
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-group">
+                                    <div class="label">Description</div>
+                                    <div class="input-box">
+                                        <textarea class="input-field"
+                                            placeholder="Enter your description about this activity"></textarea>
+                                    </div>
+                                </div>
+                                <div class="input-group skills-section">
+                                    <div class="label">Select the Skills</div>
+                                    <div class="select-box">
+                                        <select id="skillsSelect">
+                                            <option value="" disabled selected>Click here to select your skills</option>
+                                            <option value="Wireframe">Wireframe</option>
+                                            <option value="Prototyping">Prototyping</option>
+                                            <option value="UI/UX">UI/UX</option>
+                                            <option value="Research">Research</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div style="display: flex; justify-content:end;">
+                                    <button class="create-activity-button" id="create-activity-btn">
+                                        <div class="create-button-content">
+                                            Create Activity
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div id="toast">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="sidebar.js"></script>
+    <script src="activitylist.js"></script>
+    <script src="helpactivity.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            flatpickr("#beginDate", {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                onClose: function (selectedDates, dateStr, instance) {
+                    document.getElementById("beginDate").innerText = "Begin: " + dateStr;
+                }
+            });
+
+            flatpickr("#endDate", {
+                enableTime: false,
+                dateFormat: "d/m/Y",
+                onClose: function (selectedDates, dateStr, instance) {
+                    document.getElementById("endDate").innerText = "End: " + dateStr;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

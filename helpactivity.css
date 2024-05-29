@@ -1,0 +1,432 @@
+
+.overlay {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+
+}
+.container{
+    pointer-events: none;
+    filter: blur(2px);
+}
+.help-content{
+    z-index: 200;
+    height: 0;
+    width: 0;
+    position: relative;
+  }
+  
+  .help-content .choose-activity{
+    position: relative;
+    position: absolute;
+    top: 293px;
+    left: 41px;
+  }
+  
+  .help-submenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 21px;
+    width: 155px;
+    background-color: #6938ef;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    text-align: center;
+    text-align: left;
+    transform: scale(1.01);
+    pointer-events: none;
+  }
+
+  .help-text{
+    position: absolute;
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(251, 247, 255);
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+
+  .help-choose-activity{
+    top: -10px;
+    left: 390px;
+    width: 150px;
+  }
+
+.arrow-submenu{
+  position: absolute;
+  top: 0px;
+  left: 170px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-90deg);
+}
+
+
+.arrow-submenu .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-submenu .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 207px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.help-content .add-activity{
+    position: relative;
+    position: absolute;
+    top: 473px;
+    left: 1071px;
+}
+
+.help-content .add-activity .upload-box{
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.01);
+  pointer-events: none;
+}
+
+.help-add-activity{
+  top: 0;
+  left: -372px;
+}
+
+
+.arrow-add-activity{
+  position: absolute;
+  top: 15px;
+  left: -19px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+}
+
+
+.arrow-add-activity .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-add-activity .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 207px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.help-actcreate .fill-input{
+  position: relative;
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+.help-actcreate .help-input{
+  width: 100px;
+}
+
+.fill-input .input-name{
+  position: absolute;
+  top: -74px;
+  left: 326px;
+  height: 44px;
+  width: 676px;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid #5925DC;
+  display: flex;
+  align-items: center;
+  transform: scale(1.01);
+}
+
+.fill-input .input-name .input-field{
+  border: none;
+  font-size: 16px;
+  padding-left: 10px;
+  pointer-events: none;
+}
+
+.arrow-input-name{
+  position: absolute;
+  top: -48px;
+  left: 306px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(72deg);
+}
+
+
+.arrow-input-name .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-input-name .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 200px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.fill-input .input-des{
+  position: absolute;
+  top: 96px;
+  left: 326px;
+  height: 44px;
+  width: 676px;
+  background-color: white;
+  border-radius: 6px;
+  border: 2px solid #5925DC;
+  display: flex;
+  align-items: center;
+  transform: scale(1.01);
+  pointer-events: none;
+}
+
+.fill-input .input-des .input-field{
+  border: none;
+  font-size: 16px;
+  padding-left: 10px;
+  width: 300px;
+}
+
+.arrow-input-des{
+  position: absolute;
+  top: 95px;
+  left: 304px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(115deg);
+}
+
+
+.arrow-input-des .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-input-des .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 212px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.help-actcreate .help-time-group{
+  position: relative;
+  position: absolute;
+  top: 200px;
+  left: 1300px;
+}
+
+.help-actcreate .help-time{
+  width: 150px;
+}
+
+.help-time-group .input-group{
+  position:absolute;
+  top: 6px;
+  left: -774px;
+  width: 677px;
+  transform: scale(1.01);
+  pointer-events: none;
+}
+
+.arrow-time{
+  position: absolute;
+  top: 10px;
+  left: -95px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-95deg);
+}
+
+
+.arrow-time .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-time .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 82px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.help-actcreate .help-skill-group{
+  position: relative;
+  position: absolute;
+  top: 400px;
+  left: 200px;
+}
+
+.help-actcreate .help-skill{
+  width: 130px;
+}
+
+.help-skill-group .input-group{
+  position: absolute;
+  top: -10px;
+  left: 328px;
+  width: 676px;
+  border-radius: 6px;
+  background-color: white;
+  transform: scale(1.01);
+  pointer-events: none;
+}
+
+.arrow-skill{
+  position: absolute;
+  top: 10px;
+  left: 306px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(88deg);
+}
+
+
+.arrow-skill .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-skill .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 162px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.help-actcreate .help-creact-group{
+  position: relative;
+  position: absolute;
+  top: 440px;
+  left: 1300px;
+}
+
+.help-creact-group .create-activity-button{
+  position: absolute;
+  top: 6px;
+  left: -256px;
+  transform: scale(1.01);
+  pointer-events: none;
+}
+
+.help-actcreate .help-creact{
+  width: 150px;
+}
+
+.arrow-creact{
+  position: absolute;
+  top: 15px;
+  left: -95px;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-87deg);
+}
+
+
+.arrow-creact .arrow-head {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent; 
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid black;
+  top: 0;
+  left: 0;
+}
+
+.arrow-creact .arrow-body {
+  position: absolute;
+  width: 2px;
+  height: 82px;
+  background-color: black;
+  top: 14px;
+  left: 3.7px;
+}
+
+.help-content .back{
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
+  background-color: rgb(251, 247, 255);
+  cursor: pointer;
+}
+
+.help-content .back:hover {
+  background-color: #d6c0e3;
+  color: #1c1c1c;
+  transform: scale(1.02);
+}
+
+.help-content .icon-back{
+  padding: 0px 10px;
+  font-size: 30px;
+}
