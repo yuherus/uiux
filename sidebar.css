@@ -94,3 +94,19 @@
     background-color: #7a5af8;
 }
 
+
+@media(max-width:1024px) {
+
+    .account-name,
+    .account-settings {
+        display: none;
+    }
+}
+@media(max-width:768px) {
+    .form-group {
+        width: 100%;
+    }
+    .form-group.bio textarea {
+        width: 100%;
+    }
+}
