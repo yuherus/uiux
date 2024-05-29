@@ -252,3 +252,70 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+@media screen and (max-width: 768px) {
+
+    .dashboard {
+        margin-left: 30px;
+        width: 100%;
+        padding-right: 30px;
+    }
+    
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .sidebar-toggle {
+        margin-right: 20px;
+    }
+
+    .banner {
+        width: 120%;
+    }
+
+    .cards-container {
+        width: 120%;
+    }
+
+    .card-text {
+        font-size: 16px;
+    }
+
+    .card-detail {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .account-section {
+        margin-left: 200px;
+    }
+
+    .account-name {
+        display: none !important;  
+    }
+
+    .account-settings {
+        display: none !important;
+    }
+    .sidebar-visible .main-image {
+        right: -25%; /* Vị trí khi sidebar được hiển thị */
+    }
+    .main-image {
+        right: 0; /* Vị trí mặc định khi sidebar bị ẩn */
+    }
+    
+
+}
+
+@media screen and (min-width: 768px) {
+    .sidebar-toggle {
+        display: none;
+    }
+}

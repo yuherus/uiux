@@ -30,13 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let sidebarVisible = true;
+
 function toggleSidebar() {
     var sidebar = document.getElementById("sidebar-container");
-
-      if (sidebarVisible) {
+    var body = document.body; // Hoặc sử dụng phần tử cha phù hợp
+    
+    if (sidebarVisible) {
         sidebar.style.display = 'none'; // Ẩn sidebar nếu đã hiển thị
-      } else {
+        body.classList.remove('sidebar-visible');
+    } else {
         sidebar.style.display = 'block'; // Hiển thị sidebar nếu chưa hiển thị
-      }
-      sidebarVisible = !sidebarVisible; // Đảo ngược trạng thái hiển thị
+        body.classList.add('sidebar-visible');
+    }
+    sidebarVisible = !sidebarVisible; // Đảo ngược trạng thái hiển thị
 }

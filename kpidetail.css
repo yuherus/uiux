@@ -519,6 +519,11 @@
     position: relative;
 }
 @media screen and (max-width: 768px) {
+    .dashboard {
+        margin-left: 30px;
+        width: 100%;
+        padding-right: 30px;
+    }
     .progress-dates {
         flex-direction: column; /* Sử dụng flex-direction: column để các date-input dọc theo hàng dọc */
         gap:20px;
