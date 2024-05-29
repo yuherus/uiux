@@ -21,7 +21,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var createPlanButton = document.querySelector('.submit-btn');
     createPlanButton.addEventListener('click', function(event) {
         event.preventDefault();
-        showSuccessToast();
         modal.style.display = "none";
     });
 
