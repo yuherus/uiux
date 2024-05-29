@@ -1,4 +1,4 @@
-.de-kpi-details-header {
+.kpi-details-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -7,13 +7,13 @@
     margin-bottom: 20px;
 }
 
-.de-kpi-details-header h1 {
+.kpi-details-header h1 {
     margin: 0;
     font-size: 24px;
     color: #5925DC;
 }
 
-.de-kpi-details-header .de-btn-edit {
+.kpi-details-header .btn-edit {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -27,13 +27,13 @@ form {
     flex-direction: column;
 }
 
-.de-progress-status-container {
+.progress-status-container {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
 }
 
-.de-progress-container {
+.progress-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -41,13 +41,13 @@ form {
     margin-bottom: 10px;
 }
 
-.de-progress-container label {
+.progress-container label {
     margin-bottom: 5px;
     color: #000;
     font-weight: bold;
 }
 
-.de-progress-bar {
+.progress-bar {
     position: relative;
     width: 100%;
     height: 20px;
@@ -56,14 +56,14 @@ form {
     overflow: hidden;
 }
 
-.de-progress-fill {
+.progress-fill {
     height: 100%;
     background: #9C3CE7;
     border-radius: 10px;
     transition: width 0.3s, background 0.3s;
 }
 
-.de-progress-text {
+.progress-text {
     position: absolute;
     right: 10px;
     top: 50%;
@@ -72,41 +72,42 @@ form {
     font-weight: bold;
 }
 
-.de-status-hour-container {
+.status-hour-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
 }
 
-.de-hour-completed {
+.hour-completed {
     display: flex;
     align-items: center;
 }
 
-.de-hour-completed .de-hours {
+.hour-completed .hours {
     margin-left: 10px;
     color: #5925DC;
     font-weight: bold;
 }
 
-.de-status-container {
+.status-container {
     display: flex;
     align-items: center;
 }
 
-.de-status-container label {
+.status-container label {
     margin-right: 10px;
     margin-bottom: 0px;
+
     font-weight: bold;
 }
 
-.de-kpi-details {
+.kpi-details {
     display: flex;
     flex-direction: column;
 }
 
-.de-kpi-info, .de-kpi-goals, .de-kpi-plans {
+.kpi-info, .kpi-goals, .kpi-plans {
     margin-bottom: 20px;
     padding: 20px;
     border-radius: 8px;
@@ -114,7 +115,7 @@ form {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.de-kpi-info h2, .de-kpi-goals h2, .de-kpi-plans h2 {
+.kpi-info h2, .kpi-goals h2, .kpi-plans h2 {
     margin-top: 0;
     color: #000;
 }
@@ -143,13 +144,13 @@ textarea {
     height: 100px;
 }
 
-.de-date-label {
+.date-label {
     display: inline-block;
     width: 46%;
     margin-right: 30px;
 }
 
-.de-plan-card {
+.plan-card {
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -159,50 +160,50 @@ textarea {
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.de-plan-card .de-plan-info {
+.plan-card .plan-info {
     flex: 1;
 }
 
-.de-plan-card h3 {
+.plan-card h3 {
     margin: 0;
     font-size: 18px;
     color: #333;
 }
 
-.de-plan-details {
+.plan-details {
     text-decoration: none;
     color: #5925DC;
     font-size: 14px;
     margin-top: 5px;
 }
 
-.de-plan-percentage {
+.plan-percentage {
     margin-right: 20px;
 }
 
-.de-plan-percentage label {
+.plan-percentage label {
     display: flex;
     align-items: center;
     margin: 0;
     font-size: 14px;
 }
 
-.de-plan-percentage input[type="text"] {
+.plan-percentage input[type="text"] {
     width: 50px;
     margin-left: 10px;
     text-align: center;
 }
 
-.de-plan-checkbox {
+.plan-checkbox {
     transform: scale(1.2);
 }
 
-.de-add-more-plans {
+.add-more-plans {
     text-align: center;
     margin-top: 10px;
 }
 
-.de-add-more-plans .de-btn-add-more {
+.add-more-plans .btn-add-more {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -211,13 +212,13 @@ textarea {
     cursor: pointer;
 }
 
-.de-kpi-actions {
+.kpi-actions {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
 }
 
-.de-kpi-actions .de-btn-save, .de-kpi-actions .de-btn-delete {
+.kpi-actions .btn-save, .kpi-actions .btn-delete {
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -225,14 +226,15 @@ textarea {
     cursor: pointer;
 }
 
-.de-kpi-actions .de-btn-save {
+.kpi-actions .btn-save {
     background: linear-gradient(90deg, #5925DC, #9C3CE7);
 }
 
-.de-kpi-actions .de-btn-delete {
+.kpi-actions .btn-delete {
     background: linear-gradient(90deg, #5925DC, #9C3CE7);
 }
 
-.de-additional-plans .de-plan-card {
+.additional-plans .plan-card {
     display: none;
 }
+

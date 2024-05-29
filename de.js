@@ -15,20 +15,20 @@ document.addEventListener('DOMContentLoaded', function () {
         ]
     };
 
-    document.getElementById('de-kpiNameDetail').value = kpiDetails.name;
-    document.getElementById('de-kpiFieldDetail').value = kpiDetails.field;
-    document.getElementById('de-kpiDescriptionDetail').value = kpiDetails.description;
-    document.getElementById('de-kpiGoalDetail').value = kpiDetails.goal;
-    document.getElementById('de-kpiUnitDetail').value = kpiDetails.unit;
-    document.getElementById('de-kpiStartDateDetail').value = kpiDetails.startDate;
-    document.getElementById('de-kpiEndDateDetail').value = kpiDetails.endDate;
+    document.getElementById('kpiNameDetail').value = kpiDetails.name;
+    document.getElementById('kpiFieldDetail').value = kpiDetails.field;
+    document.getElementById('kpiDescriptionDetail').value = kpiDetails.description;
+    document.getElementById('kpiGoalDetail').value = kpiDetails.goal;
+    document.getElementById('kpiUnitDetail').value = kpiDetails.unit;
+    document.getElementById('kpiStartDateDetail').value = kpiDetails.startDate;
+    document.getElementById('kpiEndDateDetail').value = kpiDetails.endDate;
 
 });
 
 function updateStatus() {
-    const statusSelect = document.getElementById('de-statusSelect');
-    const progressFill = document.getElementById('de-progressFill');
-    const progressText = document.getElementById('de-progressText');
+    const statusSelect = document.getElementById('statusSelect');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
 
     if (statusSelect.value === 'done') {
         progressFill.style.width = '100%';
@@ -44,28 +44,28 @@ function updateStatus() {
 
 function enableEditing() {
     // Ensure all relevant fields are enabled
-    document.getElementById('de-kpiNameDetail').disabled = false;
-    document.getElementById('de-kpiGoalDetail').disabled = false;
-    document.getElementById('de-kpiDescriptionDetail').disabled = false;
-    document.getElementById('de-kpiStartDateDetail').disabled = false;
-    document.getElementById('de-kpiEndDateDetail').disabled = false;
-    document.getElementById('de-kpiUnitDetail').disabled = false;
-    document.getElementById('de-kpiFieldDetail').disabled = false;
-    document.getElementById('de-kpiFieldDetail').addEventListener('change', function() {
+    document.getElementById('kpiNameDetail').disabled = false;
+    document.getElementById('kpiGoalDetail').disabled = false;
+    document.getElementById('kpiDescriptionDetail').disabled = false;
+    document.getElementById('kpiStartDateDetail').disabled = false;
+    document.getElementById('kpiEndDateDetail').disabled = false;
+    document.getElementById('kpiUnitDetail').disabled = false;
+    document.getElementById('kpiFieldDetail').disabled = false;
+    document.getElementById('kpiFieldDetail').addEventListener('change', function() {
         if (this.value === 'Custom') {
-            document.getElementById('de-kpiFieldCustom').style.display = 'inline-block';
+            document.getElementById('kpiFieldCustom').style.display = 'inline-block';
         } else {
-            document.getElementById('de-kpiFieldCustom').style.display = 'none';
+            document.getElementById('kpiFieldCustom').style.display = 'none';
         }
     });
-    const planPercentageInputs = document.querySelectorAll('.de-plan-percentage-input');
+    const planPercentageInputs = document.querySelectorAll('.plan-percentage-input');
     planPercentageInputs.forEach(input => {
         input.disabled = false;
     });
 }
 
 function addMorePlans() {
-    const additionalPlans = document.getElementById('de-additionalPlans');
+    const additionalPlans = document.getElementById('additionalPlans');
     const plansData = [
         { title: 'Plan 4', importance: '%' },
         { title: 'Plan 5', importance: '%' },
@@ -80,18 +80,18 @@ function addMorePlans() {
 
     plansData.forEach(plan => {
         const newPlanCard = document.createElement('div');
-        newPlanCard.className = 'de-plan-card';
+        newPlanCard.className = 'plan-card';
         newPlanCard.innerHTML = `
-            <div class="de-plan-info">
+            <div class="plan-info">
                 <h3>${plan.title}</h3>
-                <a href="#" class="de-plan-details">See plan details</a>
+                <a href="#" class="plan-details">See plan details</a>
             </div>
-            <div class="de-plan-percentage">
+            <div class="plan-percentage">
                 <label><strong>% Importance:</strong>
-                    <input type="text" value="${plan.importance}" class="de-plan-percentage-input">
+                    <input type="text" value="${plan.importance}" class="plan-percentage-input">
                 </label>
             </div>
-            <input type="checkbox" class="de-plan-checkbox" onclick="movePlan(this)">
+            <input type="checkbox" class="plan-checkbox" onclick="movePlan(this)">
         `;
         additionalPlans.appendChild(newPlanCard);
         newPlanCard.style.display = 'flex';
@@ -102,7 +102,7 @@ function movePlan(checkbox) {
     const planCard = checkbox.parentElement;
     if (checkbox.checked) {
         planCard.style.display = 'flex';
-        document.querySelector('.de-add-more-plans').before(planCard);
+        document.querySelector('.add-more-plans').before(planCard);
     }
 }
 
