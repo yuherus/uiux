@@ -85,13 +85,16 @@
 
 .kpi-section .time{
     padding-top: 10px;
+    margin-left: 10px;
 }
 
 .progress-dates {
     display: flex;
     justify-content: center;
-    gap: 400px;
+    gap: 200px;
     margin-bottom: 20px;
+    padding-left: 20px;
+    
 }
 
 .time .date-input {
@@ -101,6 +104,7 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #FAFAFF;
+    width: 200px;
 }
 
 .date-input label {
@@ -110,7 +114,7 @@
     color: #8000ff;
 }
 
-.date-input input {
+.date-input .time-content {
     padding: 5px;
     border: none;
     outline: none;
@@ -119,14 +123,10 @@
     color: #8000ff;
 }
 
-.date-input input:hover{
+.date-input .time-content:hover{
     transform: scale(1.01);
     cursor: pointer;
 }
-
- .date-input input[type="date"] {
-    background-color: #FAFAFF;
- }
 
 .time .date-input .icon{
     padding: 5px;
