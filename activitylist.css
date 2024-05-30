@@ -183,6 +183,7 @@
     justify-content: center;
     align-items: center;
     transform-origin: 0 0;
+    margin-top:150px;
 }
 
 .display-image {
@@ -192,10 +193,9 @@
 }
 
 .upload-box {
-    width: 180px;
-    position: absolute;
     right: 40px;
-    top: 400px;
+    width: 160px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -203,6 +203,7 @@
     border-radius: 20px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     transition: box-shadow 0.3s ease;
+    margin-left:460px;
 }
 
 .upload-box:hover {
@@ -237,7 +238,16 @@
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
+.add-activity{
+    display: flex;
+    margin-top:20px;
 
+}
+.activity-list{
+    font-size: 28px;
+    font-weight: bold;
+    margin-left:10px;
+}
 .icon-structure {
     width: 8px;
     height: 8px;
@@ -1340,3 +1350,67 @@ cursor: pointer;
 .detail-close-button::after {
     transform: rotate(-45deg);
 }
+@media screen and (min-width: 768px) {
+    .sidebar-toggle {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+   
+    .dashboard {
+        margin-left: 30px;
+        width: 100%;
+        padding-right: 30px;
+    }
+
+    #sidebar-container {
+        display: none;
+    }
+   
+    .search-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+
+    .sidebar-toggle {
+        margin-right: 20px;
+    }
+
+}
+@media screen and (max-width: 768px) {
+   .image-container{
+    display:none;
+   }
+   .dashboard {
+    margin-left: 30px;
+    width: 100%;
+    padding-right: 30px;
+}
+    .card{
+        width:100%
+    }
+    .activity-list{
+        width:200px;
+        font-size:25px;
+    }
+    
+      .upload-text{
+        margin:0px 0px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+        .upload-text span {
+          display: none; /* Ẩn văn bản */
+        }
+        .create-activity-button{
+            margin-top:-20px;
+        }
+      }
