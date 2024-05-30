@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,13 @@
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="activitylist.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 </head>
+
 <body>
     <div class="container">
-        <div id="sidebar-container"> 
+        <div id="sidebar-container">
             <div id="sidebar">
                 <a class="sidebar-header" href="/index.html">
                     <img src="image/logo.png" alt="Logo" class="logo">
@@ -23,7 +25,7 @@
                 <ul class="sidebar-menu">
                     <li>
                         <a href="#">
-                            <i class="fas fa-home" ></i>
+                            <i class="fas fa-home"></i>
                             <div style="display: flex; width: 100%; justify-content:space-between; align-items:center;">
                                 Home
                                 <i class="fas fa-chevron-right chevron-icon"></i>
@@ -33,7 +35,7 @@
                             <li><a href="index.html">Dashboard</a></li>
                             <li><a href="kpilist.html">KPI</a></li>
                             <li><a href="plan.html">Plan</a></li>
-                            <li><a href="activitylist.html"  class="menu-active">Activity</a></li>
+                            <li><a href="activitylist.html" class="menu-active">Activity</a></li>
                         </ul>
                     </li>
                     <li>
@@ -65,9 +67,9 @@
                 <div class="sidebar-footer">
                     <a href="#" class="btn-recommendation">Get Recommendation <i class="fas fa-arrow-right"></i></a>
                 </div>
-            </div>        
+            </div>
         </div>
-        <div class="dashboard"> 
+        <div class="dashboard">
             <div id="header-container">
                 <div class="header">
                     <div class="sidebar-toggle">
@@ -86,7 +88,8 @@
                             <input type="text" class="search-input" placeholder="Search for tasks, events ..">
                         </div>
                         <div class="notification-section noti-dropdown">
-                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon noti-dropdown-btn">
+                            <img src="image/notification-badge.svg" alt="Notifications"
+                                class="notification-icon noti-dropdown-btn">
                             <div class="noti-dropdown-content">
                                 <a href="#">You have 2 tasks that are about to be late</a>
                                 <a href="#">Congratulations, you have completed all your work today</a>
@@ -108,24 +111,24 @@
                                     Profile Settings
                                 </a>
                                 <a href="#">
-                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>                                    Log Out
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out
                                 </a>
-                              </div>
+                            </div>
                         </div>
                     </div>
-                </div>            
+                </div>
             </div>
-            <div class ="add-activity">
+            <div class="add-activity">
                 <div class="activity-list">Activity List</div>
                 <div id="activityPopup" class="upload-box">
                     <div class="upload-content">
                         <div class="upload-text"><span>New Upload</span> <i class="fa-solid fa-plus"></i> </div>
+                    </div>
                 </div>
-                </div>
-                </div>
+            </div>
             <div class="activity-container">
                 <div class="content">
-                    <div class="card">
+                    <div class="card" id="card-1">
                         <div class="activity-image">
                             <img class="image-src" src="image\act1.jpg" />
                         </div>
@@ -139,11 +142,11 @@
                         </div>
                         <div class="activity-progress-bar">
                             <div style="display:flex;">
-                                <div class="percentage">64%</div>
+                                <div class="percentage percentage-1" id="percentage-1">64%</div>
                                 <div class="status">Pending</div>
                             </div>
                             <div class="bar-bg"></div>
-                            <div class="bar-fill-2"></div>
+                            <div class="bar-fill-2" id="bar-fill-2-card-1"></div>
                         </div>
                         <div class="progress-icon">
                             <img class="icon-src" src="image/edit.png" />
@@ -246,201 +249,218 @@
                         </div>
                     </div>
                     <div id="activityModalUpdate" class="modal">
-                            <div class="update-popup-content">
-                                <div class="activity-content">
-                                    <div class="modal-header1">
-                                        <h3 style="width:100%; text-align:center; margin-top:20px">Technology behind the Blockchain</h3>
-                                        <button class="close" id="close-btn1">&times;</button>
-                                    </div class="body-container">
-                                    <div style="display:flex; width:100%; justify-content:space-around">
-                                        <div style="width:60%;">
-                                            <div class="input-group">
-                                                <div class="label">Time</div>
-                                                <div class="time-inputs">
-                                                    <div class="time-box">
-                                                        <div class="time-content" id="beginDate1">
-                                                            Begin: Click here to choose
-                                                        </div>
+                        <div class="update-popup-content">
+                            <div class="activity-content">
+                                <div class="modal-header1">
+                                    <h3 style="width:100%; text-align:center; margin-top:20px" id="modal-title-activity"
+                                        class="card-title">Technology behind the Blockchain</h3>
+                                    <button class="close" id="close-btn1">&times;</button>
+                                </div class="body-container">
+                                <div style="display:flex; width:100%; justify-content:space-around">
+                                    <div style="width:60%;">
+                                        <div class="input-group">
+                                            <div class="label">Time</div>
+                                            <div class="time-inputs">
+                                                <div class="time-box">
+                                                    <div class="time-content" id="beginDate1">
+                                                        Begin: 08/05/2024
                                                     </div>
-                                                    <div class="time-box">
-                                                        <div class="time-content" id="endDate1">
-                                                            End: Click here to choose
-                                                        </div>
+                                                </div>
+                                                <div class="time-box">
+                                                    <div class="time-content" id="endDate1">
+                                                        End: 10/7/2024
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="input-group">
-                                                <div class="label">Description</div>
-                                                <div class="input-box">
-                                                    <textarea class="input-field"
-                                                        placeholder="Enter your description about this activity"></textarea>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="label">Description</div>
+                                            <div class="input-box">
+                                                <textarea class="input-field"
+                                                    placeholder="Enter your description about this activity"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group" style="margin-top:10px;">
+                                            <div class="label">Percentage</div>
+                                            <div class="input-box">
+                                                <textarea class="input-field" id="input-percentage-data"
+                                                    placeholder="Change the percentage to manage this plan"></textarea>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group skills-section">
+                                            <div class="label">Select the Skills</div>
+                                            <div class="dropdown-modal">
+                                                <div class="dropdown" onclick="toggleDropdown()">
+                                                    <span>Select your plan</span>
+                                                    <span class="arrow">&#9662;</span>
+                                                </div>
+                                                <div class="dropdown-menu">
+                                                    <div class="dropdown-item" onclick="selectPlan('Web design')">Web
+                                                        design</div>
+                                                    <div class="dropdown-item" onclick="selectPlan('Graphic design')">
+                                                        Graphic design</div>
+                                                    <div class="dropdown-item" onclick="selectPlan('SEO')">SEO</div>
                                                 </div>
                                             </div>
-                                            <div class="input-group skills-section">
-                                                <div class="label">Select the Skills</div>
-                                                <div class="dropdown-modal">
-                                                    <div class="dropdown" onclick="toggleDropdown()">
-                                                        <span>Select your plan</span>
-                                                        <span class="arrow">&#9662;</span>
-                                                    </div>
-                                                    <div class="dropdown-menu">
-                                                        <div class="dropdown-item" onclick="selectPlan('Web design')">Web design</div>
-                                                        <div class="dropdown-item" onclick="selectPlan('Graphic design')">Graphic design</div>
-                                                        <div class="dropdown-item" onclick="selectPlan('SEO')">SEO</div>
-                                                    </div>
-                                                </div>
-                                                <div class="selected-plans" id="selected-skill">
-                                                    <!-- Selected plans will appear here -->
-                                                </div>
+                                            <div class="selected-plans" id="selected-skill">
+                                                <!-- Selected plans will appear here -->
                                             </div>
+                                        </div>
+                                        <div style="display: flex;">
                                             <button id="save-btn1" class="save-button">Save</button>
+                                            <button id="delete-btn1" class="delete-button">Delete</button>
                                         </div>
-                                        <div style="width:34%;">
-                                            <div class="progress-bar">
-                                                <div style="display:flex;">
-                                                    <div class="percentage">20%</div>
-                                                    <div class="status">Pending</div>
+
+                                    </div>
+                                    <div style="width:34%;">
+                                        <div class="progress-bar">
+                                            <div style="display:flex;">
+                                                <div class="percentage" id="percentage-modal">
                                                 </div>
-                                                <div class="bar-bg1"></div>
-                                                <div class="bar-fill3"></div>
+                                                <div class="status">Pending</div>
                                             </div>
-                                            <section class="daily-contribution-section">
-                                                <div class="contribution-info">
-                                                    <span style="font-size:18px;">Daily Contribution</span>
-                                                    <span class="hours">45 Hour</span>
-                                                </div>
-                                                <span class="percentage">+2.45%</span>
-                                            </section>
-                                            <canvas id="dailyContributionChart"></canvas>
+                                            <div class="bar-bg1"></div>
+                                            <div class="bar-fill3"></div>
                                         </div>
+                                        <section class="daily-contribution-section">
+                                            <div class="contribution-info">
+                                                <span style="font-size:18px;">Daily Contribution</span>
+                                                <span class="hours">45 Hour</span>
+                                            </div>
+                                            <span class="percentage">+2.45%</span>
+                                        </section>
+                                        <canvas id="dailyContributionChart"></canvas>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                    <!-- Thêm liên kết đến thư viện Flatpickr và jQuery (nếu cần) -->
-                    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-                
-                    <!-- Đoạn mã JavaScript để kích hoạt DatePicker -->
-                    <script src="script.js"></script>
-                
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            const createActivityBtn = document.getElementById('save-btn');
-                
-                            createActivityBtn.addEventListener('click', function () {
-                                alert("successful! You've created an activity");
-                                setTimeout(function () {
-                                    window.location.href = 'activitylist.html';
-                                }, 3); // 5 seconds
-                            });
-                        });
-                        // Khi tài liệu đã tải hoàn thành
-                        $(document).ready(function () {
-                            // Kích hoạt DatePicker cho phần thời gian "Begin"
-                            flatpickr("#beginDate", {
-                                enableTime: false,
-                                dateFormat: "d/m/Y",
-                                onClose: function (selectedDates, dateStr, instance) {
-                                    document.getElementById("beginDate").innerText = "Begin: " + dateStr;
-                                }
-                            });
-                
-                            // Kích hoạt DatePicker cho phần thời gian "End"
-                            flatpickr("#endDate", {
-                                enableTime: false,
-                                dateFormat: "d/m/Y",
-                                onClose: function (selectedDates, dateStr, instance) {
-                                    document.getElementById("endDate").innerText = "End: " + dateStr;
-                                }
-                            });
-                        });
-                    </script>
                 </div>
-               <div class ="image-container">
-                <img src ="image/girl.png" alt ="Girl Image" class=""display-image>
-               </div>
-                <div id="successPopup" class="popup-successful">
-                    <div class="popup-successful-content">
-                        <img src="image/acsucess.png" alt="Success Icon" class="popup-successful-image">
-                        <div class="popup-successful-text">
-                            <h2 class="popup-successful-title">Successful!</h2>
-                            <p class="popup-successful-description">Congratulations! Your activity has been created.</p>
-                        </div>
-                        <div class="popup-successful-buttons">
-                            <button id="backToActivity" class="popup-successful-button">BACK TO ACTIVITY</button>
-                            <button id="continueWithPlan" class="popup-successful-button">CONTINUE WITH PLAN</button>
-                        </div>
+
+                <!-- Thêm liên kết đến thư viện Flatpickr và jQuery (nếu cần) -->
+                <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                <!-- Đoạn mã JavaScript để kích hoạt DatePicker -->
+                <script src="script.js"></script>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const createActivityBtn = document.getElementById('save-btn');
+
+                        createActivityBtn.addEventListener('click', function () {
+                            alert("successful! You've created an activity");
+                            setTimeout(function () {
+                                window.location.href = 'activitylist.html';
+                            }, 3); // 5 seconds
+                        });
+                    });
+                    // Khi tài liệu đã tải hoàn thành
+                    $(document).ready(function () {
+                        // Kích hoạt DatePicker cho phần thời gian "Begin"
+                        flatpickr("#beginDate", {
+                            enableTime: false,
+                            dateFormat: "d/m/Y",
+                            onClose: function (selectedDates, dateStr, instance) {
+                                document.getElementById("beginDate").innerText = "Begin: " + dateStr;
+                            }
+                        });
+
+                        // Kích hoạt DatePicker cho phần thời gian "End"
+                        flatpickr("#endDate", {
+                            enableTime: false,
+                            dateFormat: "d/m/Y",
+                            onClose: function (selectedDates, dateStr, instance) {
+                                document.getElementById("endDate").innerText = "End: " + dateStr;
+                            }
+                        });
+                    });
+                </script>
+            </div>
+            <div class="image-container">
+                <img src="image/girl.png" alt="Girl Image" class="display-image">
+            </div>
+            <div id="successPopup" class="popup-successful">
+                <div class="popup-successful-content">
+                    <img src="image/acsucess.png" alt="Success Icon" class="popup-successful-image">
+                    <div class="popup-successful-text">
+                        <h2 class="popup-successful-title">Successful!</h2>
+                        <p class="popup-successful-description">Congratulations! Your activity has been created.</p>
+                    </div>
+                    <div class="popup-successful-buttons">
+                        <button id="backToActivity" class="popup-successful-button">BACK TO ACTIVITY</button>
+                        <button id="continueWithPlan" class="popup-successful-button">CONTINUE WITH PLAN</button>
                     </div>
                 </div>
-                
-                <div id="activityModal" class="modal">
-                    <div class="popup-content">
-                        <img class="side-image" src="image/ac.png" />
-                        <div class="main-content">
-                            <div class="modal-header">
-                                <h3>Create your new activity</h3>
-                                <button class="close" id="close-btn">&times;</button>
-                            </div class="body-container">
-                            <div class="input-section">
-                                <div class="input-group">
-                                    <div class="label">Activity’s name</div>
-                                    <div class="input-box">
-                                        <textarea class="input-field" placeholder="Enter your Activity’s name"></textarea>
-                                    </div>
+            </div>
+
+            <div id="activityModal" class="modal">
+                <div class="popup-content">
+                    <img class="side-image" src="image/ac.png" />
+                    <div class="main-content">
+                        <div class="modal-header">
+                            <h3>Create your new activity</h3>
+                            <button class="close" id="close-btn">&times;</button>
+                        </div class="body-container">
+                        <div class="input-section">
+                            <div class="input-group">
+                                <div class="label">Activity’s name</div>
+                                <div class="input-box">
+                                    <textarea class="input-field" placeholder="Enter your Activity’s name"></textarea>
                                 </div>
-                                <div class="input-group">
-                                    <div class="label">Time</div>
-                                    <div class="time-inputs">
-                                        <div class="time-box">
-                                            <div class="time-content" id="beginDate">
-                                                Begin: Click here to choose
-                                            </div>
-                                        </div>
-                                        <div class="time-box">
-                                            <div class="time-content" id="endDate">
-                                                End: Click here to choose
-                                            </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="label">Time</div>
+                                <div class="time-inputs">
+                                    <div class="time-box">
+                                        <div class="time-content" id="beginDate">
+                                            Begin: Click here to choose
                                         </div>
                                     </div>
-                                </div>
-                                <div class="input-group">
-                                    <div class="label">Description</div>
-                                    <div class="input-box">
-                                        <textarea class="input-field"
-                                            placeholder="Enter your description about this activity"></textarea>
-                                    </div>
-                                </div>
-                                <div class="input-group skills-section">
-                                    <div class="label">Select the Skills</div>
-                                    <div class="select-box">
-                                        <select id="skillsSelect">
-                                            <option value="" disabled selected>Click here to select your skills</option>
-                                            <option value="Wireframe">Wireframe</option>
-                                            <option value="Prototyping">Prototyping</option>
-                                            <option value="UI/UX">UI/UX</option>
-                                            <option value="Research">Research</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div style="display: flex; justify-content:end;">
-                                    <button class="create-activity-button" id="create-activity-btn">
-                                        <div class="create-button-content">
-                                            Create Activity
+                                    <div class="time-box">
+                                        <div class="time-content" id="endDate">
+                                            End: Click here to choose
                                         </div>
-                                    </button>
+                                    </div>
                                 </div>
+                            </div>
+                            <div class="input-group">
+                                <div class="label">Description</div>
+                                <div class="input-box">
+                                    <textarea class="input-field"
+                                        placeholder="Enter your description about this activity"></textarea>
+                                </div>
+                            </div>
+                            <div class="input-group skills-section">
+                                <div class="label">Select the Skills</div>
+                                <div class="select-box">
+                                    <select id="skillsSelect">
+                                        <option value="" disabled selected>Click here to select your skills</option>
+                                        <option value="Wireframe">Wireframe</option>
+                                        <option value="Prototyping">Prototyping</option>
+                                        <option value="UI/UX">UI/UX</option>
+                                        <option value="Research">Research</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div style="display: flex; justify-content:end;">
+                                <button class="create-activity-button" id="create-activity-btn">
+                                    <div class="create-button-content">
+                                        Create Activity
+                                    </div>
+                                </button>
                             </div>
                         </div>
                     </div>
-                </div>
-                </div>
-                <div id="toast">
                 </div>
             </div>
         </div>
+        <div id="toast">
+        </div>
+    </div>
+    </div>
     </div>
 
     <script src="sidebar.js"></script>
@@ -516,4 +536,5 @@
 
     </script>
 </body>
+
 </html>
