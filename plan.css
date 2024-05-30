@@ -61,6 +61,11 @@
     margin-bottom: 10px;
 }
 
+.item_img img{
+  height: 90px;
+  width: 130px;
+  border-radius: 10px;
+}
 
 .item-time {
     display: flex;
