@@ -150,6 +150,7 @@ label strong {
     border-radius: 4px;
     font-family: 'Poppins', sans-serif;
     color: #000;
+    padding-left: 10px;
 }
 #kpiNameDetail{
     width: 99%;
@@ -164,7 +165,6 @@ textarea {
 
 #kpiDescriptionDetail{
     width: 99%;
-    padding: 10px 2px;  
 }
 
 .date-label {
