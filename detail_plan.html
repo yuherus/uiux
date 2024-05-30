@@ -209,13 +209,36 @@
                     </a>
                 </div>
                 <div class="form-actions">
-                    <a href="plan.html"><button type="submit" class="save-btn">SAVE</button></a>
-                    <a href="plan.html"><button type="button" class="remove-btn">REMOVE</button></a>
+                    <a id="save-btn"><button type="submit" class="save-btn">SAVE</button></a>
+                    <a id="remove-btn"><button type="button" class="remove-btn">REMOVE</button></a>
+                </div>
+
+                <div id="confirmModal" class="confirm-modal" style="display: none">
+                    <div class="confirm-modal-content">
+                        <h3>Confirm</h3>
+                        <p>Are you sure you want to remove plan?</p>
+                        <button type="button" class="btn-confirm">Confirm</button>
+                        <button type="button" class="btn-cancel">Cancel</button>
+                    </div>
+                </div>
+                <div id="successPopup" class="popup-successful"style="display:none">
+                    <div class="popup-successful-content">
+                        <img src="image/acsucess.png" alt="Success Icon" class="popup-successful-image">
+                        <div class="popup-successful-text">
+                            <h2 class="popup-successful-title">Successful!</h2>
+                            <p class="popup-successful-description">Congratulations!.</p>
+                        </div>
+                        <div class="popup-successful-buttons">
+                            <button id="backToActivity" class="popup-successful-button">BACK</button>
+                            <button id="continueWithKPI" class="popup-successful-button">CONTINUE</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <script src="sidebar.js"></script>
+    <script src="detail_plan.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
     const statusSelect = document.getElementById('statusSelect');
@@ -246,6 +269,7 @@
 
     statusSelect.addEventListener('change', updateStatus);
 });
+
 
 
     </script>
