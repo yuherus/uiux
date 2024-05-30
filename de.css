@@ -131,7 +131,14 @@ label strong {
     margin-bottom: 5px;
 }
 
-input[type="text"], select, textarea, input[type="date"] {
+.kpi-info input[type="text"], 
+.kpi-info select, 
+.kpi-info textarea, 
+.kpi-info input[type="date"],
+.kpi-goals input[type="text"], 
+.kpi-goals select, 
+.kpi-goals textarea, 
+.kpi-goals input[type="date"] {
     width: 100%;
     padding: 10px;
     border: 1px solid #CCC;
@@ -139,6 +146,7 @@ input[type="text"], select, textarea, input[type="date"] {
     font-family: 'Poppins', sans-serif;
     color: #000;
 }
+
 
 textarea {
     height: 100px;
