@@ -5,6 +5,8 @@
 }
 
 .card {
+    display: flex;
+    flex-direction: column;
     background: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -20,11 +22,12 @@
 }
 
 .icon {
-    background: url('path-to-your-icon.png') no-repeat center center;
+    background:no-repeat center center;
     background-size: cover;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 0 auto 10px;
+    margin-bottom: 100px;
 }
 
 a {
