@@ -1453,6 +1453,73 @@
     margin-left: 5px;
 }
 
+/* CSS for Notification Dropdown */
+.notification-section {
+    position: relative;
+    display: inline-block;
+}
+
+.notification-icon {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.noti-dropdown-content {
+    display: none;
+    position: absolute;
+    background: #EBE9FE;
+    color: white;
+    min-width: 300px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.noti-item {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 8px;
+    margin: 5px 0;
+    padding: 10px;
+}
+
+.noti-icon {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.noti-text strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.noti-text p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.view-all {
+    display: block;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+.hi {
+    color: white;
+}
+.view-all:hover {
+    text-decoration: underline;
+}
+
+.notification-section:hover .noti-dropdown-content {
+    display: block;
+}
 
 
 @media screen and (min-width: 768px) {
