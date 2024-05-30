@@ -102,6 +102,29 @@
             <!-- web detail -->
             <div class="plan-section">
                 <h1>Web design</h1>
+                <!-- Progress and Status Section -->
+                <div class="progress-status-container">
+                    <div class="progress-container">
+                        <label><strong>Progress</strong></label>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill" style="width: 80%;"></div>
+                            <span class="progress-text" id="progressText">80%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-hour-container">
+                    <div class="hour-completed">
+                        <span><strong>Hours completed</strong></span>
+                        <span class="hours"><span class="current-hours">80</span>/<span class="total-hours">100</span></span>
+                    </div>
+                    <div class="status-container">
+                        <label for="statusSelect"><strong>Status:</strong></label>
+                        <select id="statusSelect" onchange="updateStatus()">
+                            <option value="inProgress">In Progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                </div>
                 <form>
                     <div class="form-group">
                         <label for="goals">Goals</label>
@@ -164,7 +187,7 @@
                         <div class="activity-item">
                             <img class="logo-activity-list" src="./image/composition-logo.svg" alt="">
                             <div class="text-act">
-                                <div class="title-act">Design Composition</div>
+                                <div class "title-act">Design Composition</div>
                                 <div class="uxcel">
                                     <img src="./image/uxcel-logo.svg" alt="Uxcel Logo" class="uxcel-logo">
                                     <span>uxcel</span>
@@ -173,35 +196,45 @@
                         </div>
                     </div>
                     <a href="#">
-                        <button class="add-activity-btn">Add activity
-                        </button>
+                        <button class="add-activity-btn">Add activity</button>
                     </a>
                 </div>
                 <div class="form-actions">
-                    <a href="plan.html"> <button type="submit" class="save-btn">SAVE</button></a>
+                    <a href="plan.html"><button type="submit" class="save-btn">SAVE</button></a>
                     <a href="plan.html"><button type="button" class="remove-btn">REMOVE</button></a>
                 </div>
             </div>
-
         </div>
-        <script src="sidebar.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-    const statusSelect = document.getElementById('status');
+    </div>
+    <script src="sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const statusSelect = document.getElementById('status');
+            const progressFill = document.getElementById('progressFill');
+            const progressText = document.getElementById('progressText');
 
-    function updateStatusClass() {
-        const selectedValue = statusSelect.value;
-        statusSelect.className = ''; // Reset class
-        statusSelect.classList.add(selectedValue);
-    }
-
-    statusSelect.addEventListener('change', updateStatusClass);
-
-    // Initial update based on the default selected option
-    updateStatusClass();
-});
-
-        </script>
+            // Update progress bar based on status
+            statusSelect.addEventListener('change', function() {
+                let progress = 0;
+                switch (statusSelect.value) {
+                    case 'status1':
+                        progress = 0;
+                        break;
+                    case 'status2':
+                        progress = 50;
+                        break;
+                    case 'status3':
+                        progress = 100;
+                        break;
+                    case 'status4':
+                        progress = 75;
+                        break;
+                }
+                progressFill.style.width = `${progress}%`;
+                progressText.textContent = `${progress}%`;
+            });
+        });
+    </script>
 </body>
 
 </html>
