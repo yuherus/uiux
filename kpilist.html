@@ -61,7 +61,7 @@
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#">How to use</a></li>
+                            <li><a href="howtouse.html">How to use</a></li>
                             <li><a href="aboutus.html">About us</a></li>
                         </ul>
                     </li>
@@ -77,8 +77,6 @@
                     <div class="sidebar-toggle">
                         <i class="fa-solid fa-bars menu-icon" onclick="toggleSidebar()"></i>
                     </div>
-                    
-                    
                     <div class="search-bar">
                         <div class="logo-section">
                             <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
@@ -91,8 +89,14 @@
                         <div class="search-section">
                             <input type="text" class="search-input" placeholder="Search for tasks, events ..">
                         </div>
-                        <div class="notification-section">
-                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon">
+                        <div class="notification-section noti-dropdown">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon noti-dropdown-btn">
+                            <div class="noti-dropdown-content">
+                                <a href="#">You have 2 tasks that are about to be late</a>
+                                <a href="#">Congratulations, you have completed all your work today</a>
+                                <a href="#">You haven't made plans for next week, make it now</a>
+                                <a href="#" style="text-align:center">View all notifications</a>
+                            </div>
                         </div>
                     </div>
                     <div class="account-section">
@@ -100,7 +104,18 @@
                             <span class="account-name">Cristiano</span>
                             <span class="account-settings">Hust Student</span>
                         </div>
-                        <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
+                        <div class="user-dropdown">
+                            <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture user-dropbtn">
+                            <div class="user-dropdown-content">
+                                <a href="setting.html">
+                                    <i class="fa-solid fa-user"></i>
+                                    Profile Settings
+                                </a>
+                                <a href="login.html">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>                                    Log Out
+                                </a>
+                              </div>
+                        </div>
                     </div>
                 </div>            
             </div>
@@ -115,9 +130,9 @@
                     <div class="kpi-card in-progress">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Weekly Team Meeting</h2>
+                                <h2>Improve Project Completion Time</h2>
                             </a>
-                            <p>Organize and lead the weekly team meeting to discuss project progress.</p>
+                            <p>Reducing the time taken to complete projects.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="in-progress">Progress</span></span>
                                 <span>Created on: 18/06/2023</span>
@@ -126,7 +141,7 @@
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Team Meeting">
+                                <img src="image\kpi1.png" alt="Team Meeting">
                             </div>
                             </a>
                         <a class="edit" href="kpidetail.html">
@@ -136,18 +151,18 @@
                     <div class="kpi-card late">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Product Quality Check</h2>
+                                <h2>Daily Exercise</h2>
                             </a>
-                            <p>Conduct product quality checks to ensure standards before market release.</p>
+                            <p>Increasing the amount of daily physical activity.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="late">Late</span></span>
-                                <span>Created on: 18/06/2023</span>
-                                <span>Deadline: 20/06/2023</span>
+                                <span>Created on: 01/05/2023</span>
+                                <span>Deadline: 31/12/2023</span>
                             </div>
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Product Quality Check">
+                                <img src="image\kpi2.jpg" alt="Product Quality Check">
                             </a>
                         </div>
                         <a class="edit" href="kpidetail.html">
@@ -157,18 +172,18 @@
                     <div class="kpi-card completed">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Website Performance Optimization</h2>
+                                <h2>Enhance Study Hours</h2>
                             </a>
-                            <p>Optimize the website's performance to improve loading times and user experience.</p>
+                            <p>Allocating more time for studying.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="completed">Completed</span></span>
-                                <span>Created on: 18/06/2023</span>
-                                <span>Deadline: 20/06/2023</span>
+                                <span>Created on: 10/04/2023</span>
+                                <span>Deadline: 10/06/2023</span>
                             </div>
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Research Topic">
+                                <img src="image\kpi3.jpg" alt="Research Topic">
                             </div>
                             </a>
                         <a class="edit" href="kpidetail.html">
@@ -178,18 +193,18 @@
                     <div class="kpi-card in-progress">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Annual Budget Planning</h2>
+                                <h2>Increase Teaching Effectiveness</h2>
                             </a>
-                            <p>Prepare the annual budget, including forecasts for revenue and expenses.</p>
+                            <p>Improving the quality of teaching.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="in-progress">Progress</span></span>
-                                <span>Created on: 18/06/2023</span>
-                                <span>Deadline: 20/06/2023</span>
+                                <span>Created on: 12/03/2023</span>
+                                <span>Deadline: 12/12/2023</span>
                             </div>
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Midterm Exam Preparation">
+                                <img src="image\kpi4.jpg" alt="Midterm Exam Preparation">
                             </a>
                         </div>
                         <a class="edit" href="kpidetail.html">
@@ -199,18 +214,18 @@
                     <div class="kpi-card late">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Employee Training Session</h2>
+                                <h2>Enhance Work Productivity</h2>
                             </a>
-                            <p> Plan and execute a training session for new employees on company policies and procedures.</p>
+                            <p> Increasing work output per hour.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="late">Late</span></span>
-                                <span>Created on: 18/06/2023</span>
-                                <span>Deadline: 20/06/2023</span>
+                                <span>Created on: 15/02/2023</span>
+                                <span>Deadline: 15/08/2023</span>
                             </div>
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Lab Practice">
+                                <img src="image\kpi5.jpg" alt="Lab Practice">
                             </div>
                             </a>
                         <a class="edit" href="kpidetail.html">
@@ -220,9 +235,9 @@
                     <div class="kpi-card completed">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Monthly Sales Report</h2>
+                                <h2>Improve Diet Quality</h2>
                             </a>
-                            <p>Compile and submit the monthly sales report, including analysis of sales trends and performance.</p>
+                            <p>Eating more nutritious meals.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="completed">Completed</span></span>
                                 <span>Created on: 18/06/2023</span>
@@ -231,7 +246,7 @@
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Monthly Sales Report">
+                                <img src="image\kpi6.jpg" alt="Monthly Sales Report">
                             </a>
                         </div>
                         <a class="edit" href="kpidetail.html">
@@ -241,18 +256,18 @@
                     <div class="kpi-card in-progress">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>Customer Satisfaction Survey</h2>
+                                <h2>Increase Lecture Attendance</h2>
                             </a>
-                            <p>Design and distribute the customer satisfaction survey to gather feedback on recent product releases.</p>
+                            <p>Increasing student attendance in lectures.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="in-progress">Progress</span></span>
-                                <span>Created on: 18/06/2023</span>
-                                <span>Deadline: 20/06/2023</span>
+                                <span>Created on: 20/04/2023</span>
+                                <span>Deadline: 20/10/2023</span>
                             </div>
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Customer Satisfaction Survey">
+                                <img src="image\kpi7.jpg" alt="Customer Satisfaction Survey">
                             </a>
                         </div>
                         <a class="edit" href="kpidetail.html">
@@ -262,18 +277,18 @@
                     <div class="kpi-card in-progress">
                         <div class="card-content">
                             <a href="kpidetail.html">
-                                <h2>New Hire Training Program</h2>
+                                <h2>Improve Work-Life Balance</h2>
                             </a>
-                            <p>Develop and implement a training program for new hires, including orientation and initial skill training.</p>
+                            <p>Balancing work and personal life better.</p>
                             <div class="meta">
                                 <span class="status">Status: <span class="in-progress">Progress</span></span>
-                                <span>Created on: 18/06/2023</span>
-                                <span>Deadline: 20/06/2023</span>
+                                <span>Created on: 01/05/2023</span>
+                                <span>Deadline: 01/11/2023</span>
                             </div>
                         </div>
                         <div class="card-image">
                             <a href="kpidetail.html">
-                                <img src="https://via.placeholder.com/60" alt="Employee Training Session">
+                                <img src="image\kpi8.jpg" alt="Employee Training Session">
                             </a>
                         </div>
                         <a class="edit" href="kpidetail.html">
