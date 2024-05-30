@@ -62,7 +62,7 @@
                             </div>
                         </a>
                         <ul class="submenu">
-                            <li><a href="#">How to use</a></li>
+                            <li><a href="howtouse.html">How to use</a></li>
                             <li><a href="aboutus.html">About us</a></li>
                         </ul>
                     </li>
@@ -90,8 +90,14 @@
                         <div class="search-section">
                             <input type="text" class="search-input" placeholder="Search for tasks, events ..">
                         </div>
-                        <div class="notification-section">
-                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon">
+                        <div class="notification-section noti-dropdown">
+                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon noti-dropdown-btn">
+                            <div class="noti-dropdown-content">
+                                <a href="#">You have 2 tasks that are about to be late</a>
+                                <a href="#">Congratulations, you have completed all your work today</a>
+                                <a href="#">You haven't made plans for next week, make it now</a>
+                                <a href="#" style="text-align:center">View all notifications</a>
+                            </div>
                         </div>
                     </div>
                     <div class="account-section">
@@ -99,7 +105,18 @@
                             <span class="account-name">Cristiano</span>
                             <span class="account-settings">Hust Student</span>
                         </div>
-                        <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
+                        <div class="user-dropdown">
+                            <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture user-dropbtn">
+                            <div class="user-dropdown-content">
+                                <a href="setting.html">
+                                    <i class="fa-solid fa-user"></i>
+                                    Profile Settings
+                                </a>
+                                <a href="login.html">
+                                    <i class="fa-solid fa-arrow-right-from-bracket"></i>                                    Log Out
+                                </a>
+                              </div>
+                        </div>
                     </div>
                 </div>            
             </div>
@@ -233,6 +250,8 @@
                     </form>
                 <!-- JavaScript -->
                 <script src="de.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
             </main>
         </div>
         <div id="id01" class="modal-createkpi">
