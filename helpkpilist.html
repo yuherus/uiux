@@ -9,14 +9,80 @@
     <link rel="stylesheet" href="sidebar.css">
     <link rel="stylesheet" href="kpilist.css">
     <link rel="stylesheet" href="kpicreate.css">
+    <link rel="stylesheet" href="helpkpilist.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <link rel="stylesheet" href="newKPI.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">  
 </head>
 <body>
+    <div class="overlay-container">
+        <div class="overlay" id="overlay">
+        </div>
+        <div class="help-content">
+            <div class="help-kpilist">
+                <div class="help-choose-kpi">
+                    Choose KPI
+                </div>
+                <div class="help-add-kpi">
+                    Add new KPI
+                </div>
+                <div class="arrow-add-kpi">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>              
+                <button class="help-add-kpi-btn">Add New KPI</button>
+                <div class="help-submenu">KPI</div>
+                <div class="arrow-submenu">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>
+            </div>
+            <div class="help-kpicreate">
+                <div class="help-input">
+                    Fill in blank
+                </div>
+                <input type="text" id="help-kpi-name" placeholder="Enter your KPI name" disabled>
+                <div class="arrow-input">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div> 
+                <div class="help-select-plan">
+                    How to create plan
+                </div>
+                <div class="help-dropdown">
+                    <span>Select your plan</span>
+                    <span class="arrow">&#9662;</span>
+                </div>             
+                <div class="arrow-select-plan">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>  
+                <div class="help-radio">
+                    Choose method
+                </div>     
+                <div class="help-method">
+                    <input type="radio" id="option2" name="option">
+                    <label for="option2">Percentage (Task completed/Total Task)</label>
+                </div>
+                <div class="arrow-method">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>
+                <div class="help-btn">
+                    Create KPI successfully
+                </div>
+                <button class="help-btn-create">Create KPI</button>
+                <div class="arrow-btn-create">
+                    <div class="arrow-head"></div>
+                    <div class="arrow-body"></div>
+                </div>
+            </div>
+            <button onclick="closeHelp()" class="back">
+                <i class="icon-back fa-solid fa-arrow-left-long"></i>
+            </button>
+        </div>
+        
+    </div>
+
     <div class="container">
         <div id="sidebar-container"> 
             <div id="sidebar">
@@ -35,9 +101,9 @@
                         </a>
                         <ul class="submenu">
                             <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="kpilist.html" class="menu-active">KPI</a></li>
-                            <li><a href="plan.html">Plan</a></li>
-                            <li><a href="activitylist.html">Activity</a></li>
+                            <li><a href="#" class="menu-active">KPI</a></li>
+                            <li><a href="#">Plan</a></li>
+                            <li><a href="#">Activity</a></li>
                         </ul>
                     </li>
                     <li>
@@ -66,19 +132,14 @@
                         </ul>
                     </li>
                 </ul>
-                <!-- <div class="sidebar-footer">
-                    <button onclick="openCreateKpi()" class="new-kpi-btn btn-recommendation">New KPI <i class="fa-solid fa-plus"></i></button>
-                </div> -->
+                <div class="sidebar-footer">
+                    <button onclick="openCreateKpi()" class="new-kpi-btn">Add New KPI</button>
+                </div>
             </div>        
         </div>
         <div class="dashboard"> 
             <div id="header-container">
                 <div class="header">
-                    <div class="sidebar-toggle">
-                        <i class="fa-solid fa-bars menu-icon" onclick="toggleSidebar()"></i>
-                    </div>
-                    
-                    
                     <div class="search-bar">
                         <div class="logo-section">
                             <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
@@ -103,12 +164,6 @@
                         <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
                     </div>
                 </div>            
-            </div>
-            <div class="addKPI" style="display: flex;justify-content: space-between;" >
-                <div class="titleKPI" style="font-weight: 600; font-size: 30px;margin-top: 10px;margin-left: 10px;">KPI LIST</div>
-                <div class="new-kpi-btn">
-                    <button onclick="openCreateKpi()" >NEW KPI &nbsp;<i class="fa-solid fa-plus"></i></button>
-                </div>
             </div>
             <div class="main-content">
                 <div class="kpi-list">
@@ -294,165 +349,68 @@
             </div>
             
         </div>
-        <div id="id01" class="modal-createkpi">
+        <div id="id01" class="modal-createkpi help-cre-kpi">
             <div class="modal-content" >
-                <div class="modal-container">
-                    <div class="progress-bar">
-                        <div class="step active">
-                            <div class="step-number">1</div>
-                            <div class="step-label">Basic Info</div>
+                <div class="image-modal">
+                    <img src="your-image-source.jpg" alt="Decorative Spiral Image">
+                </div>
+                <div class="form-modal">
+                    <h2>Create your new KPI</h2>
+                    <button onclick="closeModal()" class="close">
+                        <i class="icon fa-regular fa-x"></i>
+                    </button>
+                    <form>
+                        <div class="form-group">
+                            <label for="kpi-name">Activity's name</label>
+                            <input type="text" id="kpi-name" placeholder="Enter your KPI name">
                         </div>
-                        <div class="step">
-                            <div class="step-number">2</div>
-                            <div class="step-label">Set Goals</div>
+                        <div class="form-group">
+                            <label for="target">Target</label>
+                            <input type="text" id="target" placeholder="Enter your target for this KPI">
                         </div>
-                        <div class="step">
-                            <div class="step-number">3</div>
-                            <div class="step-label">Select Plans</div>
-                        </div>
-                    </div>
-            
-                    <form id="kpiForm">
-                        <div class="form-step form-step-active">
-                            <h2>Enter Basic Information</h2>
-                            <div class="modal-form-group">
-                                <label for="kpiName">KPI Name</label>
-                                <input type="text" id="kpiName" name="kpiName" placeholder="KPI Name" required>
-                            </div>
-                            <div class="modal-form-group">
-                                <label for="kpiField">Field</label>
-                                <select id="kpiField" name="kpiField" required>
-                                    <option value="work">Work</option>
-                                    <option value="life">Life</option>
-                                    <option value="study">Study</option>
-                                    <option value="custom">Custom</option>
-                                </select>
-                            </div>
-                            <div id="customFieldContainer" class="modal-form-group" style="display: none;">
-                                <label for="customField">Custom</label>
-                                <input type="text" id="customField" name="customField" placeholder="Custom Field Name">
-                            </div>  
-                            <div class="modal-form-group">
-                                <label for="kpiDescription">Description</label>
-                                <textarea id="kpiDescription" name="kpiDescription" placeholder="Brief description of the KPI"></textarea>
-                            </div>                                    
-                            <button type="button" class="btn-next">Next</button>
-                        </div>
-            
-                        <div class="form-step">
-                            <h2>Set KPI Goals</h2>
-                            <div class="modal-form-group">
-
-                            </div>
-                            <div class="modal-form-group">
-                                <label for="kpiGoal">Specific Goal</label>
-                                <input type="text" id="kpiGoal" name="kpiGoal" placeholder="Specific Goal" required>
-                            </div>
-                            <div class="modal-form-group">         
-                                <label for="kpiUnit">Measurement Unit</label>
-                                <select id="kpiUnit" name="kpiUnit" required>
-                                    <option value="time">Actual Time vs. Set Time</option>
-                                    <option value="completion">Completion Rate vs. Set Rate</option>
-                                </select>
-                            </div>
-                            <div class="modal-form-group progress-dates">                                
-                                    <div class="date-input">
-                                        <label><span class="icon fa-regular fa-clock"></span> Begin:</label>
-                                        <div class="time-content" id="beginDate">
-                                            2/4/2024
-                                        </div>
-                                    </div>
-                                    <div class="date-input">
-                                        <label><span class="icon bi bi-stopwatch-fill"></span> End:</label>
-                                        <div class="time-content" id="endDate">
-                                            2/4/2024
-                                        </div>
-                                    </div>
-                            </div>                       
-                            <button type="button" class="btn-prev">Back</button>
-                            <button type="button" class="btn-next">Next</button>
-                        </div>
-            
-                        <div class="form-step">
-                            <h2>Select Plans</h2>
-                            <label for="kpiPlans">Choose one or more Plans</label>
-                            <div id="plansContainer">
-                                <div class="plan-card">
-                                    <div class="plan-info">
-                                        <h3>Plan 1</h3>
-                                        <a href="#" class="plan-details">See plan details</a>
-                                    </div>
-                                    <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
-                                    <input type="checkbox" id="plan1" name="kpiPlans" value="plan1">
+                        <div class="form-group">
+                            <label for="plan">Select your Plan</label>
+                            <div class="dropdown-modal">
+                                <div class="dropdown" onclick="toggleDropdown()">
+                                    <span>Select your plan</span>
+                                    <span class="arrow">&#9662;</span>
                                 </div>
-                                <div class="plan-card">
-                                    <div class="plan-info">
-                                        <h3>Plan 2</h3>
-                                        <a href="#" class="plan-details">See plan details</a>
-                                    </div>
-                                    <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
-                                    <input type="checkbox" id="plan1" name="kpiPlans" value="plan1">
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item" onclick="selectPlan('Web design')">Web design</div>
+                                    <div class="dropdown-item" onclick="selectPlan('Graphic design')">Graphic design</div>
+                                    <div class="dropdown-item" onclick="selectPlan('SEO')">SEO</div>
+                                    <!-- Add more options as needed -->
                                 </div>
-                                <div class="plan-card">
-                                    <div class="plan-info">
-                                        <h3>Plan 3</h3>
-                                        <a href="#" class="plan-details">See plan details</a>
-                                    </div>
-                                    <input type="number" min="0" max="100" placeholder="% Importance" class="plan-percentage small-input">
-                                    <input type="checkbox" id="plan1" name="kpiPlans" value="plan1">
-                                </div>
-
                             </div>
-            
-                            <button type="button" class="btn-prev">Back</button>
-                            <button type="button" class="btn-submit">Create New KPI</button>
+                            <div class="selected-plans" id="selected-plans">
+                                <!-- Selected plans will appear here -->
+                            </div>
                         </div>
+                        <div class="form-group">
+                            <label>Evaluation methods</label>
+                            <div class="radio-container">
+                                <div class="radio-item">
+                                    <input type="radio" id="option1" name="option">
+                                    <label for="option1">Percentage (Actual time to complete/Set time)</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="option2" name="option">
+                                    <label for="option2">Percentage (Task completed/Total Task)</label>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-create" id="createKPIButton">Create KPI</button>
                     </form>
                 </div>
-            
-                <div id="confirmModal" class="confirm-modal">
-                    <div class="confirm-modal-content">
-                        <h3>Confirm</h3>
-                        <p>Are you sure you want to create a new KPI?</p>
-                        <button type="button" class="btn-confirm">Confirm</button>
-                        <button type="button" class="btn-cancel">Cancel</button>
-                    </div>
-                </div>
-                <a href="kpilist.html" class="close-button">
-                    <img src="image/Cancel.png" alt="Cancel" class="close-image">
-                </a>       
             </div>
-        </div>
-        <div id="toast">
+            
         </div>
     </div>
 
     <script src="sidebar.js"></script>
     <script src="kpilist.js"></script>
     <script src="kpicreate.js"></script>
-    <script src="newKPI.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-            $(document).ready(function () {
-                // Kích hoạt DatePicker cho phần thời gian "Begin"
-                flatpickr("#beginDate", {
-                    enableTime: false,
-                    dateFormat: "d/m/Y",
-                    onClose: function (selectedDates, dateStr, instance) {
-                        document.getElementById("beginDate").innerText = dateStr;
-                    }
-                });
+    <script src="helpkpilist.js"></script>
 
-                // Kích hoạt DatePicker cho phần thời gian "End"
-                flatpickr("#endDate", {
-                    enableTime: false,
-                    dateFormat: "d/m/Y",
-                    onClose: function (selectedDates, dateStr, instance) {
-                        document.getElementById("endDate").innerText =dateStr;
-                    }
-                });
-            });
-    </script>
 </body>
 </html>

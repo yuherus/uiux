@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const cancelButton = document.querySelector('.btn-cancel');
     const kpiField = document.getElementById('kpiField');
     const customFieldContainer = document.getElementById('customFieldContainer');
+    const steps = document.querySelectorAll('.progress-bar .step');
 
     let currentStep = 0;
 
@@ -22,6 +23,13 @@ document.addEventListener('DOMContentLoaded', function () {
             step.classList.toggle('active', index === currentStep);
         });
     }
+
+    steps.forEach((step, index) => {
+        step.addEventListener('click', () => {
+            currentStep = index;
+            updateFormSteps();
+        });
+    });
 
     nextButtons.forEach(button => {
         button.addEventListener('click', () => {
