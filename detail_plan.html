@@ -119,6 +119,30 @@
             <!-- web detail -->
             <div class="plan-section">
                 <h1>Web design</h1>
+                <!-- Progress and Status Section -->
+                <div class="progress-status-container">
+                    <div class="progress-container">
+                        <label><strong>Progress</strong></label>
+                        <div class="progress-bar" id="progressBar">
+                            <div class="progress-fill" id="progressFill" style="width: 80%;"></div>
+                            <span class="progress-text" id="progressText">80%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="status-hour-container">
+                    <div class="hour-completed">
+                        <span><strong>Hours completed</strong></span>
+                        <span class="hours"><span class="current-hours">80</span>/<span class="total-hours">100</span></span>
+                    </div>
+                    <div class="status-container">
+                        <label for="statusSelect"><strong>Status:</strong></label>
+                        <select id="statusSelect" onchange="updateStatus()">
+                            <option value="inProgress">In Progress</option>
+                            <option value="done">Done</option>
+                        </select>
+                    </div>
+                </div>
+                
                 <form>
                     <div class="form-group">
                         <label for="goals">Goals</label>
@@ -136,15 +160,6 @@
                         </div>
                     </div>
                 </form>
-                <div class="status-content">
-                    <label>Status</label>
-                    <select id="status">
-                        <option value="status1" selected>Yet start</option>
-                        <option value="status2">Progress</option>
-                        <option value="status3">Completed</option>
-                        <option value="status4">Late</option>
-                    </select>
-                </div>
                 <div class="skills">
                     <label>Skills</label>
                     <div class="skills-list">
@@ -181,7 +196,7 @@
                         <div class="activity-item">
                             <img class="logo-activity-list" src="./image/composition-logo.svg" alt="">
                             <div class="text-act">
-                                <div class="title-act">Design Composition</div>
+                                <div class "title-act">Design Composition</div>
                                 <div class="uxcel">
                                     <img src="./image/uxcel-logo.svg" alt="Uxcel Logo" class="uxcel-logo">
                                     <span>uxcel</span>
@@ -190,35 +205,50 @@
                         </div>
                     </div>
                     <a href="#">
-                        <button class="add-activity-btn">Add activity
-                        </button>
+                        <button class="add-activity-btn">Add activity</button>
                     </a>
                 </div>
                 <div class="form-actions">
-                    <a href="plan.html"> <button type="submit" class="save-btn">SAVE</button></a>
+                    <a href="plan.html"><button type="submit" class="save-btn">SAVE</button></a>
                     <a href="plan.html"><button type="button" class="remove-btn">REMOVE</button></a>
                 </div>
             </div>
-
         </div>
-        <script src="sidebar.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-    const statusSelect = document.getElementById('status');
+    </div>
+    <script src="sidebar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const statusSelect = document.getElementById('statusSelect');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const currentHours = document.querySelector('.current-hours');
+    const totalHours = document.querySelector('.total-hours');
 
-    function updateStatusClass() {
-        const selectedValue = statusSelect.value;
-        statusSelect.className = ''; // Reset class
-        statusSelect.classList.add(selectedValue);
+    function updateStatus() {
+        if (statusSelect.value === 'done') {
+            progressFill.style.width = '100%';
+            progressFill.style.backgroundColor = '#5BBFFF';
+            progressText.style.color = '#FFFFFF';
+            progressText.textContent = '100%';
+            currentHours.textContent = totalHours.textContent; // Assuming done means all hours completed
+            startConfetti();
+        } else {
+            progressFill.style.width = '80%'; // Assuming '80%' is the default progress for 'in progress'
+            progressFill.style.backgroundColor = '#9C3CE7';
+            progressText.style.color = '#9C3CE7'; // Matching the color with the fill
+            progressText.textContent = '80%';
+            currentHours.textContent = '80'; // Example value, adjust according to your logic
+        }
     }
 
-    statusSelect.addEventListener('change', updateStatusClass);
+    // Initial call to set the status based on current selection
+    updateStatus();
 
-    // Initial update based on the default selected option
-    updateStatusClass();
+    statusSelect.addEventListener('change', updateStatus);
 });
 
-        </script>
+
+    </script>
 </body>
 
 </html>
