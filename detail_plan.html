@@ -142,6 +142,7 @@
                         </select>
                     </div>
                 </div>
+                
                 <form>
                     <div class="form-group">
                         <label for="goals">Goals</label>
@@ -159,15 +160,6 @@
                         </div>
                     </div>
                 </form>
-                <div class="status-content">
-                    <label>Status</label>
-                    <select id="status">
-                        <option value="status1" selected>Yet start</option>
-                        <option value="status2">Progress</option>
-                        <option value="status3">Completed</option>
-                        <option value="status4">Late</option>
-                    </select>
-                </div>
                 <div class="skills">
                     <label>Skills</label>
                     <div class="skills-list">
@@ -226,31 +218,36 @@
     <script src="sidebar.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const statusSelect = document.getElementById('status');
-            const progressFill = document.getElementById('progressFill');
-            const progressText = document.getElementById('progressText');
+    const statusSelect = document.getElementById('statusSelect');
+    const progressFill = document.getElementById('progressFill');
+    const progressText = document.getElementById('progressText');
+    const currentHours = document.querySelector('.current-hours');
+    const totalHours = document.querySelector('.total-hours');
 
-            // Update progress bar based on status
-            statusSelect.addEventListener('change', function() {
-                let progress = 0;
-                switch (statusSelect.value) {
-                    case 'status1':
-                        progress = 0;
-                        break;
-                    case 'status2':
-                        progress = 50;
-                        break;
-                    case 'status3':
-                        progress = 100;
-                        break;
-                    case 'status4':
-                        progress = 75;
-                        break;
-                }
-                progressFill.style.width = `${progress}%`;
-                progressText.textContent = `${progress}%`;
-            });
-        });
+    function updateStatus() {
+        if (statusSelect.value === 'done') {
+            progressFill.style.width = '100%';
+            progressFill.style.backgroundColor = '#5BBFFF';
+            progressText.style.color = '#FFFFFF';
+            progressText.textContent = '100%';
+            currentHours.textContent = totalHours.textContent; // Assuming done means all hours completed
+            startConfetti();
+        } else {
+            progressFill.style.width = '80%'; // Assuming '80%' is the default progress for 'in progress'
+            progressFill.style.backgroundColor = '#9C3CE7';
+            progressText.style.color = '#9C3CE7'; // Matching the color with the fill
+            progressText.textContent = '80%';
+            currentHours.textContent = '80'; // Example value, adjust according to your logic
+        }
+    }
+
+    // Initial call to set the status based on current selection
+    updateStatus();
+
+    statusSelect.addEventListener('change', updateStatus);
+});
+
+
     </script>
 </body>
 
