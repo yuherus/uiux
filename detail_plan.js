@@ -67,20 +67,18 @@ document.querySelector('.btn-cancel').addEventListener('click', function() {
 
 document.querySelector('.btn-confirm').addEventListener('click', function() {
     document.getElementById('confirmModal').style.display = 'none';
-    document.getElementById('successPopup').style.display = 'flex';
+    window.history.back();
 });
 document.querySelector('.save-btn').addEventListener('click', function() {
-    
-    document.getElementById('successPopup').style.display = 'flex';
+    // chuyển về trang trước đó
+    window.history.back();
 });
 
 document.getElementById('backToActivity').addEventListener('click', function() {
     document.getElementById('successPopup').style.display = 'none';
-    window.location.href = "detail_plan.html";
 });
 
 document.getElementById('continueWithKPI').addEventListener('click', function() {
     document.getElementById('successPopup').style.display = 'none';
-    window.location.href = "plan.html";
 });
 

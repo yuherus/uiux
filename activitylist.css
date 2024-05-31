@@ -251,15 +251,14 @@
     display: flex;
     justify-content: space-between;
     width: calc(100% - 220px);
-
+    align-items: center;
 
 }
 .activity-list{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     margin-left:20px;
-    margin-top:10px;
-
+    color: #5925dc;
 }
 
 .icon-structure {
