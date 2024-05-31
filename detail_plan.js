@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-=======
+
 document.getElementById('remove-btn').addEventListener('click', function() {
     document.getElementById('confirmModal').style.display = 'flex';
 });
