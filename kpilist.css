@@ -26,7 +26,6 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    width: 420px;
 }
 
 .kpi-card:hover{
@@ -305,7 +304,6 @@ cursor: pointer;
     font-weight: 500; 
     color: white; 
     border: none;
-    margin-right: 90px;            
 }
 @media screen and (max-width: 768px) {
    
