@@ -1,386 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KPlecturer</title>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="helpplan.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <title>Help Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="plan.css">
 
+    <style>
+        .form{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .action {
+            display: block;
+        }
+
+        .back{
+            position: fixed;
+            top: 10px;
+            left: 20px;
+        }
+
+        .next{
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+
+        .done{
+            display: none;
+            position: fixed;
+            top: 10px;
+            right: 20px;
+        }
+
+        .back, .next, .done{
+            border-radius: 5px;
+            background-color: rgb(251, 247, 255);
+            cursor: pointer;
+        }
+
+        .back:hover, .next:hover, .done:hover {
+            background-color: #d6c0e3;
+            color: #1c1c1c;
+            transform: scale(1.02);
+        }
+
+        .back ,
+        .next, .done{
+            padding: 0px 10px;
+            font-size: 20px;
+        }
+
+        .button-container {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+
+        .button-container button {
+            margin: 5px;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="overlay-container">
-        <div class="overlay" id="overlay">
-        </div>
-        <div class="help-content">
-            <div class="help-plan">
-                <div class="choose-plan">
-                    <div class="help-choose-plan help-text">
-                        Choose Plan
-                    </div>
-                    <div class="help-submenu">Plan</div>
-                    <div class="arrow-submenu">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div>
-                </div>
-                <div class="add-plan-group">
-                    <div class="help-add-plan help-text">
-                        Add new Plan
-                    </div>
-                    <div class="btn-recommendation">New Plan <i class="fa-solid fa-plus"></i></div>
-                    <div class="arrow-add-plan">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div>              
-                </div>
-            </div>
-            <div class="help-plan-create" style="display: none;">
-                <div class="fill-input-group">
-                    <div class="help-input help-text">
-                        Fill in blank
-                    </div>
-                    <div class="input-name input-fill">
-                        <input class="input-field" placeholder="Enter your Activity’s name"></input>
-                    </div>
-                    <div class="input-time input-fill">
-                        <input class="input-field"
-                            placeholder="Enter your description about this activity"></input>
-                    </div>
-                    <div class="input-target input-fill">
-                        <input class="input-field" placeholder="Enter your Activity’s name"></input>
-                    </div>
-                    <div class="arrow-input-name">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div>
-                    <div class="arrow-input-time">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div>
-                    <div class="arrow-input-target">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div> 
-                </div>
-                <div class="help-select-group">
-                    <div class="help-select help-text">
-                        Select activity here
-                    </div>
-                    <select>
-                        <option value="" disabled selected>Select your activity</option>
-                    </select>
-                    <div class="arrow-select">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div>
-                </div>
-                <div class="help-creplan-group">
-                    <div class="help-creplan help-text">
-                        Create activity successful
-                    </div>
-                    <button class="create-plan-button">
-                        <div class="create-button-content">
-                            Create Plan
-                        </div>
-                    </button>
-                    <div class="arrow-creplan">
-                        <div class="arrow-head"></div>
-                        <div class="arrow-body"></div>
-                    </div>
-                </div>
-                
-            </div>
-            <button onclick="closeHelp()" class="back">
-                <i class="icon-back fa-solid fa-arrow-left-long"></i>
-            </button>
-        </div>
-        
+    <div class="container" style="width: 100%; height: 100%;">
+        <img src="image/helpplanlist.png" alt="" style="width: 100%; height: 100%;" id="helpkpi" class="form action">
+        <img src="image/helpplancre.png" alt="" style="width: 100%; height: 100%;" id="step1" class="form">
     </div>
-    <div class="container">
-        <div id="sidebar-container">
-            <div id="sidebar">
-                <div class="sidebar-header">
-                    <img src="image/logo.png" alt="Logo" class="logo">
-                    <h2>KPlecturer</h2>
-                </div>
-                <ul class="sidebar-menu">
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-home"></i>
-                            <div style="display: flex; width: 100%; justify-content:space-between;">
-                                Home
-                                <i class="fas fa-chevron-right chevron-icon"></i>
-                            </div>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="index.html">Dashboard</a></li>
-                            <li><a href="kpilist.html">KPI</a></li>
-                            <li><a href="plan.html" class="menu-active">Plan</a></li>
-                            <li><a href="activitylist.html">Activity</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="/statistics.html">
-                            <i class="fas fa-star"></i>
-                            Statistics
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/setting.html">
-                            <i class="fas fa-cog"></i>
-                            Settings
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-user"></i>
-                            <div style="width:100%; display:flex; justify-content:space-between;">
-                                Help
-                                <i class="fas fa-chevron-right chevron-icon"></i>
-                            </div>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#">How to use</a></li>
-                            <li><a href="#">About us</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="sidebar-footer">
-                    <div id="btn-create-plan" class="btn-recommendation">New Plan <i class="fa-solid fa-plus"></i></div>
-                    <div id="planModal" class="modal">
-                        <div class="popup-content">
-                            <div class="image-container">
-                                <img src="./image/create-plan.svg" alt="Decorative Image">
-                            </div>
-                            <div class="form-container">
-                                <div class="modal-header">
-                                    <h3>Create your new plan</h3>
-                                    <button class="close" id="close-btn">&times;</button>
-                                </div class="body-container">
-                                <div>
-                                    <form action="plan.html" method="get">
-                                        <label for="plan-name">Plan's name</label>
-                                        <input type="text" id="plan-name" placeholder="Enter your Plan's name">
-
-                                        <label for="time">Time</label>
-                                        <input type="text" id="time" placeholder="Enter time about this plan">
-
-                                        <label for="target">Target</label>
-                                        <input type="text" id="target" placeholder="Enter your target for this plan">
-
-                                        <label for="activity">Select your Activity</label>
-                                        <select id="activity">
-                                            <option value="" disabled selected>Select your activity</option>
-                                            <option value="activity1">UX/UI</option>
-                                            <option value="activity2">English</option>
-                                        </select>
-                                        <div id="selectedActivities">
-                                        </div>
-                                        <div class="footer"><button type="submit" class="submit-btn">Create Plan</button>
-                                        </div>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    <div id="toast">
-                    </div>
-                </div>
-            </div>
-        <div class="dashboard">
-            <div id="header-container">
-                <div class="header">
-                    <div class="search-bar">
-                        <div class="logo-section">
-                            <img src="image/Logo_Đại_học_Bách_Khoa_Hà_Nội.svg" alt="University Logo" class="logo">
-                            <div style="display:flex; flex-direction: column; margin-right:16px;">
-                                <span class="workspace">University</span>
-                                <span class="separator">Workspace</span>
-                            </div>
-                            <i class="fa-solid fa-sort sort-icon"></i>
-                        </div>
-                        <div class="search-section">
-                            <input type="text" class="search-input" placeholder="Search for tasks, events ..">
-                        </div>
-                        <div class="notification-section">
-                            <img src="image/notification-badge.svg" alt="Notifications" class="notification-icon">
-                        </div>
-                    </div>
-                    <div class="account-section">
-                        <div style="display:flex; flex-direction: column;">
-                            <span class="account-name">Cristiano</span>
-                            <span class="account-settings">Hust Student</span>
-                        </div>
-                        <img src="image/user-logo.jpg" alt="Profile Picture" class="profile-picture">
-                    </div>
-                   
-                </div>
-
-            </div>
-            <div class="list-plan">
-                <a href="detail_plan.html" style="text-decoration: none;">
-                    <div class="box-item-web-design box-item">
-                        <div class="item">
-                            <div class="item_img">
-                                <img src="/image/web_design_img.png" alt="">
-                            </div>
-                            <div class="title">
-                                Web design
-                            </div>
-                            <div class="item-time">
-                                <img src="/image/lock.png" alt="">
-                                <span style="margin-left: 12px;"> 3months</span>
-                            </div>
-                            <div class="item-bottom">
-                                <span>80%</span>
-                                <span style="color:#F56B3F">Almost Done</span>
-                            </div>
-                            <div class="item-bottom-progress">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-
-                <a href="detail_plan.html" style="text-decoration: none;">
-                    <div class="box-item-figma box-item">
-                        <div class="item">
-                            <div class="item_img">
-                                <img src="/image/figma.svg" alt="">
-                            </div>
-                            <div class="title">
-                                Figma UX/UI
-                            </div>
-                            <div class="item-time">
-                                <img src="/image/lock.png" alt="">
-                                <span style="margin-left: 12px;"> 3months</span>
-                            </div>
-                            <div class="item-bottom">
-                                <span>80%</span>
-                                <span style="color:#F56B3F">Almost Done</span>
-                            </div>
-                            <div class="item-bottom-progress">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="detail_plan.html" style="text-decoration: none;">
-                    <div class="box-item-logo-design box-item">
-                        <div class="item">
-                            <div class="item_img">
-                                <img src="/image/logo-design.svg" alt="">
-                            </div>
-                            <div class="title">
-                                Logo design
-                            </div>
-                            <div class="item-time">
-                                <img src="/image/lock.png" alt="">
-                                <span style="margin-left: 12px;"> 3months</span>
-                            </div>
-                            <div class="item-bottom">
-                                <span>80%</span>
-                                <span style="color:#F56B3F">Almost Done</span>
-                            </div>
-                            <div class="item-bottom-progress">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="detail_plan.html" style="text-decoration: none;">
-                    <div class="box-item-ml box-item">
-                        <div class="item">
-                            <div class="item_img">
-                                <img src="/image/ml-svg.svg" alt="">
-                            </div>
-                            <div class="title">
-                                Machine Learning
-                            </div>
-                            <div class="item-time">
-                                <img src="/image/lock.png" alt="">
-                                <span style="margin-left: 12px;"> 3months</span>
-                            </div>
-                            <div class="item-bottom">
-                                <span>80%</span>
-                                <span style="color:#F56B3F">Almost Done</span>
-                            </div>
-                            <div class="item-bottom-progress">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="detail_plan.html" style="text-decoration: none;">
-                    <div class="box-item-figma box-item">
-                        <div class="item">
-                            <div class="item_img">
-                                <img src="/image/pts-svg.svg" alt="">
-                            </div>
-                            <div class="title">
-                                Photoshop
-                            </div>
-                            <div class="item-time">
-                                <img src="/image/lock.png" alt="">
-                                <span style="margin-left: 12px;"> 3months</span>
-                            </div>
-                            <div class="item-bottom">
-                                <span>80%</span>
-                                <span style="color:#F56B3F">Almost Done</span>
-                            </div>
-                            <div class="item-bottom-progress">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="detail_plan.html" style="text-decoration: none;">
-                    <div class="box-item-web-design box-item">
-                        <div class="item">
-                            <div class="item_img">
-                                <img src="/image/web_design_img.png" alt="">
-                            </div>
-                            <div class="title">
-                                Web design
-                            </div>
-                            <div class="item-time">
-                                <img src="/image/lock.png" alt="">
-                                <span style="margin-left: 12px;"> 3months</span>
-                            </div>
-                            <div class="item-bottom">
-                                <span>80%</span>
-                                <span style="color:#F56B3F">Almost Done</span>
-                            </div>
-                            <div class="item-bottom-progress">
-                                <div></div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
-        </div>
+    <div class="button-container">
+        <button onclick="closeHelp()" class="back">Back</button>
+        <button onclick="nextStep()" id="nextBtn" class="next">Next</button>
+        <button onclick="showDone()" id="doneBtn" class="done" style="display:none;">Done</button>
     </div>
+    <script>
+        const steps = ['helpkpi', 'step1'];
+        let currentStepIndex = 0;
 
-    <script src="sidebar.js"></script>
-    <script src="plan.js"></script>
-    <script src="helpplan.js"></script>
+        function showCurrentStep() {
+            const currentStepId = steps[currentStepIndex];
+            const currentStep = document.getElementById(currentStepId);
+            currentStep.style.display = 'block';
 
+            // Hide previous step
+            if (currentStepIndex > 0) {
+                const prevStepId = steps[currentStepIndex - 1];
+                const prevStep = document.getElementById(prevStepId);
+                prevStep.style.display = 'none';
+            }
+
+            // Toggle buttons
+            if (currentStepIndex < steps.length - 1) {
+                document.getElementById('nextBtn').style.display = 'block';
+                document.getElementById('doneBtn').style.display = 'none';
+            } else {
+                document.getElementById('nextBtn').style.display = 'none';
+                document.getElementById('doneBtn').style.display = 'block';
+            }
+        }
+
+        function closeHelp() {
+                window.location.href = "howtouse.html";
+        }
+
+        function nextStep() {
+            if (currentStepIndex < steps.length - 1) {
+                currentStepIndex++;
+                showCurrentStep();
+            }
+        }
+
+        function showDone() {
+            window.location.href = "howtouse.html";
+        }
+
+        window.onload = function () {
+            showCurrentStep();
+        };
+    </script>
 </body>
-
 </html>
