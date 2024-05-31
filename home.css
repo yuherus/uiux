@@ -1,5 +1,5 @@
 .banner {
-    background-image: url('https://github.com/yuherus/uiux/blob/master/image/banner.png?raw=true');
+    background-image: url('/image/banner.png');
     height: 150px;
     color: #fff;
     padding: 20px;

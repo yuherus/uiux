@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var createPlanButton = document.getElementById("create-activity-btn");
     createPlanButton.addEventListener('click', function (event) {
         event.preventDefault();
-        showSuccessToast();
         modal.style.display = "none";
     });
 
