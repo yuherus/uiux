@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showSuccessToast() {
         toast({
-          title: "Thành công!",
-          message: "Bạn đã tạo KPI thành công.",
+          title: "Successful!",
+          message: "KPI has been created successfully.",
           type: "success",
           duration: 5000
         });
